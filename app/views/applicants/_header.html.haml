@@ -1,0 +1,15 @@
+#applicant.navbar.navbar-light.navbar-fixed-top
+  .container
+    .navbar-brand
+      = "#{@applicant.first_name} #{@applicant.last_name}"
+      .slogan= @applicant.slogan
+
+    %ul.nav.navbar-nav.pull-right
+      %li.nav-item.active
+        = link_to 'Wer bin ich', '#', class: 'nav-link'
+      %li.nav-item
+        = link_to 'Meine Chronik', '#', class: 'nav-link'
+      %li.nav-item
+        = link_to 'Meine Interessen', '#', class: 'nav-link'
+      %li.nav-item
+        = link_to "Einige FAQ's", '#', class: 'nav-link'

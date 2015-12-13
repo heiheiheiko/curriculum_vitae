@@ -6,10 +6,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.alpha1'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
+gem 'rails-i18n'
 
 group :development do
   gem 'better_errors'
@@ -28,7 +29,7 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 3.0'
   gem 'sqlite3'
   gem 'thin'
-  gem 'byebug'
+  gem 'pry'
 end
 
 group :production do

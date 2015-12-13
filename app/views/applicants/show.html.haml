@@ -1,0 +1,20 @@
+- content_for :header do
+  = render 'header', applicant: @applicant
+
+%section#introduction
+  .images
+    .container
+      .card-group
+        - @applicant.images.each do |i|
+          .card.card-inverse{"aria-controls" => "image_#{i.id}", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#image_#{i.id}"}
+            = image_tag i.url, alt: i.name
+            .card-img-overlay
+              %h4.card-title= i.name
+
+  .descriptions
+    - @applicant.images.each do |i|
+      .description
+        .container
+          .collapse{id: "image_#{i.id}"}
+            .card.card-block
+              = i.name

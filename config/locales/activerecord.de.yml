@@ -1,0 +1,14 @@
+de:
+  activerecord:
+    models:
+      applicant: Bewerber
+
+    attributes:
+      accounting:
+        first_name: Vorname
+        last_name: Nachname
+        slogan: Slogan
+        birthday: Geburtsdatum
+        family_status: Familienstand
+        email: E-Mail
+        mobile_phone: Mobil
