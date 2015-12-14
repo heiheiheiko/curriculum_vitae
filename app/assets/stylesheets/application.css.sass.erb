@@ -18,7 +18,6 @@
 @import "colors"
 @import "customization/bootstrap"
 
-
 .slogan
   font-size: 12px
 
@@ -34,22 +33,24 @@ body
     .card
       border: 0
       border-radius: 0
+      cursor: pointer
       &:nth-child(1)
         background-color: lighten($pastel_red, 15%)
       &:nth-child(2)
         background-color: lighten($pastel_blue, 15%)
       &:nth-child(3)
         background-color: lighten($pastel_green, 25%)
-
       &.active
         img
           opacity: 1 !important
-
     img
       width: 100%
       opacity: 0.4
 
   .description
+    .card-block
+      text-align: center
+      padding: 30px 30px
     &:nth-child(1)
       background-color: lighten($pastel_red, 15%)
     &:nth-child(2)
