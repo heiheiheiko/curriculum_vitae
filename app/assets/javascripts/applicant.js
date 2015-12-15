@@ -22,4 +22,8 @@ $(function() {
     $('.descriptions').find('.collapse').collapse('hide');
     $(id).collapse('show');
   });
+
+  $('.toggle_collapse_icon').click(function() {
+    $(this).toggleClass('fa-chevron-circle-up fa-chevron-circle-down')
+  });
 });

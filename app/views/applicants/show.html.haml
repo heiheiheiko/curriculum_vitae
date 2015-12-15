@@ -7,9 +7,9 @@
       .card-group
         - @applicant.images.each do |i|
           .card.card-inverse{"aria-controls" => "image_#{i.id}", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#image_#{i.id}"}
-            = image_tag i.url, alt: i.name
+            = image_tag i.url, alt: i.title
             .card-img-overlay
-              %h4.card-title= i.name
+              %h4.card-title= i.title
 
   .descriptions
     - @applicant.images.each do |i|
@@ -17,5 +17,11 @@
         .container
           .collapse{id: "image_#{i.id}"}
             .card-block
-              %h4.card-title= i.name
-              %p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              %h4.card-title= i.description
+
+%section#timeline
+  .container
+    %ul.timeline
+      - @applicant.chronicle_items.sort_by(&:rank).each do |ci|
+        - alignment = ci.rank.even? ? :right : nil
+        = render 'shared/timeline_item', alignment: alignment, chronicle_item: ci

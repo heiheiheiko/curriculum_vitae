@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20151212092239) do
 
   create_table "addresses", force: :cascade do |t|
+    t.string   "name"
     t.string   "street"
     t.string   "zip"
     t.string   "city"
@@ -41,7 +42,12 @@ ActiveRecord::Schema.define(version: 20151212092239) do
     t.date     "started_at"
     t.date     "ended_at"
     t.string   "title"
-    t.text     "descriptoin"
+    t.text     "description"
+    t.string   "position"
+    t.string   "employment"
+    t.string   "website"
+    t.integer  "rank"
+    t.string   "badge"
     t.integer  "applicant_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -50,7 +56,8 @@ ActiveRecord::Schema.define(version: 20151212092239) do
   add_index "chronicle_items", ["applicant_id"], name: "index_chronicle_items_on_applicant_id"
 
   create_table "images", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
+    t.text     "description"
     t.string   "url"
     t.integer  "imageable_id"
     t.string   "imageable_type"
@@ -61,7 +68,8 @@ ActiveRecord::Schema.define(version: 20151212092239) do
   add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
 
   create_table "links", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
+    t.text     "description"
     t.string   "url"
     t.integer  "linkable_id"
     t.string   "linkable_type"

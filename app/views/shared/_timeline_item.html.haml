@@ -1,0 +1,27 @@
+- alignment ||= nil
+
+%li{class: ('timeline-inverted' if alignment == :right) }
+  .timeline-badge.primary
+    = icon chronicle_item.badge
+  .timeline-card
+    .timeline-heading
+      %h4.timeline-title
+        = chronicle_item.title
+        %i.fa.fa-chevron-circle-up.pull-right.toggle_collapse_icon{"aria-controls" => "chronicle_item_#{chronicle_item.id}", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#chronicle_item_#{chronicle_item.id}"}
+      %p
+        %small.text-muted
+          = icon 'calendar'
+          = l chronicle_item.started_at
+          = '-'
+          = chronicle_item.ended_at ? l(chronicle_item.ended_at) : 'heute'
+        - if chronicle_item.address
+          &nbsp;
+          %small.text-muted
+            = icon 'building-o'
+            = "#{chronicle_item.address.name}, #{chronicle_item.employment}".html_safe
+
+    .timeline-body
+      .collapse{id: "chronicle_item_#{chronicle_item.id}"}
+        %ul
+          - chronicle_item.description.split(';').each do |part|
+            %li= part

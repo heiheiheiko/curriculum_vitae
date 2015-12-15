@@ -4,7 +4,12 @@ class CreateChronicleItems < ActiveRecord::Migration
       t.date :started_at
       t.date :ended_at
       t.string :title
-      t.text :descriptoin
+      t.text :description
+      t.string :position
+      t.string :employment
+      t.string :website
+      t.integer :rank
+      t.string :badge
       t.belongs_to :applicant, index:true
       t.timestamps null: false
     end

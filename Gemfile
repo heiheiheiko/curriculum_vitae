@@ -11,6 +11,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'rails-i18n'
+gem 'font-awesome-sass'
 
 group :development do
   gem 'better_errors'
