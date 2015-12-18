@@ -12,6 +12,7 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'rails-i18n'
 gem 'font-awesome-sass'
+gem 'dotiw'
 
 group :development do
   gem 'better_errors'

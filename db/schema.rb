@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212092239) do
+ActiveRecord::Schema.define(version: 20151217203653) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "name"
@@ -46,14 +46,33 @@ ActiveRecord::Schema.define(version: 20151212092239) do
     t.string   "position"
     t.string   "employment"
     t.string   "website"
-    t.integer  "rank"
     t.string   "badge"
+    t.boolean  "important"
     t.integer  "applicant_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   add_index "chronicle_items", ["applicant_id"], name: "index_chronicle_items_on_applicant_id"
+
+  create_table "chronicle_items_experiences", force: :cascade do |t|
+    t.integer "experience_id"
+    t.integer "chronicle_item_id"
+  end
+
+  add_index "chronicle_items_experiences", ["chronicle_item_id"], name: "index_chronicle_items_experiences_on_chronicle_item_id"
+  add_index "chronicle_items_experiences", ["experience_id"], name: "index_chronicle_items_experiences_on_experience_id"
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "experienceable_id"
+    t.string   "experienceable_type"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "experiences", ["experienceable_type", "experienceable_id"], name: "index_experiences_on_experienceable_type_and_experienceable_id"
 
   create_table "images", force: :cascade do |t|
     t.string   "title"

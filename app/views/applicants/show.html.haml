@@ -22,6 +22,6 @@
 %section#timeline
   .container
     %ul.timeline
-      - @applicant.chronicle_items.sort_by(&:rank).each do |ci|
-        - alignment = ci.rank.even? ? :right : nil
+      - @applicant.chronicle_items.sort_by(&:id).each do |ci|
+        - alignment = ci.id.even? ? :right : nil
         = render 'shared/timeline_item', alignment: alignment, chronicle_item: ci

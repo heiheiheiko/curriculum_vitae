@@ -8,8 +8,8 @@ class CreateChronicleItems < ActiveRecord::Migration
       t.string :position
       t.string :employment
       t.string :website
-      t.integer :rank
       t.string :badge
+      t.boolean :important
       t.belongs_to :applicant, index:true
       t.timestamps null: false
     end
