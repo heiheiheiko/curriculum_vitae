@@ -5,5 +5,5 @@ class ChronicleItem < ActiveRecord::Base
   belongs_to :applicant
 
   has_many :chronicle_item_informations
-  has_many :experiences, through: :chronicle_item_informations, source: :information, source_type: 'Experience'
+  has_many :experiences, through: :chronicle_item_informations, source: :information
 end
