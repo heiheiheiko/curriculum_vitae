@@ -4,5 +4,6 @@ class ChronicleItem < ActiveRecord::Base
   has_many :links, as: :linkable, dependent: :destroy
   belongs_to :applicant
 
-  has_and_belongs_to_many :experiences
+  has_many :chronicle_item_informations
+  has_many :experiences, through: :chronicle_item_informations, source: :information
 end

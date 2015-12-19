@@ -1,3 +1,4 @@
-class Experience < ActiveRecord::Base
-  has_and_belongs_to_many :chronicle_items
+class Experience < Information
+  has_many :chronicle_item_informations
+  has_many :chronicle_items, through: :chronicle_item_informations
 end
