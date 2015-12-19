@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217203653) do
+ActiveRecord::Schema.define(version: 20151218074753) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "name"
@@ -85,6 +85,19 @@ ActiveRecord::Schema.define(version: 20151217203653) do
   end
 
   add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+
+  create_table "information", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "information_type", default: 0
+    t.string   "type"
+    t.integer  "informable_id"
+    t.string   "informable_type"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "information", ["informable_type", "informable_id"], name: "index_information_on_informable_type_and_informable_id"
 
   create_table "links", force: :cascade do |t|
     t.string   "title"
