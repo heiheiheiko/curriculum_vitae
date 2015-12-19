@@ -65,14 +65,6 @@ ActiveRecord::Schema.define(version: 20151219115221) do
 
   add_index "chronicle_items", ["applicant_id"], name: "index_chronicle_items_on_applicant_id"
 
-  create_table "chronicle_items_experiences", force: :cascade do |t|
-    t.integer "experience_id"
-    t.integer "chronicle_item_id"
-  end
-
-  add_index "chronicle_items_experiences", ["chronicle_item_id"], name: "index_chronicle_items_experiences_on_chronicle_item_id"
-  add_index "chronicle_items_experiences", ["experience_id"], name: "index_chronicle_items_experiences_on_experience_id"
-
   create_table "experiences", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -83,18 +75,6 @@ ActiveRecord::Schema.define(version: 20151219115221) do
   end
 
   add_index "experiences", ["experienceable_type", "experienceable_id"], name: "index_experiences_on_experienceable_type_and_experienceable_id"
-
-  create_table "images", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "url"
-    t.integer  "imageable_id"
-    t.string   "imageable_type"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  add_index "images", ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
 
   create_table "information", force: :cascade do |t|
     t.string   "title"
@@ -113,6 +93,7 @@ ActiveRecord::Schema.define(version: 20151219115221) do
     t.string   "title"
     t.text     "description"
     t.string   "url"
+    t.string   "type"
     t.integer  "linkable_id"
     t.string   "linkable_type"
     t.datetime "created_at",    null: false
