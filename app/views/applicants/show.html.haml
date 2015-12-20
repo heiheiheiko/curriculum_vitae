@@ -24,4 +24,4 @@
     %ul.timeline
       - @applicant.chronicle_items.sort_by(&:id).each do |ci|
         - alignment = ci.id.even? ? :right : nil
-        = render ci, alignment: alignment
+        = render 'chronicle_items/chronicle_item', chronicle_item: ci, alignment: alignment

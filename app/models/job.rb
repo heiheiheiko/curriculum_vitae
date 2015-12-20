@@ -5,4 +5,12 @@ class Job < ChronicleItem
   def color_class
     'success'
   end
+
+  def card_sub_title
+    I18n.t(employment, scope: 'enums.chronicle_item.employment')
+  end
+
+  def address_icon
+    'building-o'
+  end
 end

@@ -1,0 +1,37 @@
+- alignment ||= nil
+
+%li{class: ('timeline-inverted' if alignment == :right) }
+  .timeline-badge{class: chronicle_item.color_class}
+    = icon chronicle_item.badge
+  .timeline-card
+    .timeline-heading
+      .timeline-title
+        %h4
+          = chronicle_item.card_title
+          - if chronicle_item.card_sub_title
+            .small= chronicle_item.card_sub_title
+          - if chronicle_item.card_body?
+            %i.fa.fa-chevron-circle-up.pull-right.toggle_collapse_icon{"aria-controls" => "chronicle_item_#{chronicle_item.id}", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#chronicle_item_#{chronicle_item.id}"}
+      %p
+        %small.text-muted
+          = icon('calendar')
+          = chronicle_item.period
+          &nbsp;
+          = icon('clock-o')
+          = distance_of_time_in_words(chronicle_item.ended_at_extended, chronicle_item.started_at)
+        - if chronicle_item.address
+          %br
+          %small.text-muted
+            = icon chronicle_item.address_icon
+            = chronicle_item.address
+
+    - if chronicle_item.card_body?
+      .timeline-body
+        .collapse{id: "chronicle_item_#{chronicle_item.id}"}
+          %ul
+            - if chronicle_item.description
+              - chronicle_item.description.split(';').each do |description_item|
+                %li= description_item
+          - if chronicle_item.experiences.present?
+            %ul
+              %li{class: chronicle_item.model_name.to_s.underscore}= chronicle_item.experiences.map(&:title).join(', ')

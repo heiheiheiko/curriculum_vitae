@@ -16,4 +16,16 @@ class ChronicleItem < ActiveRecord::Base
   def ended_at_extended
     ended_at ? ended_at + 1.month : Date.current
   end
+
+  def card_title
+    position ? I18n.t(position, scope: 'enums.chronicle_item.position') : title
+  end
+
+  def card_body?
+    [description_items, experiences].compact.flatten.present?
+  end
+
+  def description_items
+    description ? description.split(';') : []
+  end
 end

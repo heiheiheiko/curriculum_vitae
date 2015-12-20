@@ -129,14 +129,16 @@
     padding-left: 0
     list-style-type: none
   li:before
-    //content: '\2713'
     content: '\f00c'
     font-family: FontAwesome
     font-size: 12px
     display: inline-block
     width: 1.5em
     margin-left: -1.5em
-
+  li.job:before
+    content: '\f085'
+  li.education:before
+    content: '\f0c3'
 
 .timeline-body > p + p
   margin-top: 5px
