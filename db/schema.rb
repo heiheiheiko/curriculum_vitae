@@ -53,28 +53,18 @@ ActiveRecord::Schema.define(version: 20151219115221) do
     t.date     "ended_at"
     t.string   "title"
     t.text     "description"
-    t.string   "position"
-    t.string   "employment"
-    t.string   "website"
+    t.integer  "position"
+    t.integer  "employment"
     t.string   "badge"
     t.boolean  "important"
+    t.string   "type"
+    t.string   "graduation"
     t.integer  "applicant_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   add_index "chronicle_items", ["applicant_id"], name: "index_chronicle_items_on_applicant_id"
-
-  create_table "experiences", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "experienceable_id"
-    t.string   "experienceable_type"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-  end
-
-  add_index "experiences", ["experienceable_type", "experienceable_id"], name: "index_experiences_on_experienceable_type_and_experienceable_id"
 
   create_table "information", force: :cascade do |t|
     t.string   "title"

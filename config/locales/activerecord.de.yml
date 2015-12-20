@@ -3,12 +3,14 @@ de:
     models:
       applicant: Bewerber
 
-    attributes:
-      accounting:
-        first_name: Vorname
-        last_name: Nachname
-        slogan: Slogan
-        birthday: Geburtsdatum
-        family_status: Familienstand
-        email: E-Mail
-        mobile_phone: Mobil
+  enums:
+    chronicle_item:
+      position:
+        web_developer: Web Developer
+        software_developer: Software Developer
+        junior_software_developer: Junior Software Developer
+      employment:
+        intern: Praktikant
+        student_assistant: studentische Hilfskraft
+        bachelor: Bachelorand
+        employee: Angestellter
