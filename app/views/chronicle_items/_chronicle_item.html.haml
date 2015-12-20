@@ -20,10 +20,14 @@
           = icon('clock-o')
           = distance_of_time_in_words(chronicle_item.ended_at_extended, chronicle_item.started_at)
         - if chronicle_item.address
+          - address = chronicle_item.address
           %br
           %small.text-muted
             = icon chronicle_item.address_icon
-            = chronicle_item.address
+            - if address.website
+              = link_to address, address.website.url
+            - else
+              = address
 
     - if chronicle_item.card_body?
       .timeline-body
