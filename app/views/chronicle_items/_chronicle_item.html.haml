@@ -36,6 +36,6 @@
             - if chronicle_item.description
               - chronicle_item.description.split(';').each do |description_item|
                 %li= description_item
-          - if chronicle_item.experiences.present?
+          - if chronicle_item.skills.present?
             %ul
-              %li{class: chronicle_item.model_name.to_s.underscore}= chronicle_item.experiences.map(&:title).join(', ')
+              %li{class: chronicle_item.model_name.to_s.underscore}= chronicle_item.skills.map(&:title).join(', ')

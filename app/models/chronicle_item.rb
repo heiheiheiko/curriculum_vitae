@@ -22,7 +22,7 @@ class ChronicleItem < ActiveRecord::Base
   end
 
   def card_body?
-    [description_items, experiences].compact.flatten.present?
+    [description_items, skills].compact.flatten.present?
   end
 
   def description_items
