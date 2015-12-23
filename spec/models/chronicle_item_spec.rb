@@ -4,6 +4,7 @@ RSpec.describe ChronicleItem, type: :model do
   it { should have_one(:address).class_name('Address') }
   it { should have_many(:images).class_name('Image') }
   it { should have_many(:links).class_name('Link') }
+  it { should have_many(:skills).class_name('Skill') }
   it { should belong_to(:applicant).class_name('Applicant') }
 end
 

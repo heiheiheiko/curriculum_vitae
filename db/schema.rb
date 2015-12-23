@@ -38,15 +38,15 @@ ActiveRecord::Schema.define(version: 20151219115221) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "chronicle_item_informations", force: :cascade do |t|
+  create_table "chronicle_item_skills", force: :cascade do |t|
     t.integer  "chronicle_item_id"
-    t.integer  "information_id"
+    t.integer  "skill_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
-  add_index "chronicle_item_informations", ["chronicle_item_id"], name: "index_chronicle_item_informations_on_chronicle_item_id"
-  add_index "chronicle_item_informations", ["information_id"], name: "index_chronicle_item_informations_on_information_id"
+  add_index "chronicle_item_skills", ["chronicle_item_id"], name: "index_chronicle_item_skills_on_chronicle_item_id"
+  add_index "chronicle_item_skills", ["skill_id"], name: "index_chronicle_item_skills_on_skill_id"
 
   create_table "chronicle_items", force: :cascade do |t|
     t.date     "started_at"

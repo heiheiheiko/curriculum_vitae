@@ -4,8 +4,8 @@ class ChronicleItem < ActiveRecord::Base
   has_many :links, as: :linkable, dependent: :destroy
   belongs_to :applicant
 
-  has_many :chronicle_item_informations
-  has_many :experiences, through: :chronicle_item_informations, source: :information
+  has_many :chronicle_item_skills
+  has_many :skills, through: :chronicle_item_skills
 
   def period
     start_date =  I18n.l started_at, format: '%m/%Y'
