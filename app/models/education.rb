@@ -1,13 +1,17 @@
 class Education < ChronicleItem
-  def color_class
-    'info'
-  end
-
   def card_sub_title
     graduation
   end
 
-  def address_icon
+  def self.color_class
+    'info'
+  end
+
+  def self.address_icon
     'university'
+  end
+
+  def self.filter_icon
+    'graduation-cap'
   end
 end

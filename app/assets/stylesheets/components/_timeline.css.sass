@@ -66,7 +66,7 @@
   border-bottom: 14px solid transparent
   border-left: 14px solid #fff
 
-.timeline > li > .timeline-badge
+.timeline .timeline-badge
   z-index: 100
   position: absolute
   top: 16px
@@ -77,7 +77,7 @@
   text-align: center
   font-size: 1.2em
 
-.timeline > li > .timeline-badge
+.timeline-badge
   .fa-stack-2x
     z-index: 110
     font-size: 3em
@@ -90,19 +90,22 @@
     line-height: 50px
 
 .timeline-badge .primary
-  color: $brand-primary !important
+  color: $brand-primary
 
 .timeline-badge .success
-  color: $brand-success !important
+  color: $brand-success
 
 .timeline-badge .warning
-  color: $brand-warning !important
+  color: $brand-warning
 
 .timeline-badge .danger
-  color: $brand-danger !important
+  color: $brand-danger
 
 .timeline-badge .info
-  color: $brand-info !important
+  color: $brand-info
+
+.timeline-badge .default
+  color: $gray-darker !important
 
 .timeline > li.timeline-inverted > .timeline-card
   float: right

@@ -1,13 +1,17 @@
 class Highlight < ChronicleItem
-  def color_class
-    'danger'
-  end
-
   def card_sub_title
     nil
   end
 
-  def address_icon
+  def self.color_class
+    'danger'
+  end
+
+  def self.address_icon
     'map-marker'
+  end
+
+  def self.filter_icon
+    'home'
   end
 end

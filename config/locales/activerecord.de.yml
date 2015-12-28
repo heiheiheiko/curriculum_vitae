@@ -2,6 +2,9 @@ de:
   activerecord:
     models:
       applicant: Bewerber
+      job: Berufstechnische-Einträge
+      highlight: Private-Einträge
+      education: Bildungstechnische-Einträge
 
   enums:
     chronicle_item:

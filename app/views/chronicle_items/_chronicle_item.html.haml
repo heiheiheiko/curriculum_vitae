@@ -1,9 +1,9 @@
 - alignment ||= nil
 
-%li{class: ('timeline-inverted' if alignment == :right) }
+%li{class: "#{('timeline-inverted' if alignment == :right)} #{chronicle_item.model_name.to_s.underscore}" }
   %span.fa-stack.fa-lg.timeline-badge
     - badge_class = chronicle_item.important ? 'star' : 'circle'
-    = icon badge_class, class: "fa-stack-2x #{chronicle_item.color_class}"
+    = icon badge_class, class: "fa-stack-2x #{chronicle_item.class.color_class}"
     = icon chronicle_item.badge, class: 'fa-stack-1x fa-inverse'
   .timeline-card
     .timeline-heading
@@ -25,7 +25,7 @@
           - address = chronicle_item.address
           %br
           %small.text-muted
-            = icon chronicle_item.address_icon
+            = icon chronicle_item.class.address_icon
             - if address.website
               = link_to address, address.website.url
             - else

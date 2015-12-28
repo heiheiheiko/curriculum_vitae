@@ -2,3 +2,6 @@ de:
   applicant:
     chronicle:
       header: Meine Chronik
+      filter: Filter
+      tooltip_disable: '%{model} ausblenden'
+      tooltip_enable: '%{model} einblenden'
