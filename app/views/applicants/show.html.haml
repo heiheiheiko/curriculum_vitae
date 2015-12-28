@@ -1,19 +1,5 @@
 - content_for :header do
   = render 'header', applicant: @applicant
 
-%section#introduction
-  .container
-    .card-group
-      - @applicant.images.each do |i|
-        .card.card-inverse
-          = image_tag i.url, alt: i.title
-          .card-img-overlay
-            %h4.card-title= i.title
-            %p.card-text= i.description
-
-%section#timeline
-  .container
-    %ul.timeline
-      - @applicant.chronicle_items.sort_by(&:id).each do |ci|
-        - alignment = ci.id.even? ? :right : nil
-        = render 'chronicle_items/chronicle_item', chronicle_item: ci, alignment: alignment
+= render 'introduction', applicant: @applicant
+= render 'chronicle', applicant: @applicant

@@ -1,0 +1,9 @@
+%section#introduction
+  .container
+    .card-group
+      - applicant.images.each do |i|
+        .card.card-inverse
+          = image_tag i.url, alt: i.title
+          .card-img-overlay
+            %h4.card-title= i.title
+            %p.card-text= i.description
