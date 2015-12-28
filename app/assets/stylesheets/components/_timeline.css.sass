@@ -74,12 +74,35 @@
   width: 50px
   height: 50px
   margin-left: -25px
-  border-radius: 50% 50% 50% 50%
   text-align: center
   font-size: 1.2em
-  line-height: 50px
-  color: #fff
-  background-color: #999999
+
+.timeline > li > .timeline-badge
+  .fa-stack-2x
+    z-index: 110
+    font-size: 3em
+    line-height: 50px
+    &.fa-star
+      left: -1px
+  .fa-stack-1x
+    z-index: 120
+    font-size: 1em
+    line-height: 50px
+
+.timeline-badge .primary
+  color: $brand-primary !important
+
+.timeline-badge .success
+  color: $brand-success !important
+
+.timeline-badge .warning
+  color: $brand-warning !important
+
+.timeline-badge .danger
+  color: $brand-danger !important
+
+.timeline-badge .info
+  color: $brand-info !important
 
 .timeline > li.timeline-inverted > .timeline-card
   float: right
@@ -95,21 +118,6 @@
   left: -14px
   border-right-width: 14px
   border-left-width: 0
-
-.timeline-badge.primary
-  background-color: $brand-primary !important
-
-.timeline-badge.success
-  background-color: $brand-success !important
-
-.timeline-badge.warning
-  background-color: $brand-warning !important
-
-.timeline-badge.danger
-  background-color: $brand-danger !important
-
-.timeline-badge.info
-  background-color: $brand-info !important
 
 .timeline-title
   margin-top: 0

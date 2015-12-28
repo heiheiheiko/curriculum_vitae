@@ -1,8 +1,10 @@
 - alignment ||= nil
 
 %li{class: ('timeline-inverted' if alignment == :right) }
-  .timeline-badge{class: chronicle_item.color_class}
-    = icon chronicle_item.badge
+  %span.fa-stack.fa-lg.timeline-badge
+    - badge_class = chronicle_item.important ? 'star' : 'circle'
+    = icon badge_class, class: "fa-stack-2x #{chronicle_item.color_class}"
+    = icon chronicle_item.badge, class: 'fa-stack-1x fa-inverse'
   .timeline-card
     .timeline-heading
       .timeline-title
