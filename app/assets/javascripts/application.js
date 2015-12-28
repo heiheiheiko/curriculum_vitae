@@ -13,9 +13,19 @@
 //= require jquery
 //= require tether
 //= require jquery_ujs
+//= require jquery-ui
 //= require bootstrap-sprockets
 //= require_tree .
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
+
+  $(document).scroll(function() {
+    selector = $('header .navbar');
+    if ($(this).scrollTop() >= 5) {
+      selector.switchClass('navbar-light', 'navbar-dark', 150);
+    } else {
+      selector.switchClass('navbar-dark', 'navbar-light', 150);
+    }
+  });
 })

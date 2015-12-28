@@ -1,3 +1,4 @@
+@import "jquery-ui"
 @import "bootstrap"
 @import "colors"
 @import "applicant"
@@ -12,8 +13,11 @@ body
 .slogan
   font-size: 12px
 
-#header
-  background-color: rgba(white, 0.95)
+#header.navbar-light
+  background-color: white
+
+#header.navbar-dark
+  background-color: $pastel_green
 
 .container > h1
   padding: 50px 0
