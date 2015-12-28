@@ -2,22 +2,14 @@
   = render 'header', applicant: @applicant
 
 %section#introduction
-  .images
-    .container
-      .card-group
-        - @applicant.images.each do |i|
-          .card.card-inverse{"aria-controls" => "image_#{i.id}", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#image_#{i.id}"}
-            = image_tag i.url, alt: i.title
-            .card-img-overlay
-              %h4.card-title= i.title
-
-  .descriptions
-    - @applicant.images.each do |i|
-      .description
-        .container
-          .collapse{id: "image_#{i.id}"}
-            .card-block
-              %h4.card-title= i.description
+  .container
+    .card-group
+      - @applicant.images.each do |i|
+        .card.card-inverse
+          = image_tag i.url, alt: i.title
+          .card-img-overlay
+            %h4.card-title= i.title
+            %p.card-text= i.description
 
 %section#timeline
   .container

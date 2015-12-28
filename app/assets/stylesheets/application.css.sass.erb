@@ -8,40 +8,34 @@
 .slogan
   font-size: 12px
 
-body
-  // background-image: url( <%= asset_path('pattern/cream_pixels.png') %> )
-
 #header
   background-color: rgba(white, 1)
 
 #introduction
-  .images
-    background-color: rgba($pastel_gray, 0.4)
-    margin-top: 72px
-    .card
-      border: 0
-      border-radius: 0
-      cursor: pointer
-      &:nth-child(1)
-        background-color: lighten($pastel_red, 15%)
-      &:nth-child(2)
-        background-color: lighten($pastel_blue, 15%)
-      &:nth-child(3)
-        background-color: lighten($pastel_green, 25%)
-      &.active
-        img
-          opacity: 1 !important
-    img
-      width: 100%
-      opacity: 0.4
+  background-color: lighten($pastel_green, 15%)
+  margin-top: 72px
 
-  .description
-    .card-block
-      text-align: center
-      padding: 30px 30px
-    &:nth-child(1)
-      background-color: lighten($pastel_red, 15%)
-    &:nth-child(2)
-      background-color: lighten($pastel_blue, 15%)
-    &:nth-child(3)
-      background-color: lighten($pastel_green, 25%)
+  .card
+    border: 0
+    border-radius: 0
+    cursor: pointer
+    background-color: lighten($pastel_green, 15%)
+    &.active
+      img
+        opacity: 1 !important
+      .card-title
+        opacity: 1 !important
+      .card-text
+        opacity: 1 !important
+
+  img
+    width: 100%
+    opacity: 0.4
+
+  .card-title
+    opacity: 0
+    
+  .card-text
+    position: absolute
+    bottom: 15px
+    opacity: 0
