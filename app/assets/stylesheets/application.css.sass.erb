@@ -11,14 +11,15 @@ body
   position: relative
 
 #header
-  .slogan
-    font-size: 12px
-
   &.navbar-light
     background-color: white
-
   &.navbar-dark
     background-color: $pastel_blue
+  .slogan
+    font-size: 12px
+  .nav-item
+    @include media-breakpoint-down(lg)
+      display: none !important
 
 
 .container > h1
@@ -26,10 +27,11 @@ body
   text-align: center
   font-size: 3.5rem
 
-// https://css-tricks.com/hash-tag-links-padding/
-section:before
-  display: block
-  content: " "
-  margin-top: -70px
-  height: 70px
-  visibility: hidden
+@include media-breakpoint-up(lg)
+  // https://css-tricks.com/hash-tag-links-padding/
+  section:before
+    display: block
+    content: " "
+    margin-top: -70px
+    height: 70px
+    visibility: hidden
