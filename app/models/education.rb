@@ -4,7 +4,7 @@ class Education < ChronicleItem
   end
 
   def self.color_class
-    'info'
+    'success'
   end
 
   def self.address_icon

@@ -7,7 +7,7 @@ class Job < ChronicleItem
   end
 
   def self.color_class
-    'success'
+    'danger'
   end
 
   def self.address_icon

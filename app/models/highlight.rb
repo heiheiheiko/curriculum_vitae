@@ -4,7 +4,7 @@ class Highlight < ChronicleItem
   end
 
   def self.color_class
-    'danger'
+    'info'
   end
 
   def self.address_icon
