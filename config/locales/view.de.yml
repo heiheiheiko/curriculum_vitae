@@ -1,5 +1,7 @@
 de:
   applicant:
+    introduction:
+      header: Impression
     chronicle:
       header: Meine Chronik
       filter: Filter
