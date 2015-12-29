@@ -6,4 +6,7 @@
           = image_tag i.url, alt: i.title
           .card-img-overlay
             %h4.card-title= i.title
-            %p.card-text= i.description
+            %p.card-text
+              = icon 'quote-left'
+              = i.description
+              = icon 'quote-right'
