@@ -1,7 +1,7 @@
 %section#introduction
   .container
     .card-group
-      - applicant.images.each do |i|
+      - applicant.images.sort_by(&:id).each do |i|
         .card.card-inverse
           = image_tag i.url, alt: i.title
           .card-img-overlay
