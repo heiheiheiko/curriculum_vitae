@@ -2,9 +2,9 @@ de:
   activerecord:
     models:
       applicant: Bewerber
-      job: Berufstechnische-Einträge
-      highlight: Private-Einträge
-      education: Bildungstechnische-Einträge
+      job: Karriere
+      highlight: Privatleben
+      education: Bildungsweg
 
   enums:
     chronicle_item:
