@@ -15,12 +15,13 @@
           - if chronicle_item.card_body?
             %i.fa.fa-chevron-circle-up.pull-right.toggle_collapse_icon{"aria-controls" => "chronicle_item_#{chronicle_item.id}", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#chronicle_item_#{chronicle_item.id}"}
       %p
-        %small.text-muted
-          = icon('calendar')
-          = chronicle_item.period
-          &nbsp;
-          = icon('clock-o')
-          = distance_of_time_in_words(chronicle_item.ended_at_extended, chronicle_item.started_at)
+        %small.text-muted.period
+          %span
+            = icon('calendar')
+            = chronicle_item.period
+          %span
+            = icon('clock-o')
+            = distance_of_time_in_words(chronicle_item.ended_at_extended, chronicle_item.started_at)
         - if chronicle_item.address
           - address = chronicle_item.address
           %br
