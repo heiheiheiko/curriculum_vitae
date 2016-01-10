@@ -4,7 +4,7 @@
       = "#{@applicant.first_name} #{@applicant.last_name}"
       .slogan= @applicant.slogan
 
-    %ul.nav.navbar-nav.pull-right{ role: 'tablist'}
+    %ul.nav.navbar-nav.pull-right.hidden-sm-down{ role: 'tablist'}
       %li.nav-item
         = link_to t(:header, scope: 'applicant.introduction'), '#goto-introduction', class: 'nav-link anchor'
       %li.nav-item
