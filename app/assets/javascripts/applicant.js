@@ -1,17 +1,4 @@
 $(function() {
-  // introduction
-  $('#introduction .card:eq(0)').addClass('active');
-
-  $('#introduction').find('.card').click(function() {
-    cards = $(this).parent().find('.card')
-    cards.find('img').animate({opacity: 0.4}, 500);
-    cards.find('.card-title').animate({opacity: 0}, 500);
-    cards.find('.card-text').animate({opacity: 0}, 500);
-    cards.removeClass('active');
-
-    $(this).addClass('active');
-  });
-
   // chronicle
   $('#chronicle .filter').hide();
 
