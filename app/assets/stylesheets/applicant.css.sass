@@ -1,6 +1,9 @@
 section
   position: relative
 
+.navbar-introduction
+  background-color: $brown
+  @extend .navbar-dark
 #introduction
   background-color: $brown_light
   margin-top: 72px
@@ -18,7 +21,11 @@ section
       text-align: center
       vertical-align: middle
 
+.navbar-chronicle
+  background-color: $blue
+  @extend .navbar-dark
 #chronicle
+  background-color: white
   .filter
     @include media-breakpoint-down(lg)
       display: none !important

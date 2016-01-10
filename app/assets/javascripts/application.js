@@ -22,10 +22,14 @@ $(function () {
 
   $(document).scroll(function() {
     selector = $('header .navbar');
-    if ($(this).scrollTop() >= 5) {
-      selector.switchClass('navbar-light', 'navbar-dark', 150);
-    } else {
-      selector.switchClass('navbar-dark', 'navbar-light', 150);
+    goto_element_height = 70
+    fixed_header_height = 72
+    correction = goto_element_height + fixed_header_height
+    if ($(this).scrollTop() >= ($('#goto-chronicle').position().top - correction)) {
+      selector.switchClass('navbar-introduction', 'navbar-chronicle', 150);
+    }
+    if ($(this).scrollTop() < ($('#goto-chronicle').position().top - correction)) {
+      selector.switchClass('navbar-chronicle', 'navbar-introduction', 150);
     }
   });
 })
