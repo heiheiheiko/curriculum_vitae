@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151219115221) do
+ActiveRecord::Schema.define(version: 20160115152055) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20151219115221) do
     t.integer  "skill_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "experience"
   end
 
   add_index "chronicle_item_skills", ["chronicle_item_id"], name: "index_chronicle_item_skills_on_chronicle_item_id"
