@@ -1,11 +1,12 @@
 section
   position: relative
 
+$introduction_color: $material_red
 .navbar-introduction
-  background-color: $brown
+  background-color: $introduction_color
   @extend .navbar-dark
 #introduction
-  background-color: $brown_light
+  background-color: lighten($introduction_color, $level1)
   margin-top: 72px
   .table-wrapper
     display: table
@@ -22,7 +23,7 @@ section
       vertical-align: middle
 
 .navbar-chronicle
-  background-color: $blue
+  background-color: $material_blue
   @extend .navbar-dark
 #chronicle
   background-color: white
@@ -47,4 +48,4 @@ section
     margin-right: 5px
 
 #skills
-  background-color: $yellow_light
+  background-color: $material_yellow

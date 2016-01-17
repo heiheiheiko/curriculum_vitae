@@ -1,51 +1,43 @@
-$lighten_defalut: 13.5%
-$darken_defalut: 13.5%
+$level1: 13.5%
+$level2: 20%
+$level3: 33.5%
+$level4: 46.7%
+$level5: 93.5%
 
-$red: #FF6961
-$red_light: #FF6961
-$red_dark: #FF6961
+// https://www.google.com/design/spec/style/color.html
+$material_red: #F44336
+$material_pink: #E91E63
+$material_purple: #9C27B0
+$material_deep_purple: #673AB7
 
-$green: #77DD77
-$green_light: lighten($green, $lighten_defalut)
-$green_dark: darken($green, $darken_defalut)
+$material_indigo: #3F51B5
+$material_blue: #2196F3
+$material_light_blue: #03A9F4
+$material_cyan: #00BCD4
+$material_teal: #009688
 
-$blue: #AEC6CF
-$blue_light: lighten($blue, $lighten_defalut)
-$blue_dark: darken($blue, $darken_defalut)
+$material_green: #4CAF50
+$material_light_green: #8BC34A
+$material_lime: #CDDC39
 
-$orange: #FFB347
-$orange_light: lighten($orange, $lighten_defalut)
-$orange_dark: darken($orange, $darken_defalut)
+$material_yellow: #FFEB3B
+$material_amber: #FFC107
+$material_orange: #FF9800
+$material_deep_orange: #FF5722
 
-$violet: #CB99C9
-$violet_light: lighten($violet, $lighten_defalut)
-$violet_dark: darken($violet, $darken_defalut)
+$material_brown: #795548
+$material_grey: #9E9E9E
+$material_blue_grey: #607D8B
 
-$brown: #836953
-$brown_light: lighten($brown, $lighten_defalut)
-$brown_dark: darken($brown, $darken_defalut)
+// bootstrap
+$gray-darker:            darken($gray, $level2)
+$gray-dark:              darken($gray, $level1)
+$gray:                   $material_grey
+$gray-light:             lighten($gray, $level1)
+$gray-lighter:           lighten($gray, $level2)
 
-$gray: #CFCFC4
-$gray_light: lighten($gray, $lighten_defalut)
-$gray_dark: darken($gray, $darken_defalut)
-
-$yellow: #FDFD96
-$yellow_light: lighten($yellow, $lighten_defalut)
-$yellow_dark: darken($yellow, $darken_defalut)
-
-$magenta: #f49ac2
-$magenta_light: lighten($magenta, $lighten_defalut)
-$magenta_dark: darken($magenta, $darken_defalut)
-
-$gray-darker: darken($gray, 13.5%)
-$gray-dark: darken($gray, 20%)
-$gray: lighten($gray, 33.5%)
-$gray-light: lighten($gray, 60%)
-$gray-lighter: lighten($gray, 93.5%)
-$gray-lightest: lighten($gray, 97.25%)
-
-$brand-primary: $yellow
-$brand-success: $green
-$brand-info: $blue
-$brand-warning: $orange
-$brand-danger: $red
+$brand-primary: $material_yellow
+$brand-success: $material_green
+$brand-info: $material_blue
+$brand-warning: $material_orange
+$brand-danger: $material_red
