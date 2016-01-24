@@ -13,19 +13,24 @@ class ChronicleItem < ActiveRecord::Base
     "#{start_date} - #{end_date}"
   end
 
-  def ended_at_extended
-    ended_at ? ended_at + 1.month : Date.current
+  def time_range
+    @period ||= ::TimeRange.new(started_at, ended_at)
   end
 
-  def card_title
-    position ? I18n.t(position, scope: 'enums.chronicle_item.position') : title
+  def ended_at_extended
+    ended_at ? ended_at + 1.month : Date.current + 1.month
   end
 
   def card_body?
     [description_items, skills].compact.flatten.present?
   end
 
+  # decorator
   def description_items
     description ? description.split(';') : []
+  end
+
+  def card_title
+    position ? I18n.t(position, scope: 'enums.chronicle_item.position') : title
   end
 end

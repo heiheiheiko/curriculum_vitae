@@ -7,3 +7,10 @@ de:
       filter: Filter
       tooltip_disable: '%{model} ausblenden'
       tooltip_enable: '%{model} einblenden'
+  time_range:
+    year: Jahr
+    month: Monat
+    years: Jahre
+    months: Monate
+    and: ' und '
+    today: heute
