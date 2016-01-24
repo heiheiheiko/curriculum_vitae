@@ -16,8 +16,10 @@
 //= require jquery-ui
 //= require bootstrap-sprockets
 //= require_tree .
-
+//= require highcharts/highcharts
+//= require highcharts/highcharts-more
 $(function () {
+  var lastScrollTop = 0;
   $('[data-toggle="tooltip"]').tooltip()
 
   $(document).scroll(function() {
@@ -25,11 +27,33 @@ $(function () {
     goto_element_height = 70
     fixed_header_height = 72
     correction = goto_element_height + fixed_header_height
-    if ($(this).scrollTop() >= ($('#goto-chronicle').position().top - correction)) {
-      selector.switchClass('navbar-introduction', 'navbar-chronicle', 150);
+
+    chronicle_break_point = $('#goto-chronicle').position().top - correction
+    skills_break_point = $('#goto-skills').position().top - correction
+
+    var x = $(this).scrollTop();
+    if (x > lastScrollTop){
+      switch (true) {
+        case (0 <= x && x < chronicle_break_point):
+            selector.switchClass('navbar-chronicle', 'navbar-introduction', 150);
+            break;
+        case (chronicle_break_point <= x && x < skills_break_point):
+            selector.switchClass('navbar-introduction', 'navbar-chronicle', 150);
+            break;
+        case (x > skills_break_point):
+            selector.switchClass('navbar-chronicle', 'navbar-skills', 150);
+            break;
+      }
+    } else {
+      switch (true) {
+        case (skills_break_point >= x && x > chronicle_break_point ):
+            selector.switchClass('navbar-skills', 'navbar-chronicle', 150);
+            break;
+        case ( chronicle_break_point > x && x >= 0):
+            selector.switchClass('navbar-chronicle', 'navbar-introduction', 150);
+            break;
+      }
     }
-    if ($(this).scrollTop() < ($('#goto-chronicle').position().top - correction)) {
-      selector.switchClass('navbar-chronicle', 'navbar-introduction', 150);
-    }
+    lastScrollTop = x;
   });
 })

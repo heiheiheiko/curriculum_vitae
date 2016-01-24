@@ -7,18 +7,8 @@ class ChronicleItem < ActiveRecord::Base
   has_many :chronicle_item_skills
   has_many :skills, through: :chronicle_item_skills
 
-  def period
-    start_date =  I18n.l started_at, format: '%m/%Y'
-    end_date = ended_at ? I18n.l(ended_at, format: '%m/%Y') : 'heute'
-    "#{start_date} - #{end_date}"
-  end
-
   def time_range
     @period ||= ::TimeRange.new(started_at, ended_at)
-  end
-
-  def ended_at_extended
-    ended_at ? ended_at + 1.month : Date.current + 1.month
   end
 
   def card_body?

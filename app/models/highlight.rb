@@ -1,4 +1,6 @@
 class Highlight < ChronicleItem
+
+  # decorator
   def card_sub_title
     nil
   end

@@ -19,6 +19,10 @@ RSpec.describe TimeRange do
     it{ expect(time_range_1.period_as_dates).to eq '10/2015 - 10/2016' }
   end
 
+  context '.range_in_years' do
+    it{ expect(time_range_1.range_in_years).to eq 1.0833333333333333 }
+  end
+
   context '+' do
     let(:time_range_sum){ time_range_1 + time_range_2 }
     it{ expect(time_range_sum.send(:years)).to eq 3 }

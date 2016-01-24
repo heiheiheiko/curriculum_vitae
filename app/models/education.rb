@@ -1,4 +1,6 @@
 class Education < ChronicleItem
+
+  # decorator
   def card_sub_title
     graduation
   end

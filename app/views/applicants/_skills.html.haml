@@ -1,0 +1,66 @@
+- i18n_scope = 'applicant.skills'
+%span.goto#goto-skills
+%section#skills
+  .container
+    %h1= t(:header, scope: i18n_scope)
+    #highcharts
+    - applicant.skill_type_groups.each do |skill_type_group|
+      .card.card-inverse.card-primary
+        .card-block
+          %blockquote
+            %h3= skill_type_group.title
+            %footer
+              = high_chart(skill_type_group.type, skill_type_group.chart) do |c|
+                = raw "options.tooltip.formatter = function() { return '<b>' + this.series.name +'</b>: '+ tooltip_formatter(this.y); }"
+                = raw "options.tooltip.positioner = function(box_width, box_height, point) { return  tooltip_positioner(#{skill_type_group.type}, box_width, point); };"
+
+:javascript
+  function tooltip_formatter(years) {
+    months = (years * 12) % 12
+    years = parseInt(years)
+
+    months_string = ''
+    switch(months) {
+      case 0:
+        months_string = ''
+        break;
+      case 1:
+        months_string = "1 Monat"
+        break;
+      default:
+        months_string = months + " Monate"
+    }
+
+    years_string = ''
+    switch(years) {
+      case 0:
+        years_string = ''
+        break;
+      case 1:
+        years_string = "1 Jahr"
+        break;
+      default:
+        years_string = years + " Jahre"
+    }
+
+    if (!(years_string == '') && !(months_string == '')){
+      return years_string + ' und ' + months_string
+    } else {
+      return years_string + months_string
+    }
+  }
+
+  function tooltip_positioner(selector, box_width, point) {
+    chart=$(selector).highcharts()
+    var tooltipX, tooltipY;
+    if (point.plotX + box_width > chart.plotWidth) {
+        tooltipX = point.plotX + chart.plotLeft - box_width - 20;
+    } else {
+        tooltipX = point.plotX + chart.plotLeft + 20;
+    }
+    tooltipY = point.plotY + chart.plotTop - 20;
+    return {
+        x: tooltipX,
+        y: tooltipY
+    };
+  }
