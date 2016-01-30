@@ -26,6 +26,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'guard-livereload', '~> 2.4', require: false
 end
 
 group :development, :test do
@@ -36,6 +37,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'thin'
   gem 'pry'
+  gem 'guard'
 end
 
 group :production do
