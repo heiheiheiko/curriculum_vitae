@@ -17,3 +17,14 @@ de:
         student_assistant: studentische Hilfskraft
         bachelor: Bachelorand
         employee: Angestellter
+    chronicle_item_skill:
+      experience:
+        frequent: Regelmäßig
+        regular: Häufig
+        rare: Hin und wieder
+    skill:
+      type:
+        software: Software
+        technology: Technologien
+        area: Bereiche
+        conditions: Methoden, Architekturen, Prinzipien

@@ -30,6 +30,7 @@ $introduction_color: $material_red
   .filter
     position: fixed
     top: 100px
+    z-index: 1000
     .timeline-badge
       width: 50px
       height: 50px
@@ -47,5 +48,26 @@ $introduction_color: $material_red
     display: inline-block
     margin-right: 5px
 
+$skills_color: $material_green
+.navbar-skills
+  background-color: $skills_color
+  @extend .navbar-dark
 #skills
-  background-color: $material_yellow
+  background-color: lighten($skills_color, $level1)
+  @extend .dark
+
+  .a
+    background-color: $material_teal
+    border: 1px solid $material_teal
+
+  .b
+    background-color: $material_indigo
+    border: 1px solid $material_indigo
+
+  .c
+    background-color: $material_deep_orange
+    border: 1px solid $material_deep_orange
+
+  .d
+    background-color: $material_deep_purple
+    border: 1px solid $material_deep_purple

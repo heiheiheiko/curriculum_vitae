@@ -4,7 +4,15 @@ $(function() {
 
   $(document).scroll(function() {
     selector = $('#chronicle .filter')
-    if ($(this).scrollTop() >= $('#chronicle').position().top) {
+    goto_element_height = 70
+    fixed_header_height = 72
+    correction = goto_element_height + fixed_header_height
+
+    chronicle_break_point = $('#goto-chronicle').position().top - correction
+    skills_break_point = $('#goto-skills').position().top - correction
+
+    x = $(this).scrollTop()
+    if ( chronicle_break_point <= x && x < skills_break_point ) {
       selector.fadeIn();
     } else {
       selector.fadeOut();
