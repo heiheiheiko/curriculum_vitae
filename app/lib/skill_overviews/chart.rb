@@ -1,6 +1,5 @@
 module SkillOverviews
   class Chart
-    I18N_SCOPE = 'enums.chronicle_item_skill.experience'
 
     def initialize(title, skill_groups)
       @title = title
@@ -10,6 +9,7 @@ module SkillOverviews
 
     def draw
       LazyHighCharts::HighChart.new('graph') do |f|
+
         f.chart(
           type: 'bar',
           backgroundColor:'rgba(255, 255, 255, 0)',
@@ -25,9 +25,10 @@ module SkillOverviews
           tickLength: 0
         )
 
-        f.series(name: I18n.t(:rare, scope: I18N_SCOPE), data: @rare)
-        f.series(name: I18n.t(:regular, scope: I18N_SCOPE), data: @regular)
-        f.series(name: I18n.t(:frequent, scope: I18N_SCOPE), data: @frequent)
+        i18n_scope = 'enums.chronicle_item_skill.experience'
+        f.series(name: I18n.t(:rare, scope: i18n_scope), data: @rare)
+        f.series(name: I18n.t(:regular, scope: i18n_scope), data: @regular)
+        f.series(name: I18n.t(:frequent, scope: i18n_scope), data: @frequent)
 
         f.plotOptions(
           series: { stacking: 'normal' },
@@ -39,8 +40,9 @@ module SkillOverviews
         )
 
         f.yAxis(
+          gridLineColor: '#fff',
           height: 25 * @skill_groups.size,
-          tickInterval: 1,
+          tickInterval: 5,
           title: {
             text: I18n.t('time_range.years'),
             style: { color: '#fff' }
@@ -59,6 +61,7 @@ module SkillOverviews
 
         f.legend(
           itemStyle: { color: '#fff' },
+          itemHoverStyle: { color: '#eee' },
           reversed: true,
           borderRadius:0,
           borderWidth:0
