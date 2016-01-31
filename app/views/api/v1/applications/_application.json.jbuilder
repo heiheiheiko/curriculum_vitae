@@ -2,10 +2,10 @@ json.partial! 'address', address: application.address
 
 json.(application,
   :position,
-  :letter,
+  :paragraphs,
   :availability,
   :salary_expectations,
-  :created_at
+  :created_at,
 )
 
 json.job_advertisement do
