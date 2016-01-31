@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160130235854) do
   create_table "applications", force: :cascade do |t|
     t.string   "position"
     t.text     "letter"
+    t.string   "auth_token"
     t.integer  "applicant_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
