@@ -5,10 +5,12 @@ RSpec.describe Information, type: :model do
 end
 
 RSpec.describe Faq, type: :model do
+  subject { Faq.new(informable_type: :personal) }
   it { should belong_to(:informable) }
 end
 
 RSpec.describe Interest, type: :model do
+  subject { Interest.new(informable_type: :personal) }
   it { should belong_to(:informable) }
 end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115152055) do
+ActiveRecord::Schema.define(version: 20160131020610) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(version: 20160115152055) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "applications", force: :cascade do |t|
+    t.string   "position"
+    t.text     "letter"
+    t.string   "auth_token"
+    t.integer  "applicant_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "applications", ["applicant_id"], name: "index_applications_on_applicant_id"
+
   create_table "chronicle_item_skills", force: :cascade do |t|
     t.integer  "chronicle_item_id"
     t.integer  "skill_id"
@@ -57,12 +68,12 @@ ActiveRecord::Schema.define(version: 20160115152055) do
     t.integer  "position"
     t.integer  "employment"
     t.string   "badge"
-    t.boolean  "important"
+    t.boolean  "important",    default: false
     t.string   "type"
     t.string   "graduation"
     t.integer  "applicant_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   add_index "chronicle_items", ["applicant_id"], name: "index_chronicle_items_on_applicant_id"
