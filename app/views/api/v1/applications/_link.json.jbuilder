@@ -1,5 +1,6 @@
 json.(link,
   :title,
   :description,
-  :url
+  :url,
+  :type
 )

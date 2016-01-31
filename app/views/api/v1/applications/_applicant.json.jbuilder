@@ -8,12 +8,8 @@ json.applicant do
     :mobile_phone
   )
 
-  json.images do
-    json.partial! 'link', collection: applicant.images, as: :link
-  end
-
-  json.websites do
-    json.partial! 'link', collection: applicant.websites, as: :link
+  json.links do
+    json.partial! 'link', collection: applicant.images + applicant.websites  , as: :link
   end
 
   json.chronicle_items do
