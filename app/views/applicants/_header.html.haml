@@ -1,7 +1,7 @@
 #header.navbar.navbar-introduction.navbar-fixed-top
   .container
     .navbar-brand
-      = "#{@applicant.first_name} #{@applicant.last_name}"
+      = @applicant.address.person
       .slogan= @applicant.slogan
 
     %ul.nav.navbar-nav.pull-right.hidden-sm-down{ role: 'tablist'}
