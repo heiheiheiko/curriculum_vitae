@@ -13,3 +13,5 @@ json.(chronicle_item,
 json.chronicle_item_skills do
   json.partial! 'chronicle_item_skill', collection: chronicle_item.chronicle_item_skills, as: :chronicle_item_skill
 end
+
+json.partial! 'address', address: chronicle_item.address
