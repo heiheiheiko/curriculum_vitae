@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131021726) do
+ActiveRecord::Schema.define(version: 20160131100332) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street"
@@ -42,8 +42,10 @@ ActiveRecord::Schema.define(version: 20160131021726) do
     t.text     "letter"
     t.string   "auth_token"
     t.integer  "applicant_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "salary_expectations"
+    t.date     "availability"
   end
 
   add_index "applications", ["applicant_id"], name: "index_applications_on_applicant_id"

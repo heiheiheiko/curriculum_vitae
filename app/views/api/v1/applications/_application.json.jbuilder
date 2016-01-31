@@ -3,6 +3,8 @@ json.partial! 'address', address: application.address
 json.(application,
   :position,
   :letter,
+  :availability,
+  :salary_expectations,
   :created_at
 )
 
