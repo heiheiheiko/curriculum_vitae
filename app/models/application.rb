@@ -3,7 +3,7 @@ class Application < ActiveRecord::Base
 
   belongs_to :applicant
   has_one :address, as: :addressable, dependent: :destroy
-  has_one :job_advertisement, as: :linkable, class_name: 'Website', dependent: :destroy
+  has_one :job_advertisement, as: :informable, class_name: 'Website', dependent: :destroy
 
   def paragraphs
     letter.split("\r")

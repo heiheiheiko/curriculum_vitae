@@ -1,2 +1,2 @@
-class Website < Link
+class Website < Information
 end

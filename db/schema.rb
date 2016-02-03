@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131100332) do
+ActiveRecord::Schema.define(version: 20160203113404) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street"
@@ -88,21 +88,9 @@ ActiveRecord::Schema.define(version: 20160131100332) do
     t.string   "informable_type"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "url"
   end
 
   add_index "information", ["informable_type", "informable_id"], name: "index_information_on_informable_type_and_informable_id"
-
-  create_table "links", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "url"
-    t.string   "type"
-    t.integer  "linkable_id"
-    t.string   "linkable_type"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "links", ["linkable_type", "linkable_id"], name: "index_links_on_linkable_type_and_linkable_id"
 
 end

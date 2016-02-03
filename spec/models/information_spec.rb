@@ -18,3 +18,11 @@ RSpec.describe Skill, type: :model do
   it { should belong_to(:informable) }
   it { should have_many(:chronicle_items).class_name('ChronicleItem') }
 end
+
+RSpec.describe Image, type: :model do
+  it { should belong_to(:informable) }
+end
+
+RSpec.describe Website, type: :model do
+  it { should belong_to(:informable) }
+end

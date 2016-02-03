@@ -1,2 +1,2 @@
-class Image < Link
+class Image < Information
 end

@@ -1,7 +1,5 @@
 class ChronicleItem < ActiveRecord::Base
   has_one :address, as: :addressable, dependent: :destroy
-  has_many :images, as: :linkable, dependent: :destroy
-  has_many :links, as: :linkable, dependent: :destroy
   belongs_to :applicant
 
   has_many :chronicle_item_skills

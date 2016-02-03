@@ -1,6 +1,10 @@
-class CreateLinks < ActiveRecord::Migration
-  def change
-    create_table :links do |t|
+class DropLinks < ActiveRecord::Migration
+  def up
+    drop_table :links
+  end
+
+  def down
+    create_table :links, id: false do |t|
       t.string :title
       t.text :description
       t.string :url
