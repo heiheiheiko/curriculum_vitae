@@ -1,21 +1,24 @@
 module Personal
   extend ActiveSupport::Concern
+  
+  COLOR_CLASS = 'personal'
+  ICON = 'home'
 
-  def self.color_class
-    self.class.color_class
+  def color_class
+    COLOR_CLASS
   end
 
-  def self.icon
-    self.class.icon
+  def icon
+    ICON
   end
 
   included do
     def self.color_class
-      'personal'
+      COLOR_CLASS
     end
 
     def self.icon
-      'home'
+      ICON
     end
   end
 end

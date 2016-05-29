@@ -1,21 +1,24 @@
 module Educational
   extend ActiveSupport::Concern
 
-  def self.color_class
-    self.class.color_class
+  COLOR_CLASS = 'educational'
+  ICON = 'graduation-cap'
+
+  def color_class
+    COLOR_CLASS
   end
 
-  def self.icon
-    self.class.icon
+  def icon
+    ICON
   end
 
   included do
     def self.color_class
-      'educational'
+      COLOR_CLASS
     end
 
     def self.icon
-      'graduation-cap'
+      ICON
     end
   end
 end

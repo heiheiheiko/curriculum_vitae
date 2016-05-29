@@ -30,6 +30,7 @@ $(function () {
 
     chronicle_break_point = $('#goto-chronicle').position().top - correction
     skills_break_point = $('#goto-skills').position().top - correction
+    interests_break_point = $('#goto-interests').position().top - correction
 
     var x = $(this).scrollTop();
     if (x > lastScrollTop){
@@ -40,12 +41,18 @@ $(function () {
         case (chronicle_break_point <= x && x < skills_break_point):
             selector.switchClass('navbar-introduction', 'navbar-chronicle', 150);
             break;
-        case (x > skills_break_point):
+        case (skills_break_point <= x && x < interests_break_point):
             selector.switchClass('navbar-chronicle', 'navbar-skills', 150);
+            break;
+        case (x > interests_break_point):
+            selector.switchClass('navbar-skills', 'navbar-interests', 150);
             break;
       }
     } else {
       switch (true) {
+        case (interests_break_point >= x && x > skills_break_point ):
+            selector.switchClass('navbar-interests', 'navbar-skills', 150);
+            break;
         case (skills_break_point >= x && x > chronicle_break_point ):
             selector.switchClass('navbar-skills', 'navbar-chronicle', 150);
             break;

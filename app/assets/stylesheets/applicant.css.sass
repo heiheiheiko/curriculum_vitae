@@ -54,6 +54,7 @@ $skills_color: $material_green
   @extend .navbar-dark
 #skills
   background-color: lighten($skills_color, $level1)
+  padding-bottom: 75px
   @extend .dark
 
   .a
@@ -71,3 +72,12 @@ $skills_color: $material_green
   .d
     background-color: $material_deep_purple
     border: 1px solid $material_deep_purple
+
+$interests_color: $material_deep_purple
+.navbar-interests
+  background-color: $interests_color
+  @extend .navbar-dark
+#interests
+  padding-bottom: 75px
+  // background-color: lighten($interests_color, $level1)
+  // @extend .dark

@@ -1,21 +1,24 @@
 module Professional
   extend ActiveSupport::Concern
 
-  def self.color_class
-    self.class.color_class
+  COLOR_CLASS = 'professional'
+  ICON = 'code'
+
+  def color_class
+    COLOR_CLASS
   end
 
-  def self.icon
-    self.class.icon
+  def icon
+    ICON
   end
 
   included do
     def self.color_class
-      'professional'
+      COLOR_CLASS
     end
 
     def self.icon
-      'code'
+      ICON
     end
   end
 end
