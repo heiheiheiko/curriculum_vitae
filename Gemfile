@@ -44,6 +44,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'puma'
+  gem 'google-analytics-rails'
 end
 
 group :test do
