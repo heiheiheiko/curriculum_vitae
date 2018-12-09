@@ -11,7 +11,7 @@
         %li{"data-slide-to" => "1", "data-target" => "#carousel"}
         %li{"data-slide-to" => "2", "data-target" => "#carousel"}
       .carousel-inner{:role => "listbox"}
-        - applicant.images.each_with_index do |i, index|
+        - applicant.images.order(:id).each_with_index do |i, index|
           .carousel-item{class: "#{'active' if index == 0 }"}
             .table-wrapper
               .image

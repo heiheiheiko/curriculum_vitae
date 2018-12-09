@@ -1,8 +1,8 @@
 #header.navbar.navbar-introduction.navbar-fixed-top
   .container
     .navbar-brand
-      = @applicant.address.person
-      .slogan= @applicant.slogan
+      = applicant.address.person
+      .slogan= applicant.slogan
 
     %ul.nav.navbar-nav.pull-right.hidden-sm-down{ role: 'tablist'}
       %li.nav-item
@@ -11,3 +11,5 @@
         = link_to t(:header, scope: 'applicant.chronicle'), '#goto-chronicle', class: 'nav-link anchor'
       %li.nav-item
         = link_to t(:header, scope: 'applicant.skills'), '#goto-skills', class: 'nav-link anchor'
+      %li.nav-item
+        = link_to t(:header, scope: 'applicant.interests'), '#goto-interests', class: 'nav-link anchor'

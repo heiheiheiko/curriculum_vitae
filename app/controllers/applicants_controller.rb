@@ -1,6 +1,7 @@
 class ApplicantsController < ApplicationController
   def show
     @applicant = load_applicant
+    @applicant.interests.each { |i| i.extend_decorators }
   end
 
   private

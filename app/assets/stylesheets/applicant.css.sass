@@ -54,20 +54,26 @@ $skills_color: $material_green
   @extend .navbar-dark
 #skills
   background-color: lighten($skills_color, $level1)
+  padding-bottom: 75px
   @extend .dark
-
-  .a
+  .software
     background-color: $material_teal
     border: 1px solid $material_teal
-
-  .b
+  .technology
     background-color: $material_indigo
     border: 1px solid $material_indigo
-
-  .c
+  .area
     background-color: $material_deep_orange
     border: 1px solid $material_deep_orange
-
-  .d
+  .conditions
     background-color: $material_deep_purple
     border: 1px solid $material_deep_purple
+
+$interests_color: $material_deep_purple
+.navbar-interests
+  background-color: $interests_color
+  @extend .navbar-dark
+#interests
+  padding-bottom: 75px
+  // background-color: lighten($interests_color, $level1)
+  // @extend .dark

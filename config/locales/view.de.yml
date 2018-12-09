@@ -9,6 +9,8 @@ de:
       tooltip_enable: '%{model} einblenden'
     skills:
       header: Skills
+    interests:
+      header: Interessen
   time_range:
     year: Jahr
     month: Monat

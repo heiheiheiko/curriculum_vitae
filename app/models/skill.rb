@@ -12,13 +12,13 @@ class Skill < Information
   def self.color_class_for(information_type)
     case information_type.to_sym
     when :software
-      'a'
+      'software'
     when :technology
-      'b'
+      'technology'
     when :area
-      'c'
+      'area'
     when :conditions
-      'd'
+      'conditions'
     end
   end
 end
