@@ -19,7 +19,7 @@ Skill.destroy_all
 
 # Applicants
 applicant = Applicant.create(
-  slogan: 'Spielkind, Entdecker, Enthusiast',
+  slogan: 'Spielkind, Entdecker, Verwirklicher',
   birthday: '18-07-1986',
   family_status: 'verheiratet',
   email: 'heiko.beineke@gmail.com',
@@ -41,7 +41,7 @@ Image.create(
   informable_type: applicant.model_name
 )
 Image.create(
-  title: 'Enthusiast',
+  title: 'Verwirklicher',
   description: 'Wer immer tut, was er schon kann, bleibt immer das, was er schon ist. - Henry Ford',
   url: 'https://lh3.googleusercontent.com/QJWnWquJx91n3EFGs24RuWw-ZvpOalqMLeS2j4AbNk5MwANXCVvjhk78UyjhXMtog9ILSDJSvgqbU3bnRnlVStVhs_bmv_tpozVOvgiTDuxuMZKoFlL6sRdK6Fjwo7tX7_IxlZJ2FppB4CYDlDceGcDxt7OIqfuD-R0qVjU73EhIaZLk3Vgn6Sh-fYI3oQEaSKfcfPyV3zNn15d-ZcfdY00vz6pAD48QTJTlM_RuftOuKnKVIDXHjurM-ovvVY_sRZUDLdxaCVBhBJQPGvWZefYTHkbwwXhT9J7vb12tyrC6N6H8VrX6Dn_P5IgRaQEhfdnUUZy6coMl0FdPDDrA7_l2awHsDe68g1CHBoTwIpd12lN-OE-a6-K8RfnKGb_ZxIDANvdFJmGF73BOmawspsaU44lh7dp-nsl-h7m_KmhUTut4123slakzK9kb1EBvTLWrmWl8ZUPLe_V-qpjnbneCOhr18umkxtHqH0j-sIFDcs9xsKcBBnNvkSzVzeE9iVtCr0aw8kO5tDm5rirLxxQQBlJ8E_-jURMad8rJCe9gPoG_FTvNl-C12gEreg3hmyTS=w430-h700-no',
   informable_id: applicant.id,
