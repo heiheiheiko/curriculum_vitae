@@ -7,6 +7,6 @@ class Highlight < ChronicleItem
   end
 
   def self.address_icon
-    'map-marker'
+    'map-marker-alt'
   end
 end

@@ -5,6 +5,10 @@ class ChronicleItem < ApplicationRecord
   has_many :chronicle_item_skills
   has_many :skills, through: :chronicle_item_skills
 
+  def self.address_icon_font
+    'fas'
+  end
+
   def time_range
     @period ||= ::TimeRange.new(started_at, ended_at)
   end

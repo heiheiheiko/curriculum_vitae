@@ -11,8 +11,8 @@
           - disable_tooltip_message = t(:tooltip_disable, scope: i18n_scope, model: klass.model_name.human)
           - enable_tooltip_message = t(:tooltip_enable, scope: i18n_scope, model: klass.model_name.human)
           = content_tag(:span, class: 'fa-stack fa-lg timeline-badge', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
-            = icon 'circle', class: "fa-stack-2x #{klass.color_class}"
-            = icon klass.icon, class: 'fa-stack-1x fa-inverse'
+            = icon 'fas', 'circle', class: "fa-stack-2x #{klass.color_class}"
+            = icon 'fas', klass.icon, class: 'fa-stack-1x fa-inverse'
 
   .container
     %h1= t(:header, scope: i18n_scope)

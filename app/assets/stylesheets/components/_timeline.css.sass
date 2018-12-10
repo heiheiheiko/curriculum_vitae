@@ -80,14 +80,17 @@
 .timeline-badge
   .fa-stack-2x
     z-index: 110
-    font-size: 3em
+    font-size: 2.5em
     line-height: 50px
     &.fa-star
-      left: -1px
+      left: -2px
   .fa-stack-1x
     z-index: 120
     font-size: 1em
     line-height: 50px
+  .fa-stack-2x.fa-star + .fa-stack-1x
+      font-size: 0.8em
+      line-height: 55px
 
 .timeline-badge .personal
   color: $personal

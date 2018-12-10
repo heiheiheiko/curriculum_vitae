@@ -1,10 +1,11 @@
 - alignment ||= nil
 
 %li{class: "#{('timeline-inverted' if alignment == :right)} #{chronicle_item.model_name.to_s.underscore}" }
-  %span.fa-stack.fa-lg.timeline-badge
+  %span.fa-stack.fa-2x.timeline-badge
     - badge_class = chronicle_item.important ? 'star' : 'circle'
-    = icon badge_class, class: "fa-stack-2x #{chronicle_item.class.color_class}"
-    = icon chronicle_item.badge, class: 'fa-stack-1x fa-inverse'
+    = icon "fas", badge_class, class: "fa-stack-2x #{chronicle_item.class.color_class}"
+    = icon "fas", chronicle_item.badge, class: 'fa-stack-1x fa-inverse'
+  </span>
   .timeline-card
     .timeline-heading
       .timeline-title
@@ -17,16 +18,16 @@
       %p
         %small.text-muted.period
           %span
-            = icon('calendar')
+            = icon 'far', 'calendar-alt'
             = chronicle_item.time_range.period_as_dates
           %span
-            = icon('clock-o')
+            = icon 'far', 'clock-o'
             = chronicle_item.time_range.period_in_words
         - if chronicle_item.address
           - address = chronicle_item.address
           %br
           %small.text-muted
-            = icon chronicle_item.class.address_icon
+            = icon chronicle_item.class.address_icon_font, chronicle_item.class.address_icon
             - if address.website
               = link_to address, address.website.url
             - else

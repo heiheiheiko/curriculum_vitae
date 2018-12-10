@@ -15,7 +15,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'rails-i18n'
-gem 'font-awesome-sass', '= 4.5.0'
+gem 'font-awesome-sass'
 gem 'lazy_high_charts'
 
 group :development do

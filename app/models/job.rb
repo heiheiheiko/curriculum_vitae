@@ -10,6 +10,10 @@ class Job < ChronicleItem
   end
 
   def self.address_icon
-    'building-o'
+    'building'
+  end
+
+  def self.address_icon_font
+    'far'
   end
 end
