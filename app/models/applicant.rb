@@ -1,4 +1,4 @@
-class Applicant < ActiveRecord::Base
+class Applicant < ApplicationRecord
   has_one :address, as: :addressable, dependent: :destroy
   has_many :images, as: :informable, dependent: :destroy
   has_many :websites, as: :informable, dependent: :destroy
