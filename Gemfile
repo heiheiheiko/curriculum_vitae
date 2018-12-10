@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.3.8'
-gem 'rails', '>= 5.0.0.rc2', '< 5.1'
+ruby '2.5.1'
+gem 'rails', '~> 5.2.2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 gem 'bootstrap', '= 4.0.0.alpha3'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -21,19 +20,19 @@ gem 'lazy_high_charts'
 group :development do
   gem 'better_errors'
   gem 'html2haml'
-  gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '>= 3.3.0'
   gem 'spring'
-  gem 'guard-livereload', '~> 2.4', require: false
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard-livereload'
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
-  gem 'shoulda-matchers', '~> 3.0'
+  gem 'shoulda-matchers'
   gem 'sqlite3'
   gem 'thin'
   gem 'pry'
@@ -41,14 +40,14 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.18'
+  gem 'pg', '>= 0.18', '< 2.0'
   gem 'rails_12factor'
-  gem 'puma'
+  gem 'puma', '~> 3.11'
   gem 'google-analytics-rails'
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '>= 2.15'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
