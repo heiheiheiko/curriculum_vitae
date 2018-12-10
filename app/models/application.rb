@@ -1,4 +1,4 @@
-class Application < ApplicationRecord
+class Application < ActiveRecord::Base
   before_create :generate_auth_token
 
   belongs_to :applicant
