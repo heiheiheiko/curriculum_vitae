@@ -168,7 +168,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    pg (1.1.3)
+    pg (0.21.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -320,7 +320,7 @@ DEPENDENCIES
   jquery-ui-rails
   launchy
   lazy_high_charts
-  pg
+  pg (~> 0.18)
   pry
   puma
   quiet_assets
