@@ -1,4 +1,4 @@
-class ChronicleItemSkill < ActiveRecord::Base
+class ChronicleItemSkill < ApplicationRecord
   belongs_to :skill
   belongs_to :chronicle_item
 

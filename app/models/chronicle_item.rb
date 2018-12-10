@@ -1,4 +1,4 @@
-class ChronicleItem < ActiveRecord::Base
+class ChronicleItem < ApplicationRecord
   has_one :address, as: :addressable, dependent: :destroy
   belongs_to :applicant
 
