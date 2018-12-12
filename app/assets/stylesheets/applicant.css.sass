@@ -1,12 +1,8 @@
-section
-  position: relative
-
-$introduction_color: $material_red
 .navbar-introduction
-  background-color: $introduction_color
+  background-color: $color-introduction
   @extend .navbar-dark
 #introduction
-  background-color: lighten($introduction_color, $level1)
+  background-color: lighten($color-introduction, $intensity-1)
   margin-top: 72px
   .table-wrapper
     display: table
@@ -22,8 +18,9 @@ $introduction_color: $material_red
       text-align: center
       vertical-align: middle
 
+
 .navbar-chronicle
-  background-color: $material_blue
+  background-color: $color-chronicle
   @extend .navbar-dark
 #chronicle
   background-color: white
@@ -48,32 +45,31 @@ $introduction_color: $material_red
     display: inline-block
     margin-right: 5px
 
-$skills_color: $material_green
+
 .navbar-skills
-  background-color: $skills_color
+  background-color: $color-skills
   @extend .navbar-dark
 #skills
-  background-color: lighten($skills_color, $level1)
+  background-color: lighten($color-skills, $intensity-1)
   padding-bottom: 75px
   @extend .dark
   .software
-    background-color: $material_teal
-    border: 1px solid $material_teal
+    background-color: $material-teal
+    border: 1px solid $material-teal
   .technology
-    background-color: $material_indigo
-    border: 1px solid $material_indigo
+    background-color: $material-indigo
+    border: 1px solid $material-indigo
   .area
-    background-color: $material_deep_orange
-    border: 1px solid $material_deep_orange
+    background-color: $material-deep_orange
+    border: 1px solid $material-deep_orange
   .conditions
-    background-color: $material_deep_purple
-    border: 1px solid $material_deep_purple
+    background-color: $material-deep_purple
+    border: 1px solid $material-deep_purple
 
-$interests_color: $material_deep_purple
+
 .navbar-interests
-  background-color: $interests_color
+  background-color: $color-interests
   @extend .navbar-dark
 #interests
   padding-bottom: 75px
-  // background-color: lighten($interests_color, $level1)
   // @extend .dark
