@@ -5,8 +5,8 @@
     %h1= t(:header, scope: i18n_scope)
     #highcharts
     - applicant.skill_type_groups.each do |skill_type_group|
-      %div{id: skill_type_group.type,class: "card card-inverse #{Skill.color_class_for(skill_type_group.type)}"}
-        .card-block
+      %div{id: skill_type_group.type, class: "card card-inverse #{Skill.color_class_for(skill_type_group.type)} mb-5"}
+        .card-body
           .card-title
             %h3= skill_type_group.title
           = high_chart("high-chart-#{skill_type_group.type}", skill_type_group.chart) do |c|

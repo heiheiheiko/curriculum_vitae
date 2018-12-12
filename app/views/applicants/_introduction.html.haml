@@ -1,16 +1,13 @@
 %span.goto#goto-introduction
 %section#introduction
-  %a.left.carousel-control.hidden-md-down{"data-slide" => "prev", :href => "#carousel", :role => "button"}
-    %span.icon-prev{"aria-hidden" => "true"}
-    %span.sr-only Previous
-
   .container
-    #carousel.carousel.slide{"data-ride" => "carousel"}
+    #introduction-carousel.carousel.slide{"data-ride" => "carousel"}
       %ol.carousel-indicators
-        %li.active{"data-slide-to" => "0", "data-target" => "#carousel"}
-        %li{"data-slide-to" => "1", "data-target" => "#carousel"}
-        %li{"data-slide-to" => "2", "data-target" => "#carousel"}
-      .carousel-inner{:role => "listbox"}
+        %li.active{"data-slide-to" => "0", "data-target" => "#introduction-carousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#introduction-carousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#introduction-carousel"}
+
+      .carousel-inner
         - applicant.images.order(:id).each_with_index do |i, index|
           .carousel-item{class: "#{'active' if index == 0 }"}
             .table-wrapper
@@ -23,6 +20,9 @@
             .carousel-caption
               %h3= i.title
 
-  %a.right.carousel-control.hidden-md-down{"data-slide" => "next", :href => "#carousel", :role => "button"}
-    %span.icon-next{"aria-hidden" => "true"}
-    %span.sr-only Next
+    %a.carousel-control-prev{"data-slide" => "prev", :href => "#introduction-carousel", :role => "button"}
+      %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.carousel-control-next{"data-slide" => "next", :href => "#introduction-carousel", :role => "button"}
+      %span.carousel-control-next-icon{"aria-hidden" => "true"}
+      %span.sr-only Next
