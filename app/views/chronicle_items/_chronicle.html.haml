@@ -1,8 +1,8 @@
 - i18n_scope = 'applicant.chronicle'
 %span.goto#goto-chronicle
 %section.section-chronicle.js-section-chronicle
-  .filter.hidden-lg-down
-    %ul
+  .filter
+    %ul.d-none.d-lg-block
       - ChronicleItem.subclasses.each do |klass|
         %li{class: klass.model_name.to_s.underscore }
           - disable_tooltip_message = t(:tooltip_disable, scope: i18n_scope, model: klass.model_name.human)
