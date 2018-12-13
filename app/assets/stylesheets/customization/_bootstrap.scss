@@ -28,3 +28,33 @@ $font-size-h3:            $size-3;
 $font-size-h4:            $size-4;
 $font-size-h5:            $size-5;
 $font-size-h6:            $size-6;
+
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// $spacer: 1rem !default;
+// $spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: (
+  1: $space-1,
+  2: $space-2,
+  3: $space-3,
+  4: $space-4,
+  5: $space-5,
+  6: $space-6,
+  7: $space-7,
+  8: $space-8,
+  '-1': (-$space-1),
+  '-2': (-$space-2),
+  '-3': (-$space-3),
+  '-4': (-$space-4),
+  '-5': (-$space-5),
+  '-6': (-$space-6),
+  '-7': (-$space-7),
+  '-8': (-$space-8)
+);
