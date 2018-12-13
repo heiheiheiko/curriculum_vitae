@@ -1,20 +1,19 @@
-.js-applicant-header
-  .navbar.navbar-introduction.fixed-top
-    .container
-      %nav.navbar.navbar-expand-lg.navbar-dark.w-100
-        %a.navbar-brand{:href => "#"} 
-          = applicant.address.person
-          .text-8= applicant.slogan
-        %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-          %span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          %ul.navbar-nav.ml-auto{ role: 'tablist'}
-            %li.nav-item
-              = link_to t(:header, scope: 'applicant.introduction'), '#goto-introduction', class: 'nav-link anchor'
-            %li.nav-item
-              = link_to t(:header, scope: 'applicant.chronicle'), '#goto-chronicle', class: 'nav-link anchor'
-            %li.nav-item
-              = link_to t(:header, scope: 'applicant.skills'), '#goto-skills', class: 'nav-link anchor'
-            %li.nav-item
-              = link_to t(:header, scope: 'applicant.interests'), '#goto-interests', class: 'nav-link anchor'
+.js-applicant-header.applicant-header-introduction.fixed-top
+  .container
+    %nav.navbar.navbar-expand-lg.navbar-dark.w-100
+      %a.navbar-brand{:href => "#"} 
+        = applicant.address.person
+        .text-8= applicant.slogan
+      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        %ul.navbar-nav.ml-auto{ role: 'tablist'}
+          %li.nav-item
+            = link_to t(:header, scope: 'applicant.introduction'), '#goto-introduction', class: 'nav-link anchor'
+          %li.nav-item
+            = link_to t(:header, scope: 'applicant.chronicle'), '#goto-chronicle', class: 'nav-link anchor'
+          %li.nav-item
+            = link_to t(:header, scope: 'applicant.skills'), '#goto-skills', class: 'nav-link anchor'
+          %li.nav-item
+            = link_to t(:header, scope: 'applicant.interests'), '#goto-interests', class: 'nav-link anchor'
             

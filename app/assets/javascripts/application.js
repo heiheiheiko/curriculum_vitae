@@ -18,46 +18,47 @@
 //= require_tree .
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
+
 $(function () {
   var lastScrollTop = 0;
   $('[data-toggle="tooltip"]').tooltip()
 
   $(document).scroll(function() {
-    selector = $('header .navbar');
-    goto_element_height = 70
-    fixed_header_height = 72
-    correction = goto_element_height + fixed_header_height
+    var selector = $('.js-applicant-header');
+    var goto_element_height = 70
+    var fixed_header_height = 72
+    var correction = goto_element_height + fixed_header_height
 
-    chronicle_break_point = $('#goto-chronicle').position().top - correction
-    skills_break_point = $('#goto-skills').position().top - correction
-    interests_break_point = $('#goto-interests').position().top - correction
+    var chronicle_break_point = $('#goto-chronicle').position().top - correction
+    var skills_break_point = $('#goto-skills').position().top - correction
+    var interests_break_point = $('#goto-interests').position().top - correction
 
     var x = $(this).scrollTop();
     if (x > lastScrollTop){
       switch (true) {
         case (0 <= x && x < chronicle_break_point):
-            selector.switchClass('navbar-chronicle', 'navbar-introduction', 150);
+            selector.switchClass('applicant-header-chronicle', 'applicant-header-introduction', 150);
             break;
         case (chronicle_break_point <= x && x < skills_break_point):
-            selector.switchClass('navbar-introduction', 'navbar-chronicle', 150);
+            selector.switchClass('applicant-header-introduction', 'applicant-header-chronicle', 150);
             break;
         case (skills_break_point <= x && x < interests_break_point):
-            selector.switchClass('navbar-chronicle', 'navbar-skills', 150);
+            selector.switchClass('applicant-header-chronicle', 'applicant-header-skills', 150);
             break;
         case (x > interests_break_point):
-            selector.switchClass('navbar-skills', 'navbar-interests', 150);
+            selector.switchClass('applicant-header-skills', 'applicant-header-interests', 150);
             break;
       }
     } else {
       switch (true) {
         case (interests_break_point >= x && x > skills_break_point ):
-            selector.switchClass('navbar-interests', 'navbar-skills', 150);
+            selector.switchClass('applicant-header-interests', 'applicant-header-skills', 150);
             break;
         case (skills_break_point >= x && x > chronicle_break_point ):
-            selector.switchClass('navbar-skills', 'navbar-chronicle', 150);
+            selector.switchClass('applicant-header-skills', 'applicant-header-chronicle', 150);
             break;
         case ( chronicle_break_point > x && x >= 0):
-            selector.switchClass('navbar-chronicle', 'navbar-introduction', 150);
+            selector.switchClass('applicant-header-chronicle', 'applicant-header-introduction', 150);
             break;
       }
     }
@@ -66,7 +67,7 @@ $(function () {
 })
 
 function rgb2hex(rgb) {
-  rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+  var rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
   function hex(x) {
       return ("0" + parseInt(x).toString(16)).slice(-2);
   }
@@ -75,7 +76,7 @@ function rgb2hex(rgb) {
 
 function color_luminance(hex, lum) {
   // validate hex string
-  hex = String(hex).replace(/[^0-9a-f]/gi, '');
+  var hex = String(hex).replace(/[^0-9a-f]/gi, '');
   if (hex.length < 6) {
     hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
   }
