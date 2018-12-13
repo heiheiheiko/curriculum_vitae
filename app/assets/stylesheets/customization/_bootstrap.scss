@@ -1,16 +1,26 @@
-//== Typography
+// Fonts
 //
-//## Font, line-height, and color for body text, headings, and more.
+// Font, line-height, and color for body text, headings, and more.
 
-// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:  $font-family-normal;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
 $font-family-base:        $font-family-normal;
 
 $font-size-base:          $size-6;
-$font-size-large:         $size-5;
-$font-size-small:         $size-8;
+$font-size-lg:            $size-5;
+$font-size-sm:            $size-8;
+
+// $font-weight-lighter:         lighter !default;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            600;
+// $font-weight-bolder:          bolder !default;
+
+// $font-weight-base:            $font-weight-normal !default;
+// $line-height-base:            1.5 !default;
 
 $font-size-h1:            $size-1;
 $font-size-h2:            $size-2;
