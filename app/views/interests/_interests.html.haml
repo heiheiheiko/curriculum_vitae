@@ -2,8 +2,8 @@
 %span.goto#goto-interests
 %section.section-interests
   .container
-    %h1= t(:header, scope: i18n_scope)
+    %h1.text-center.p-3.m-0= t(:header, scope: i18n_scope)
     .f-row.f-wrap.mx--6
       - applicant.interests.each do |i|
-        .card.card-body.mx-6.mb-6{class: i.color_class}
-          %h2.m-0= i.title
+        .card.card-body.py-6.px-6.mx-7.mb-6{class: i.color_class}
+          %h4.m-0= i.title

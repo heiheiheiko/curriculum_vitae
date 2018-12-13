@@ -12,7 +12,7 @@
             = icon 'fas', klass.icon, class: 'fa-stack-1x fa-inverse'
 
   .container
-    %h1= t(:header, scope: i18n_scope)
+    %h1.text-center.p-3.m-0= t(:header, scope: i18n_scope)
     %ul.timeline
       - applicant.chronicle_items.sort_by(&:id).each do |ci|
         - alignment = ci.id.even? ? :right : nil
