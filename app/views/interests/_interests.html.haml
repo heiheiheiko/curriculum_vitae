@@ -3,6 +3,7 @@
 %section.section-interests
   .container
     %h1= t(:header, scope: i18n_scope)
-    - applicant.interests.each do |i|
-      .card.card-body.mb-4{class: i.color_class}
-        %h2= i.title
+    .f-row.f-wrap.mx--6
+      - applicant.interests.each do |i|
+        .card.card-body.mx-6.mb-6{class: i.color_class}
+          %h2.m-0= i.title
