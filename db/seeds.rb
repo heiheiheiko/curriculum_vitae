@@ -1,12 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 p 'start'
+
+######################################################################################################
+# clean up
+######################################################################################################
+
 Application.destroy_all
 Applicant.destroy_all
 ChronicleItem.destroy_all
@@ -17,7 +14,12 @@ Website.destroy_all
 Information.destroy_all
 Skill.destroy_all
 
-# Applicants
+
+
+######################################################################################################
+# applicants
+######################################################################################################
+
 applicant = Applicant.create(
   slogan: 'Spielkind, Entdecker, Verwirklicher',
   birthday: '18-07-1986',
@@ -82,59 +84,13 @@ Website.create(
   informable_type: applicant.model_name
 )
 
-# Application
-application= Application.create(
-  applicant: applicant,
-  letter: "“Wer immer tut, was er schon kann, bleibt immer das, was er schon ist”. Das ist nicht nur mein Lieblingszitat von Henry Ford, sondern auch so eine Art persönliches Leitbild. Denn meiner Meinung nach ist Fortschritt vor allem durch fehlende Entwicklungsbereitschaft beschränkt. Unglücklicherweise arbeite ich derzeit für ein sehr traditionell ausgerichtetes Unternehmen, welches über weniger Entwicklungsbereitschaft verfügt als mir lieb ist. Und bei der Suche nach einer neuen Mission bin ich auf Eure ‘job.rb’ aufmerksam geworden.\rIch bin ein absoluter Verfechter digitaler Prozesse. Nach meiner Erfahrung nach sind analoge Prozesse meistens zeitaufwendig, kostenintensiv, langsam und nervig. Und zu unser aller Leidwesen hat die deutsche Bürokratie viele solcher Prozesse für uns parat. Und im Gesundheitssystem sieht es leider nicht besser aus. Ich sehe das immer bei meiner Frau. Sie leidet jetzt schon länger an unerklärlichen Bauchschmerzen und muss ständig ihre Unterlagen für ihre Ärzte zusammenhalten. Gerade wenn man bedenkt was uns die heutige Zeit für technologischen Möglichkeiten bietet ist mir das einfach unverständlich. Daher bin ich von der Idee rund um 'lifetime' einfach nur begeistert. Deswegen könnte ich mir vorstellen, dass es sich bei 'lifetime' um die nächste technologische Revolution im Gesundheitswesen handeln könnte. Und da wäre ich gerne dabei!\rDehalb möchte ich gerne Eurem Team beitreten! Zugegeben. Meine Englischkenntnisse sind noch ausbaufähig. Aber ich bin ein leidenschaftlicher Full-Stack Developer, der vielseitig interessiert und einsetzbar sowie von modernen Web-Technologien und Arbeitsansätze überzeugt ist. Dabei habe ich vor allem den Einsatz der Technologien Git, GitHub, Ruby, Ruby on Rails, Haml, Bootstrap, Sass und jQuery zu schätzen gelernt, wobei ich offen für neues bleibe. Ich liebe meinen Job und bin sehr am fachlichem Austausch und meiner persönlichen Weiterentwicklung interessiert.\rIch bin eine bodenständige, begeisterungsfähige und aufgeschlossene Persönlichkeit, die sich danach sehnt zusammen mit einem ethusiatischen Team etwas Großartiges zu schaffen. Das wichtigste für mich ist wahrscheinlich der Spaß an der Arbeit. Ein freundschaftliches Arbeitsklima ist für mich daher ein wesentlicher Wohlfühlfaktor. Zudem bin ich inzwischen ein großer Freund einer ausgewogenen Work-Life-Ballance geworden. Meine Gehaltsvorstellungen liegen bei etwa 46.000 € jährlich und ich wäre voraussichtlich ab dem 01.06.2016 verfügbar.\rGerne würde ich mal auf eine Club-Mate vorbeikommen. Bis dahin würde ich mich freue wieder von Euch zu hören.",
-  position: 'Web Developer',
-  salary_expectations: 46000,
-  availability: '01-06-2016'
-)
 
-address = Address.create(
-  person: 'Matthias Lau',
-  name: 'connected-health.eu GmbH',
-  street: 'Lerchenstr. 107',
-  zip: '22767',
-  city: 'Hamburg',
-  addressable_id: application.id,
-  addressable_type: application.model_name
-)
-
-Website.create(
-  url: 'https://lifetime.eu/jobs/web-developer?locale=de',
-  informable_id: application.id,
-  informable_type: application.model_name
-)
 
 ######################################################################################################
-# Faq.create(
-#   title: 'Frage',
-#   description: 'Antwort',
-#   information_type: :personal,
-#   informable_id: applicant.id,
-#   informable_type: applicant.model_name
-# )
-# Faq.create(
-#   title: 'Frage',
-#   description: 'Antwort',
-#   information_type: :company,
-#   informable_id: applicant.id,
-#   informable_type: applicant.model_name
-# )
-#
-
-
-# personality
-# Zurückhaltend - Ich bin nicht gerade ein Alleinunterhalter. Was nicht bedeutet, dass ich nicht's zu sagen hätte. Im Gegenteil. Ich bin ein guter Zuhörer und bringe mich bedacht mit ein wenn es meiner Meinung nach Sinn macht.
-# Qualitätsorientiert - Ich bin immer um die bestmöglichste Lösung interessiert. Guidlines, Test, Wartung
-# Problemlösungsorientiert - Wo andere noch mit der Schuldfrage beschäftigt sind arbeite ich schon an der Lösung! Ich neige auch nicht dazu den Kopf in den Sand zu stecken, falls mir mal ein Missgeschick passiert.
-# Ausgeprägtes Gerechtigkeitssinn - Loyal - Solange ich mich fair behandelt fühle
-
+# skills
 ######################################################################################################
-# Skill
-## Fähigkeiten
-### Bereiche
+
+# area
 Skill.create(title: 'Projektmanagement', information_type: :area)
 Skill.create(title: 'Prozessoptimierung', information_type: :area)
 Skill.create(title: 'Softwarequalität', information_type: :area)
@@ -145,7 +101,7 @@ Skill.create(title: 'Backend Development', information_type: :area)
 Skill.create(title: 'Usability', information_type: :area)
 Skill.create(title: 'Mobile Optimierung', information_type: :area)
 
-### Methoden, Prinzipien, Architekturen - Bedigungen
+# conditions
 Skill.create(title: 'Continuous Testing', information_type: :conditions)
 Skill.create(title: 'Error Tracking', information_type: :conditions)
 Skill.create(title: 'Test Driven', information_type: :conditions)
@@ -161,7 +117,7 @@ Skill.create(title: 'Kanban', information_type: :conditions)
 Skill.create(title: 'Scrum', information_type: :conditions)
 Skill.create(title: 'Lean Startup', information_type: :conditions)
 
-### Technologien
+# technology
 Skill.create(title: 'Assembler', information_type: :technology)
 Skill.create(title: 'Visual Basic', information_type: :technology)
 Skill.create(title: 'C', information_type: :technology)
@@ -175,7 +131,6 @@ Skill.create(title: 'RSpec', information_type: :technology)
 Skill.create(title: 'Capybara', information_type: :technology)
 Skill.create(title: 'Python', information_type: :technology)
 Skill.create(title: 'Django', information_type: :technology)
-
 Skill.create(title: 'SQL', information_type: :technology)
 Skill.create(title: 'Oracle', information_type: :technology)
 Skill.create(title: 'MySQL', information_type: :technology)
@@ -200,7 +155,8 @@ Skill.create(title: 'JSON', information_type: :technology)
 Skill.create(title: 'XML', information_type: :technology)
 Skill.create(title: 'BPMN 2.0', information_type: :technology)
 Skill.create(title: 'UML', information_type: :technology)
-### Software
+
+# software
 Skill.create(title: 'Windows', information_type: :software)
 Skill.create(title: 'Ubuntu', information_type: :software)
 Skill.create(title: 'Mac OS', information_type: :software)
@@ -234,7 +190,12 @@ Skill.create(title: 'GIMP', information_type: :software)
 Skill.create(title: 'Office', information_type: :software)
 Skill.create(title: 'Google Drive', information_type: :software)
 
+
+
 ######################################################################################################
+# chronicle
+######################################################################################################
+
 address = Address.create(
   zip: '48653',
   city: 'Coesfeld'
@@ -249,7 +210,10 @@ Highlight.create(
   address: address
 )
 
+
 ######################################################################################################
+
+
 school = Address.create(
   name: 'KVG Gesamtschule Nordwalde',
   street: 'Amtmann-Daniel-Straße 30',
@@ -269,7 +233,10 @@ ci = Education.create(
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Windows').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Office').id, experience: :frequent)
 
+
 ######################################################################################################
+
+
 school = Address.create(
   name: 'Wirtschaftsschulen des Kreises Steinfurt',
   street: 'Bahnhofstraße 28',
@@ -290,7 +257,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Office').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Visual Basic').id, experience: :rare)
 
+
 ######################################################################################################
+
+
 Highlight.create(
   started_at: '22-02-2004',
   ended_at: nil,
@@ -300,7 +270,10 @@ Highlight.create(
   applicant: applicant
 )
 
+
 ######################################################################################################
+
+
 Highlight.create(
   started_at: '01-10-2006',
   ended_at: nil,
@@ -310,7 +283,10 @@ Highlight.create(
   applicant: applicant
 )
 
+
 ######################################################################################################
+
+
 school = Address.create(
   name: 'Technische Schulen des Kreises Steinfurt',
   street: 'Liedekerker Str. 84',
@@ -345,7 +321,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'SQL').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'MySQL').id, experience: :rare)
 
+
 ######################################################################################################
+
+
 Highlight.create(
   started_at: '01-03-2002',
   ended_at: '01-09-2009',
@@ -356,7 +335,10 @@ Highlight.create(
   applicant: applicant
 )
 
+
 ######################################################################################################
+
+
 school = Address.create(
   name: 'Fachhochschule Münster',
   street: 'Bismarckstraße 11',
@@ -387,7 +369,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'UML').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Software Engineering').id, experience: :frequent)
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'Fachhochschule Münster',
   street: 'Corrensstraße 25',
@@ -418,7 +403,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Sublime Text').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Web Engineering').id, experience: :regular)
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'zeb/rolfes.schierenbeck.associates GmbH',
   street: 'Hammer Str. 165',
@@ -449,7 +437,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Web Engineering').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'GIMP').id , experience: :rare)
 
+
 ######################################################################################################
+
+
 address = Address.create(
   street: 'Theodor-Heuss-Str. 8',
   zip: '48341',
@@ -464,7 +455,10 @@ Highlight.create(
   address: address
 )
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'gloud GmbH',
   street: 'Hafenstraße 29- 31',
@@ -496,7 +490,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Sublime Text').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Web Engineering').id , experience: :regular)
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'Fachhochschule Münster',
   street: 'Corrensstraße 25',
@@ -550,7 +547,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'GIMP').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Continuous Testing').id , experience: :regular)
 
+
 ######################################################################################################
+
+
 Highlight.create(
   started_at: '22-02-2013',
   ended_at: nil,
@@ -560,7 +560,10 @@ Highlight.create(
   applicant: applicant
 )
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'COMPEON GmbH',
   street: 'Kirchstraße 6',
@@ -621,7 +624,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'KVP').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Lean Startup').id, experience: :regular)
 
+
 ######################################################################################################
+
+
 school = Address.create(
   name: 'Fachhochschule Münster',
   street: 'Corrensstraße 25',
@@ -679,7 +685,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'PostgreSQL').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'SQL').id, experience: :frequent)
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'Fuchs Gewürze GmbH',
   street: 'Industriestraße 25',
@@ -748,7 +757,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Webservices').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Heterogene Systemlandschaften').id, experience: :regular)
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'deltacity.NET GmbH & Co. KG',
   street: 'Spatzenweg 2',
@@ -788,7 +800,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'MySQL').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'DiffMerge').id, experience: :frequent)
 
+
 ######################################################################################################
+
+
 address = Address.create(
   street: 'Weststr. 1',
   zip: '48565',
@@ -803,7 +818,10 @@ Highlight.create(
   address: address
 )
 
+
 ######################################################################################################
+
+
 address = Address.create(
   name: 'TV Borghorst 1884 e.V.',
   street: 'Winkelstraße 22',
@@ -821,7 +839,10 @@ Highlight.create(
   address: address
 )
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'Fuchs Gewürze GmbH',
   street: 'Industriestraße 25',
@@ -890,7 +911,10 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Webservices').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Heterogene Systemlandschaften').id, experience: :regular)
 
+
 ######################################################################################################
+
+
 company = Address.create(
   name: 'InfluencerDB Tech GmbH & Co. KG',
   street: 'Im Mediapark 4D',
@@ -951,8 +975,11 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Jira').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'GIMP').id, experience: :rare)
 
+
+
 ######################################################################################################
-# Interessen
+# interests
+######################################################################################################
 
 Interest.create(
   title: 'Spiele',
