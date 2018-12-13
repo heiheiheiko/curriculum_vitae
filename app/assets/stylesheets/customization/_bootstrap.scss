@@ -8,13 +8,13 @@
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
 $font-family-base:        $font-family-normal;
 
-$font-size-base:          1rem;
-// $font-size-large:         ceil(($font-size-base * 1.25)) // ~18px
-// $font-size-small:         ceil(($font-size-base * 0.85)) // ~12px
+$font-size-base:          $size-6;
+$font-size-large:         $size-5;
+$font-size-small:         $size-8;
 
-// $font-size-h1:            floor(($font-size-base * 2.6)) // ~36px
-// $font-size-h2:            floor(($font-size-base * 2.15)) // ~30px
-// $font-size-h3:            ceil(($font-size-base * 1.7)) // ~24px
-// $font-size-h4:            ceil(($font-size-base * 1.25)) // ~18px
-// $font-size-h5:            $font-size-base
-// $font-size-h6:            ceil(($font-size-base * 0.85)) // ~12px
+$font-size-h1:            $size-1;
+$font-size-h2:            $size-2;
+$font-size-h3:            $size-3;
+$font-size-h4:            $size-4;
+$font-size-h5:            $size-5;
+$font-size-h6:            $size-6;
