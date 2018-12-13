@@ -1,11 +1,8 @@
 - i18n_scope = 'applicant.chronicle'
 %span.goto#goto-chronicle
-%section#chronicle
+%section.section-chronicle.js-section-chronicle
   .filter.hidden-lg-down
     %ul
-      -# %li
-      -#   %span.fa-stack.fa-lg.timeline-badge{"data-toggle" => "tooltip", "data-placement" => "right", title: "Tooltip on top"}
-      -#     = icon 'star', class: "fa-stack-2x"
       - ChronicleItem.subclasses.each do |klass|
         %li{class: klass.model_name.to_s.underscore }
           - disable_tooltip_message = t(:tooltip_disable, scope: i18n_scope, model: klass.model_name.human)

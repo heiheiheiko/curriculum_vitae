@@ -1,9 +1,9 @@
 $(function() {
   // chronicle
-  $('#chronicle .filter').hide();
+  $('.js-section-chronicle .filter').hide();
 
   $(document).scroll(function() {
-    selector = $('#chronicle .filter')
+    selector = $('.js-section-chronicle .filter')
     goto_element_height = 70
     fixed_header_height = 72
     correction = goto_element_height + fixed_header_height
@@ -19,7 +19,7 @@ $(function() {
     }
   });
 
-  $('#chronicle .filter .timeline-badge').click(function() {
+  $('.js-section-chronicle .filter .timeline-badge').click(function() {
     $(this).toggleClass('disabled')
     $(this).find('.fa-stack-2x').toggleClass('default')
     target_class = $(this).closest('li').prop('class');
