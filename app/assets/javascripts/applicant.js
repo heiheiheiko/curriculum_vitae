@@ -1,51 +1,49 @@
-$(function() {
-  // chronicle
+function initApplicant(){
+  initApplicantHeaderColorSwitch();
+}
 
+function initApplicantHeaderColorSwitch(){
+  var lastScrollTop = 0;
+  
   $(document).scroll(function() {
-    toggleFilterSection('.js-chronicle-filter', '#goto-chronicle', '#goto-skills');
-    toggleFilterSection('.js-skills-filter', '#goto-skills', '#goto-interests');
-  });
+    var selector = $('.js-applicant-header');
+    var goto_element_height = 70
+    var fixed_header_height = 72
+    var correction = goto_element_height + fixed_header_height
 
-  $('.js-filter-item').click(function(event) {
-    event.preventDefault();
+    var chronicle_break_point = $('#goto-chronicle').position().top - correction
+    var skills_break_point = $('#goto-skills').position().top - correction
+    var interests_break_point = $('#goto-interests').position().top - correction
 
-    var that = $(this);
-    var target_class = that.closest('li').data('target-class');
-    var message = "";
-
-    that.toggleClass('disabled');
-    that.find('.fa-circle').toggleClass('text-grey');
-    
-    if(that.hasClass('disabled')) {
-      message = that.data('enable-tooltip-message');
-      that.attr('data-original-title', message);
-      $('.' + target_class).hide();
+    var x = $(this).scrollTop();
+    if (x > lastScrollTop){
+      switch (true) {
+        case (0 <= x && x < chronicle_break_point):
+            selector.switchClass('applicant-header-chronicle', 'applicant-header-introduction', 150);
+            break;
+        case (chronicle_break_point <= x && x < skills_break_point):
+            selector.switchClass('applicant-header-introduction', 'applicant-header-chronicle', 150);
+            break;
+        case (skills_break_point <= x && x < interests_break_point):
+            selector.switchClass('applicant-header-chronicle', 'applicant-header-skills', 150);
+            break;
+        case (x > interests_break_point):
+            selector.switchClass('applicant-header-skills', 'applicant-header-interests', 150);
+            break;
+      }
     } else {
-      message = that.data('disable-tooltip-message');
-      that.attr('data-original-title', message);
-      $('.' + target_class).show();
+      switch (true) {
+        case (interests_break_point >= x && x > skills_break_point ):
+            selector.switchClass('applicant-header-interests', 'applicant-header-skills', 150);
+            break;
+        case (skills_break_point >= x && x > chronicle_break_point ):
+            selector.switchClass('applicant-header-skills', 'applicant-header-chronicle', 150);
+            break;
+        case ( chronicle_break_point > x && x >= 0):
+            selector.switchClass('applicant-header-chronicle', 'applicant-header-introduction', 150);
+            break;
+      }
     }
-    $('[data-toggle="tooltip"]').tooltip();
+    lastScrollTop = x;
   });
-
-  $('.toggle_collapse_icon').click(function() {
-    $(this).toggleClass('fa-chevron-circle-up fa-chevron-circle-down');
-  });
-});
-
-function toggleFilterSection(filterSelector, breakpoint1Selector, breakpoint2Selector) {
-  var filterElm = $(filterSelector);
-  var gotoElmHeight = $('.goto').height();
-  var applicantHeaderHeight = $('.js-applicant-header').height();
-  var correction = gotoElmHeight + applicantHeaderHeight;
-
-  var breakpoint1 = $(breakpoint1Selector).position().top - correction;
-  var breakpoint2 = $(breakpoint2Selector).position().top - correction;
-
-  var x = $(this).scrollTop()
-  if ( breakpoint1 <= x && x < breakpoint2 ) {
-    filterElm.show();
-  } else {
-    filterElm.hide();
-  }
 }
