@@ -15,6 +15,18 @@ class TimeRange
     [years_in_words, months_in_words].compact.join("#{I18n.t(:and, scope: I18N_SCOPE)}")
   end
 
+  def reduced_period_in_words
+    years_in_words = translation_for(years, 'years')
+    if years_in_words
+      return years_in_words
+    end
+
+    months_in_words = translation_for(months, 'months')
+    if months_in_words
+      return months_in_words
+    end
+  end
+
   def period_as_dates
     start_date =  I18n.l @start_date, format: '%m/%Y'
     end_date = @end_date ? I18n.l(@end_date, format: '%m/%Y') : I18n.t(:today, scope: I18N_SCOPE)
