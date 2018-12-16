@@ -15,8 +15,6 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require highcharts/highcharts
-//= require highcharts/highcharts-more
 //= require_tree .
 
 $(function () {

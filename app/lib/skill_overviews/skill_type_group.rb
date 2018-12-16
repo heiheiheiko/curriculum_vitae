@@ -4,10 +4,6 @@ module SkillOverviews
       I18n.t(type, scope: 'enums.skill.type')
     end
 
-    def chart
-      @chart ||= SkillOverviews::Chart.new(title, skill_groups).draw
-    end
-
     def skill_groups
       @skill_groups ||=
         items.

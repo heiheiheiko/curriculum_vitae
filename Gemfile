@@ -12,7 +12,6 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'rails-i18n'
 gem 'font-awesome-sass'
-gem 'lazy_high_charts'
 
 group :development do
   gem 'better_errors'

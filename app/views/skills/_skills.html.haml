@@ -3,76 +3,12 @@
 %section.section-skills
   .container
     %h1.text-center.p-3.m-0= t(:header, scope: i18n_scope)
-
-    = render 'skills/top_skills', applicant: applicant
     
-    #highcharts
-    - applicant.skill_type_groups.each do |skill_type_group|
-      %div{id: skill_type_group.type, class: "card card-inverse #{Skill.color_class_for(skill_type_group.type)} mb-3"}
-        .card-body
-          .card-title
-            %h2.px-6= skill_type_group.title
-          = high_chart("high-chart-#{skill_type_group.type}", skill_type_group.chart) do |c|
-            = raw "options.colors = bar_colors(#{skill_type_group.type});"
-            = raw "options.tooltip.formatter = function() { return '<b>' + this.series.name +'</b>: '+ tooltip_formatter(this.y); }"
-            = raw "options.tooltip.positioner = function(box_width, box_height, point) { return  tooltip_positioner(#{skill_type_group.type}, box_width, point); };"
-
-:javascript
-  function tooltip_formatter(years) {
-    months = (years * 12) % 12
-    years = parseInt(years)
-
-    months_string = ''
-    switch(months) {
-      case 0:
-        months_string = ''
-        break;
-      case 1:
-        months_string = "1 Monat"
-        break;
-      default:
-        months_string = months + " Monate"
-    }
-
-    years_string = ''
-    switch(years) {
-      case 0:
-        years_string = ''
-        break;
-      case 1:
-        years_string = "1 Jahr"
-        break;
-      default:
-        years_string = years + " Jahre"
-    }
-
-    if (!(years_string == '') && !(months_string == '')){
-      return years_string + ' und ' + months_string
-    } else {
-      return years_string + months_string
-    }
-  }
-
-  function tooltip_positioner(selector, box_width, point) {
-    chart=$(selector).find('.highcharts-container').parent().highcharts()
-    var tooltipX, tooltipY;
-    if (point.plotX + box_width > chart.plotWidth) {
-        tooltipX = point.plotX + chart.plotLeft - box_width - 20;
-    } else {
-        tooltipX = point.plotX + chart.plotLeft + 20;
-    }
-    tooltipY = point.plotY + chart.plotTop - 20;
-    return {
-        x: tooltipX,
-        y: tooltipY
-    };
-  }
-
-  function bar_colors(selector) {
-      card_color = $(selector).css('background-color');
-      return [
-        color_luminance(rgb2hex(card_color), 0.9),
-        color_luminance(rgb2hex(card_color), 0.6),
-        color_luminance(rgb2hex(card_color), 0.3)
-      ]
-    }
+    .f-row.f-wrap.mx--6
+      - applicant.skill_type_groups.each do |skill_type_group|
+        - skill_type_group.skill_groups.each do |skill_group|
+          .card.card-body.py-7.px-6.mx-7.mb-6{class: "border-0 #{Skill.color_class_for(skill_type_group.type)}"}
+            .f-row.f-ccenter
+              %h4.m-0= skill_group.title
+              .f-row.f-ccenter.text-5.ml-7
+                .badge{class: Skill.accent_color_class_for(skill_type_group.type), "data-toggle" => "tooltip", "data-html" =>"true", "data-container"=>"body", title: skill_group.experience_groups_in_words}= skill_group.time_range.reduced_period_in_words
