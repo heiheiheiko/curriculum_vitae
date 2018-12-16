@@ -1,8 +1,8 @@
 - alignment ||= nil
 
-%li{class: "#{('timeline-inverted' if alignment == :right)} js-#{chronicle_item.model_name.to_s.underscore}" }
+%li{class: "#{('timeline-inverted' if alignment == :right)} js-#{chronicle_item.model_name.to_s.underscore} #{chronicle_item.top ? 'is-top' : ''}" }
   %span.fa-stack.fa-2x.timeline-badge
-    - badge_class = chronicle_item.important ? 'star' : 'circle'
+    - badge_class = chronicle_item.top ? 'star' : 'circle'
     = icon "fas", badge_class, class: "fa-stack-2x text-#{chronicle_item.class.color_key}"
     = icon "fas", chronicle_item.badge, class: 'fa-stack-1x fa-inverse'
   </span>

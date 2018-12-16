@@ -226,7 +226,6 @@ ci = Education.create(
   title: 'Realschule',
   badge: 'book',
   graduation: 'Fachoberschulreife',
-  important: false,
   applicant: applicant,
   address: school
 )
@@ -249,7 +248,6 @@ ci = Education.create(
   title: 'Höhere Handelsschule',
   badge: 'book',
   graduation: 'Fachhochschulreife (Wirtschaft)',
-  important: false,
   applicant: applicant,
   address: school,
 )
@@ -300,7 +298,6 @@ ci = Education.create(
   description: 'Abschluss als Jahrgangsbester',
   badge: 'book',
   graduation: 'Fachhochschulreife (Informatik)',
-  important: false,
   applicant: applicant,
   address: school
 )
@@ -331,7 +328,6 @@ Highlight.create(
   title: 'Verschiedene Aushilfsjobs',
   description: 'Martin Oelrich GmbH & Co. KG (Wagenwäscher);Emsdettener Fahrradkurier (Briefzusteller);Movie and More - Videothek (Verkäufer);Biobauernhof (Mädchen für alles) ;Hermes Logistik Gruppe Deutschland (Paketzusteller);crashtest-service.com GmbH (Datenaufbereitung)',
   badge: 'money-bill-alt',
-  important: false,
   applicant: applicant
 )
 
@@ -353,7 +349,6 @@ ci = Education.create(
   title: 'Angewandte Informatik',
   badge: 'graduation-cap',
   graduation: nil,
-  important: false,
   applicant: applicant,
   address: school
 )
@@ -388,7 +383,6 @@ ci = Job.create(
   employment: :student_assistant,
   position: :web_developer,
   badge: 'code',
-  important: false,
   applicant: applicant,
   address: company,
 )
@@ -422,7 +416,7 @@ ci = Job.create(
   employment: :student_assistant,
   position: :web_developer,
   badge: 'code',
-  important: true,
+  top: true,
   applicant: applicant,
   address: company,
 )
@@ -474,7 +468,6 @@ ci = Job.create(
   employment: :student_assistant,
   position: :web_developer,
   badge: 'code',
-  important: false,
   applicant: applicant,
   address: company
 )
@@ -509,7 +502,7 @@ ci = Job.create(
   employment: :intern,
   position: :web_developer,
   badge: 'code',
-  important: true,
+  top: true,
   applicant: applicant,
   address: company
 )
@@ -579,7 +572,7 @@ ci = Job.create(
   employment: :bachelor,
   position: :web_developer,
   badge: 'code',
-  important: true,
+  top: true,
   applicant: applicant,
   address: company,
 )
@@ -641,7 +634,7 @@ ci = Education.create(
   title: 'Wirtschaftsinformatik',
   badge: 'graduation-cap',
   graduation: 'Bachelor of Science',
-  important: true,
+  top: true,
   applicant: applicant,
   address: school,
 )
@@ -704,7 +697,7 @@ ci = Job.create(
   employment: :employee,
   position: :junior_software_developer,
   badge: 'code',
-  important: true,
+  top: true,
   applicant: applicant,
   address: company
 )
@@ -776,7 +769,6 @@ ci = Job.create(
   employment: :employee,
   position: :web_developer,
   badge: 'code',
-  important: false,
   applicant: applicant,
   address: company
 )
@@ -858,7 +850,7 @@ ci = Job.create(
   employment: :employee,
   position: :software_developer,
   badge: 'code',
-  important: true,
+  top: true,
   applicant: applicant,
   address: company
 )
@@ -930,7 +922,7 @@ ci = Job.create(
   employment: :employee,
   position: :software_developer,
   badge: 'code',
-  important: true,
+  top: true,
   applicant: applicant,
   address: company
 )

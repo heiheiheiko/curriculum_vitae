@@ -4,6 +4,10 @@ module SkillOverviews
       type
     end
 
+    def skill
+      @skill ||= Skill.find_by(title: title)
+    end
+
     def experience_groups
       items.
         group_by { |cis| cis.experience }.
