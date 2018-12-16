@@ -19,11 +19,11 @@
       - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.area'))
       = content_tag(:span, class: 'filter-item js-filter-item fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
         = icon 'fas', 'circle', class: "fa-stack-2x text-deep-orange"
-        = icon 'fas', 'book', class: 'fa-stack-1x fa-inverse'
+        = icon 'fas', 'brain', class: 'fa-stack-1x fa-inverse'
 
     %li{"data-target-class" => "js-conditions"}
       - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.conditions'))
       - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.conditions'))
       = content_tag(:span, class: 'filter-item js-filter-item fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
         = icon 'fas', 'circle', class: "fa-stack-2x text-deep-purple"
-        = icon 'fas', 'brain', class: 'fa-stack-1x fa-inverse'
+        = icon 'fas', 'book', class: 'fa-stack-1x fa-inverse'
