@@ -6,8 +6,8 @@ module SkillOverviews
 
     def skill_groups
       @skill_groups ||=
-        items.
-          group_by { |cis| cis.skill.title }
+        items
+          .group_by { |cis| cis.skill.title }
           .map { |k, v| SkillOverviews::SkillGroup.new(k, v) }
     end
   end

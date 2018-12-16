@@ -1,6 +1,7 @@
 function initFilter(){
   initFilterToggleSection();
-  initFilterItemClick();
+  initFilterItemTypeClick();
+  initFilterItemTopClick();
 }
 
 function initFilterToggleSection() {
@@ -10,32 +11,89 @@ function initFilterToggleSection() {
   });
 }
 
-function initFilterItemClick() {
-  $('.js-filter-item').click(function(event) {
+function initFilterItemTypeClick() {
+  $('.js-filter-item-type').click(function(event) {
     event.preventDefault();
 
     var that = $(this);
-    var target_class = that.closest('li').data('target-class');
-    var message = "";
+    var container = that.closest('ul');
+    var filterItemTopElm = container.find('.js-filter-item-top');
+    
+    if (!filterItemTopElm.hasClass("is-disabled")){
+      disableFilter(filterItemTopElm);
+    }
+
+    if(!that.hasClass('is-disabled')) {
+      disableFilter(that);
+    } else {
+      enableFilter(that);
+    }
+
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+}
+
+function initFilterItemTopClick() {
+  $('.js-filter-item-top').click(function(event) {
+    event.preventDefault();
+
+    var that = $(this);
+    var container = that.closest('ul');
+    var targetElms = $(that.closest('li').data('target-class'));
 
     that.toggleClass('is-disabled');
     that.find('.fa-circle').toggleClass('text-disabled');
     
-    if(that.hasClass('is-disabled')) {
-      message = that.data('enable-tooltip-message');
-      that.attr('data-original-title', message);
-      $('.' + target_class).hide();
+    if(!that.hasClass('is-disabled')) {
+      container.find('.js-filter-item-type').each(function(){
+        disableFilter($(this));
+      });
+      targetElms.filter(function(){
+        return $(this).hasClass("is-top")
+      }).show();
+
+      enableFilter(that, { toggleTargetElms: false });
     } else {
-      message = that.data('disable-tooltip-message');
-      that.attr('data-original-title', message);
-      $('.' + target_class).show();
+      container.find('.js-filter-item-type').each(function(){
+        enableFilter($(this));
+      });
+
+      disableFilter(that, { toggleTargetElms: false });
     }
     $('[data-toggle="tooltip"]').tooltip();
   });
+}
 
-  $('.toggle_collapse_icon').click(function() {
-    $(this).toggleClass('fa-chevron-circle-up fa-chevron-circle-down');
-  });
+function disableFilter(elm, options){
+  var defaults = {toggleTargetElms: true };
+  var options = $.extend({}, defaults, options || {});
+
+  elm.addClass('is-disabled');
+  elm.find('.fa-circle').addClass('text-disabled');
+
+  var message = elm.data('enable-tooltip-message');
+  elm.attr('data-original-title', message);
+
+  if (options.toggleTargetElms) {
+    var targetElms = $(elm.closest('li').data('target-class'));
+    targetElms.hide();
+  }
+}
+
+function enableFilter(elm, options){
+  var defaults = {toggleTargetElms: true };
+  var options = $.extend({}, defaults, options || {});
+
+  elm.removeClass('is-disabled');
+  elm.find('.fa-circle').removeClass('text-disabled');
+
+  var message = elm.data('disable-tooltip-message');
+  elm.attr('data-original-title', message);
+
+  if (options.toggleTargetElms) {
+    var targetElms = $(elm.closest('li').data('target-class'));
+    targetElms.show();
+  }
 }
 
 function toggleFilterSection(filterSelector, breakpoint1Selector, breakpoint2Selector) {
