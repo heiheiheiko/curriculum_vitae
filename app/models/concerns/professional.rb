@@ -1,7 +1,7 @@
 module Professional
   extend ActiveSupport::Concern
 
-  COLOR_CLASS = 'professional'
+  COLOR_CLASS = 'text-red'
   ICON = 'code'
 
   def color_class

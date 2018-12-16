@@ -1,7 +1,7 @@
 module Personal
   extend ActiveSupport::Concern
   
-  COLOR_CLASS = 'personal'
+  COLOR_CLASS = 'text-blue'
   ICON = 'home'
 
   def color_class
