@@ -18,10 +18,10 @@ function initFilterItemClick() {
     var target_class = that.closest('li').data('target-class');
     var message = "";
 
-    that.toggleClass('disabled');
-    that.find('.fa-circle').toggleClass('text-grey');
+    that.toggleClass('is-disabled');
+    that.find('.fa-circle').toggleClass('text-disabled');
     
-    if(that.hasClass('disabled')) {
+    if(that.hasClass('is-disabled')) {
       message = that.data('enable-tooltip-message');
       that.attr('data-original-title', message);
       $('.' + target_class).hide();
