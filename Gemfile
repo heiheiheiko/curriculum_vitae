@@ -32,6 +32,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'thin'
   gem 'pry'
+  gem 'binding_of_caller'
   gem 'guard'
 end
 
