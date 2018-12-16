@@ -5,5 +5,5 @@
     %h1.text-center.p-3.m-0= t(:header, scope: i18n_scope)
     .f-row.f-wrap.mx--6
       - applicant.interests.each do |i|
-        .card.card-body.py-7.px-6.mx-7.mb-6{class: i.color_class}
+        .card.card-body.text-white.border-0.py-7.px-6.mx-7.mb-6{class: "bg-#{i.color_key}"}
           %h4.m-0= i.title
