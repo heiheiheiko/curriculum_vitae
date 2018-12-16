@@ -1,15 +1,27 @@
 .bg-teal {
   background-color: $material-teal;
 }
+.bg-teal-shade-1 {
+  background-color: shade($material-teal, $intensity-1)
+}
 
 .bg-indigo {
   background-color: $material-indigo;
+}
+.bg-indigo-shade-1 {
+  background-color: shade($material-indigo, $intensity-1)
 }
 
 .bg-deep-orange {
   background-color: $material-deep-orange;
 }
+.bg-deep-orange-shade-1 {
+  background-color: shade($material-deep-orange, $intensity-1)
+}
 
 .bg-deep-purple {
   background-color: $material-deep-purple;
+}
+.bg-deep-purple-shade-1 {
+  background-color: shade($material-deep-purple, $intensity-1)
 }
