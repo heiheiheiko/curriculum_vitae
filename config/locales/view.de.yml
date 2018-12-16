@@ -11,6 +11,10 @@ de:
       header: Skills
     interests:
       header: Interessen
+  general:
+    filter:
+      disable: '%{obj} ausblenden'
+      enable: '%{obj} einblenden'
   time_range:
     year: Jahr
     month: Monat
