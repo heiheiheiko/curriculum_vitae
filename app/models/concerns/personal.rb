@@ -1,7 +1,7 @@
 module Personal
   extend ActiveSupport::Concern
   
-  COLOR_KEY = 'blue'
+  COLOR_KEY = 'personal'
   ICON = 'home'
 
   def color_key

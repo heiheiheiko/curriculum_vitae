@@ -1,7 +1,7 @@
 module Educational
   extend ActiveSupport::Concern
 
-  COLOR_KEY = 'green'
+  COLOR_KEY = 'educational'
   ICON = 'graduation-cap'
 
   def color_key

@@ -48,10 +48,25 @@ $color-personal:        $material-blue;
 $color-educational:     $material-green;
 $color-professional:    $material-red;
 
+$color-software:        $material-teal;
+$color-technology:      $material-indigo;
+$color-area:            $material-deep-orange;
+$color-conditions:      $material-deep-purple;
+
 $color-introduction:    $material-red;
 $color-chronicle:       $material-blue;
 $color-skills:          $material-green;
 $color-interests:       $material-deep-purple;
+
+$colors: (
+    personal: $color-personal,
+    educational: $color-educational,
+    professional: $color-professional,
+    software: $color-software,
+    technology: $color-technology,
+    area: $color-area,
+    conditions: $color-conditions,
+);
 
 
 

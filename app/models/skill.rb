@@ -12,26 +12,26 @@ class Skill < Information
   def self.color_class_for(information_type)
     case information_type.to_sym
     when :software
-      'bg-teal js-software'
+      'bg-software js-software'
     when :technology
-      'bg-indigo js-technology'
+      'bg-technology js-technology'
     when :area
-      'bg-deep-orange js-area'
+      'bg-area js-area'
     when :conditions
-      'bg-deep-purple js-conditions'
+      'bg-conditions js-conditions'
     end
   end
 
   def self.accent_color_class_for(information_type)
     case information_type.to_sym
     when :software
-      'bg-teal-shade-1'
+      'bg-software-shade-1'
     when :technology
-      'bg-indigo-shade-1'
+      'bg-technology-shade-1'
     when :area
-      'bg-deep-orange-shade-1'
+      'bg-area-shade-1'
     when :conditions
-      'bg-deep-purple-shade-1'
+      'bg-conditions-shade-1'
     end
   end
 end

@@ -1,64 +1,14 @@
-.text-teal {
-  color: $material-teal;
-}
-.bg-teal {
-  background-color: $material-teal;
-}
-.bg-teal-shade-1 {
-  background-color: shade($material-teal, $intensity-1)
-}
+// examples: .bg-software, .bg-personal-shade-1, .text-technology
+@each $key, $color in $colors {
+  .bg-#{$key} {
+    background-color: $color;
+  }
 
-.text-indigo {
-  color: $material-indigo;
-}
-.bg-indigo {
-  background-color: $material-indigo;
-}
-.bg-indigo-shade-1 {
-  background-color: shade($material-indigo, $intensity-1)
-}
+  .bg-#{$key}-shade-1 {
+    background-color: shade($color, $intensity-1);
+  }
 
-.text-deep-orange {
-  color: $material-deep-orange;
-}
-.bg-deep-orange {
-  background-color: $material-deep-orange;
-}
-.bg-deep-orange-shade-1 {
-  background-color: shade($material-deep-orange, $intensity-1)
-}
-
-.text-deep-purple {
-  color: $material-deep-purple;
-}
-.bg-deep-purple {
-  background-color: $material-deep-purple;
-}
-.bg-deep-purple-shade-1 {
-  background-color: shade($material-deep-purple, $intensity-1)
-}
-
-.text-blue {
-  color: $material-blue;
-}
-.bg-blue {
-  background-color: $material-blue;
-}
-
-.text-green {
-  color: $material-green;
-}
-.bg-green {
-  background-color: $material-green;
-}
-
-.text-red {
-  color: $material-red;
-}
-.bg-red {
-  background-color: $material-red;
-}
-
-.text-grey {
-  color: $material-grey;
+  .text-#{$key} {
+    color: $color;
+  }
 }
