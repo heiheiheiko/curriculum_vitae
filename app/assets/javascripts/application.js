@@ -11,17 +11,17 @@
 // about supported directives.
 //
 //= require jquery3
+//= require jquery-ui
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require jquery-ui
-//= require_tree .
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
+//= require_tree .
 
 $(function () {
   var lastScrollTop = 0;
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 
   $(document).scroll(function() {
     var selector = $('.js-applicant-header');
