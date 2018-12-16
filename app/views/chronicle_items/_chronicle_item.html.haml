@@ -3,7 +3,7 @@
 %li{class: "#{('timeline-inverted' if alignment == :right)} js-#{chronicle_item.model_name.to_s.underscore}" }
   %span.fa-stack.fa-2x.timeline-badge
     - badge_class = chronicle_item.important ? 'star' : 'circle'
-    = icon "fas", badge_class, class: "fa-stack-2x #{chronicle_item.class.color_class}"
+    = icon "fas", badge_class, class: "fa-stack-2x text-#{chronicle_item.class.color_key}"
     = icon "fas", chronicle_item.badge, class: 'fa-stack-1x fa-inverse'
   </span>
   .timeline-card

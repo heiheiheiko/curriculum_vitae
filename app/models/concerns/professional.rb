@@ -1,13 +1,8 @@
 module Professional
   extend ActiveSupport::Concern
 
-  COLOR_CLASS = 'text-red'
   COLOR_KEY = 'red'
   ICON = 'code'
-
-  def color_class
-    COLOR_CLASS
-  end
 
   def color_key
     COLOR_KEY
@@ -18,11 +13,7 @@ module Professional
   end
 
   included do
-    def self.color_class
-      COLOR_CLASS
-    end
-
-    def color_key
+    def self.color_key
       COLOR_KEY
     end
 
