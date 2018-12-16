@@ -302,7 +302,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
-  bootstrap
+  bootstrap (~> 4.1.3)
   capybara (>= 2.15)
   database_cleaner
   factory_girl_rails
