@@ -1,0 +1,24 @@
+en:
+  applicant:
+    introduction:
+      header: Impression
+    chronicle:
+      header: Timeline
+      filter: Filter
+      top: Top entries
+    skills:
+      header: Skills
+      top: Top skills
+    interests:
+      header: Interests
+  general:
+    filter:
+      disable: '%{obj} hide'
+      enable: '%{obj} show'
+  time_range:
+    year: year
+    month: month
+    years: years
+    months: months
+    and: ' and '
+    today: today

@@ -1,0 +1,30 @@
+en:
+  activerecord:
+    models:
+      applicant: Applicant
+      job: Career
+      highlight: Private life
+      education: Education
+
+  enums:
+    chronicle_item:
+      position:
+        web_developer: Web Developer
+        software_developer: Software Developer
+        junior_software_developer: Junior Software Developer
+      employment:
+        intern: Trainee
+        student_assistant: Student assistant
+        bachelor: Bachelor student
+        employee: Employee
+    chronicle_item_skill:
+      experience:
+        regular: Regular
+        frequent: Frequent
+        rare: Sometimes
+    skill:
+      type:
+        software: Software
+        technology: Technologies
+        area: Areas
+        conditions: Methods, Architectures, Principles
