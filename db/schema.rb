@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_125327) do
+ActiveRecord::Schema.define(version: 2018_12_17_211441) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 2018_12_16_125327) do
     t.datetime "updated_at", null: false
     t.string "person"
     t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
+  end
+
+  create_table "applicant_translations", force: :cascade do |t|
+    t.integer "applicant_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slogan"
+    t.string "family_status"
+    t.index ["applicant_id"], name: "index_applicant_translations_on_applicant_id"
+    t.index ["locale"], name: "index_applicant_translations_on_locale"
   end
 
   create_table "applicants", force: :cascade do |t|

@@ -20,13 +20,18 @@ Skill.destroy_all
 # applicants
 ######################################################################################################
 
-applicant = Applicant.create(
-  slogan: 'Spielkind, Entdecker, Verwirklicher',
+applicant = Applicant.new(
   birthday: '18-07-1986',
-  family_status: 'verheiratet',
   email: 'heiko.beineke@gmail.com',
   mobile_phone: '0151 555 45 345',
 )
+I18n.locale = :de
+applicant.slogan = 'Spielkind, Entdecker, Verwirklicher'
+applicant.family_status = 'verheiratet'
+I18n.locale = :en
+applicant.slogan = "Gamer, Explorer, Accomplisher"
+applicant.family_status = 'married'
+applicant.save
 
 Image.create!(
   title: 'Spielkind',
