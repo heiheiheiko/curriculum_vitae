@@ -22,16 +22,16 @@ module SkillOverviews
     def experience_groups_in_words
       i18n_scope = 'enums.chronicle_item_skill.experience'
  
-      frequent = experience_groups.find { |eg| eg.type == :frequent }.try(:time_range).try(:period_in_words)
-      frequent.present? ? frequent = "#{I18n.t(:frequent, scope: i18n_scope)}: #{frequent} <br>" : nil
-
       regular = experience_groups.find { |eg| eg.type == :regular }.try(:time_range).try(:period_in_words)
       regular.present? ? regular = "#{I18n.t(:regular, scope: i18n_scope)}: #{regular} <br>" : nil
+
+      frequent = experience_groups.find { |eg| eg.type == :frequent }.try(:time_range).try(:period_in_words)
+      frequent.present? ? frequent = "#{I18n.t(:frequent, scope: i18n_scope)}: #{frequent} <br>" : nil
 
       rare = experience_groups.find { |eg| eg.type == :rare }.try(:time_range).try(:period_in_words)
       rare.present? ? rare = "#{I18n.t(:rare, scope: i18n_scope)}: #{rare} <br>" : nil
 
-      [frequent, regular, rare].compact.join("")
+      [regular, frequent, rare].compact.join("")
     end
   end
 end

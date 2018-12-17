@@ -19,8 +19,8 @@ de:
         employee: Angestellter
     chronicle_item_skill:
       experience:
-        frequent: Regelmäßig
-        regular: Häufig
+        regular: Regelmäßig
+        frequent: Häufig
         rare: Hin und wieder
     skill:
       type:
