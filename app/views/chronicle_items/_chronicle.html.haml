@@ -1,11 +1,12 @@
+- i18n_scope = 'general.filter'
 %span.goto#goto-chronicle
 %section.section-chronicle.js-section-chronicle
   .filter.js-chronicle-filter{style: "display: none;"}
     %ul.list-unstyled.d-none.d-lg-block
 
       %li{"data-target-class" => ".js-chronicle-item"}
-        - disable_tooltip_message = t('general.filter.disable', obj: t("applicant.chronicle.top"))
-        - enable_tooltip_message = t('general.filter.enable', obj: t("applicant.chronicle.top"))
+        - disable_tooltip_message = t(:disable, scope: i18n_scope, obj: t("applicant.chronicle.top"))
+        - enable_tooltip_message = t(:enable, scope: i18n_scope, obj: t("applicant.chronicle.top"))
         = content_tag(:span, class: 'filter-item js-filter-item-top fa-stack fa-lg is-disabled', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: enable_tooltip_message) do
           = icon 'fas', 'circle', class: "fa-stack-2x text-top text-disabled"
           %u= icon 'fas', 'star', class: 'fa-stack-1x fa-inverse'
@@ -15,9 +16,8 @@
 
       - ChronicleItem.subclasses.each do |klass|
         %li{"data-target-class" => ".js-#{klass.model_name.to_s.underscore}" }
-          - i18n_scope = 'general.filter'
-          - disable_tooltip_message = t(:tooltip_disable, scope: i18n_scope, obj: klass.model_name.human)
-          - enable_tooltip_message = t(:tooltip_enable, scope: i18n_scope, obj: klass.model_name.human)
+          - disable_tooltip_message = t(:disable, scope: i18n_scope, obj: klass.model_name.human)
+          - enable_tooltip_message = t(:enable, scope: i18n_scope, obj: klass.model_name.human)
           = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
             = icon 'fas', 'circle', class: "fa-stack-2x text-#{klass.color_key}"
             = icon 'fas', klass.icon, class: 'fa-stack-1x fa-inverse'
