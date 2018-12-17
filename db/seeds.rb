@@ -113,105 +113,774 @@ Website.create(
 ######################################################################################################
 
 # area
-Skill.create(title: 'Projektmanagement', information_type: :area)
-Skill.create(title: 'Prozessoptimierung', information_type: :area)
-Skill.create(title: 'Softwarequalität', information_type: :area, top: true)
-Skill.create(title: 'Software Engineering', information_type: :area)
-Skill.create(title: 'Web Engineering', information_type: :area)
-Skill.create(title: 'Frontend Development', information_type: :area, top: true)
-Skill.create(title: 'Backend Development', information_type: :area, top: true)
-Skill.create(title: 'Usability', information_type: :area, top: true)
-Skill.create(title: 'Mobile Optimierung', information_type: :area)
+skill = Skill.new()
+skill.information_type = :area
+I18n.locale = :de
+skill.title = 'Projektmanagement'
+I18n.locale = :en
+skill.title = 'Project Management'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+I18n.locale = :de
+skill.title = 'Prozessoptimierung'
+I18n.locale = :en
+skill.title = 'Process Optimization'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+skill.top = true
+I18n.locale = :de
+skill.title = 'Softwarequalität'
+I18n.locale = :en
+skill.title = 'Software Quality'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+I18n.locale = :de
+skill.title = 'Software Engineering'
+I18n.locale = :en
+skill.title = 'Software Engineering'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+I18n.locale = :de
+skill.title = 'Web Engineering'
+I18n.locale = :en
+skill.title = 'Web Engineering'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+skill.top = true
+I18n.locale = :de
+skill.title = 'Frontend Development'
+I18n.locale = :en
+skill.title = 'Frontend Development'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+skill.top = true
+I18n.locale = :de
+skill.title = 'Backend Development'
+I18n.locale = :en
+skill.title = 'Backend Development'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+skill.top = true
+I18n.locale = :de
+skill.title = 'Usability'
+I18n.locale = :en
+skill.title = 'Usability'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :area
+I18n.locale = :de
+skill.title = 'Mobile Optimierung'
+I18n.locale = :en
+skill.title = 'Mobile Optimization'
+skill.save
+
 
 # conditions
-Skill.create(title: 'Testing', information_type: :conditions, top: true)
-Skill.create(title: 'Error Tracking', information_type: :conditions)
-Skill.create(title: 'Test Driven', information_type: :conditions)
-Skill.create(title: 'Code Reviews', information_type: :conditions, top: true)
-Skill.create(title: 'MVC', information_type: :conditions)
-Skill.create(title: 'REST', information_type: :conditions)
-Skill.create(title: 'Webservices', information_type: :conditions)
-Skill.create(title: 'Microservices', information_type: :conditions, top: true)
-Skill.create(title: 'Heterogene Systemlandschaften', information_type: :conditions)
-Skill.create(title: 'KVP', information_type: :conditions)
-Skill.create(title: 'Agil', information_type: :conditions, top: true)
-Skill.create(title: 'Kanban', information_type: :conditions)
-Skill.create(title: 'Scrum', information_type: :conditions, top: true)
-Skill.create(title: 'Lean Startup', information_type: :conditions, top: true)
+skill = Skill.new()
+skill.information_type = :conditions
+skill.top = true
+I18n.locale = :de
+skill.title = 'Testing'
+I18n.locale = :en
+skill.title = 'Testing'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'Error Tracking'
+I18n.locale = :en
+skill.title = 'Error Tracking'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'Test Driven'
+I18n.locale = :en
+skill.title = 'Test Driven'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+skill.top = true
+I18n.locale = :de
+skill.title = 'Code Reviews'
+I18n.locale = :en
+skill.title = 'Code Reviews'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'MVC'
+I18n.locale = :en
+skill.title = 'MVC'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'REST'
+I18n.locale = :en
+skill.title = 'REST'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'Webservices'
+I18n.locale = :en
+skill.title = 'Webservices'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+skill.top = true
+I18n.locale = :de
+skill.title = 'Microservices'
+I18n.locale = :en
+skill.title = 'Microservices'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'Heterogene Systemlandschaften'
+I18n.locale = :en
+skill.title = 'Heterogeneous System Environment'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'KVP'
+I18n.locale = :en
+skill.title = 'CIP'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+skill.top = true
+I18n.locale = :de
+skill.title = 'Agil'
+I18n.locale = :en
+skill.title = 'Agile'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+I18n.locale = :de
+skill.title = 'Kanban'
+I18n.locale = :en
+skill.title = 'Kanban'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+skill.top = true
+I18n.locale = :de
+skill.title = 'Scrum'
+I18n.locale = :en
+skill.title = 'Scrum'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :conditions
+skill.top = true
+I18n.locale = :de
+skill.title = 'Lean Startup'
+I18n.locale = :en
+skill.title = 'Lean Startup'
+skill.save
+
 
 # technology
-Skill.create(title: 'Assembler', information_type: :technology)
-Skill.create(title: 'Visual Basic', information_type: :technology)
-Skill.create(title: 'C', information_type: :technology)
-Skill.create(title: 'C#', information_type: :technology)
-Skill.create(title: 'Java', information_type: :technology)
-Skill.create(title: 'PHP', information_type: :technology)
-Skill.create(title: 'Zend Framework', information_type: :technology)
-Skill.create(title: 'Ruby', information_type: :technology, top: true)
-Skill.create(title: 'Ruby on Rails', information_type: :technology, top: true)
-Skill.create(title: 'RSpec', information_type: :technology)
-Skill.create(title: 'Capybara', information_type: :technology)
-Skill.create(title: 'Python', information_type: :technology, top: true)
-Skill.create(title: 'Django', information_type: :technology, top: true)
-Skill.create(title: 'SQL', information_type: :technology)
-Skill.create(title: 'Oracle', information_type: :technology)
-Skill.create(title: 'MySQL', information_type: :technology)
-Skill.create(title: 'PostgreSQL', information_type: :technology)
-Skill.create(title: 'HTML5', information_type: :technology, top: true)
-Skill.create(title: 'Haml', information_type: :technology)
-Skill.create(title: 'CSS3', information_type: :technology, top: true)
-Skill.create(title: 'Sass', information_type: :technology, top: true)
-Skill.create(title: 'Bootstrap', information_type: :technology)
-Skill.create(title: 'Bulma', information_type: :technology)
-Skill.create(title: 'Tailwind CSS', information_type: :technology)
-Skill.create(title: 'JavaScript', information_type: :technology, top: true)
-Skill.create(title: 'Vue', information_type: :technology, top: true)
-Skill.create(title: 'Storybook', information_type: :technology)
-Skill.create(title: 'CoffeeScript', information_type: :technology)
-Skill.create(title: 'jQuery', information_type: :technology, top: true)
-Skill.create(title: 'AngularJS', information_type: :technology)
-Skill.create(title: 'Highcharts', information_type: :technology)
-Skill.create(title: 'Ajax', information_type: :technology)
-Skill.create(title: 'AMQP', information_type: :technology)
-Skill.create(title: 'JSON', information_type: :technology)
-Skill.create(title: 'XML', information_type: :technology)
-Skill.create(title: 'BPMN 2.0', information_type: :technology)
-Skill.create(title: 'UML', information_type: :technology)
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Assembler'
+I18n.locale = :en
+skill.title = 'Assembler'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Visual Basic'
+I18n.locale = :en
+skill.title = 'Visual Basic'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'C'
+I18n.locale = :en
+skill.title = 'C'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'C#'
+I18n.locale = :en
+skill.title = 'C#'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Java'
+I18n.locale = :en
+skill.title = 'Java'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'PHP'
+I18n.locale = :en
+skill.title = 'PHP'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Zend Framework'
+I18n.locale = :en
+skill.title = 'Zend Framework'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'Ruby'
+I18n.locale = :en
+skill.title = 'Ruby'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'Ruby on Rails'
+I18n.locale = :en
+skill.title = 'Ruby on Rails'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'RSpec'
+I18n.locale = :en
+skill.title = 'RSpec'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Capybara'
+I18n.locale = :en
+skill.title = 'Capybara'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'Python'
+I18n.locale = :en
+skill.title = 'Python'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'Django'
+I18n.locale = :en
+skill.title = 'Django'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'SQL'
+I18n.locale = :en
+skill.title = 'SQL'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Oracle'
+I18n.locale = :en
+skill.title = 'Oracle'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'MySQL'
+I18n.locale = :en
+skill.title = 'MySQL'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'PostgreSQL'
+I18n.locale = :en
+skill.title = 'PostgreSQL'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'HTML5'
+I18n.locale = :en
+skill.title = 'HTML5'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Haml'
+I18n.locale = :en
+skill.title = 'Haml'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'CSS3'
+I18n.locale = :en
+skill.title = 'CSS3'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'Sass'
+I18n.locale = :en
+skill.title = 'Sass'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Bootstrap'
+I18n.locale = :en
+skill.title = 'Bootstrap'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Bulma'
+I18n.locale = :en
+skill.title = 'Bulma'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Tailwind CSS'
+I18n.locale = :en
+skill.title = 'Tailwind CSS'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'JavaScript'
+I18n.locale = :en
+skill.title = 'JavaScript'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'Vue'
+I18n.locale = :en
+skill.title = 'Vue'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Storybook'
+I18n.locale = :en
+skill.title = 'Storybook'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'CoffeeScript'
+I18n.locale = :en
+skill.title = 'CoffeeScript'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+skill.top = true
+I18n.locale = :de
+skill.title = 'jQuery'
+I18n.locale = :en
+skill.title = 'jQuery'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'AngularJS'
+I18n.locale = :en
+skill.title = 'AngularJS'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Highcharts'
+I18n.locale = :en
+skill.title = 'Highcharts'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Ajax'
+I18n.locale = :en
+skill.title = 'Ajax'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'AMQP'
+I18n.locale = :en
+skill.title = 'AMQP'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'JSON'
+I18n.locale = :en
+skill.title = 'JSON'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'XML'
+I18n.locale = :en
+skill.title = 'XML'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'BPMN 2.0'
+I18n.locale = :en
+skill.title = 'BPMN 2.0'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'UML'
+I18n.locale = :en
+skill.title = 'UML'
+skill.save
+
 
 # software
-Skill.create(title: 'Windows', information_type: :software)
-Skill.create(title: 'Ubuntu', information_type: :software, top: true)
-Skill.create(title: 'Mac OS', information_type: :software, top: true)
-Skill.create(title: 'SVN', information_type: :software)
-Skill.create(title: 'git', information_type: :software, top: true)
-Skill.create(title: 'GitHub', information_type: :software, top: true)
-Skill.create(title: 'Bitbucket', information_type: :software)
-Skill.create(title: 'GitLab', information_type: :software)
-Skill.create(title: 'Git Tower', information_type: :software)
-Skill.create(title: 'SourceTree', information_type: :software)
-Skill.create(title: 'GitKraken', information_type: :software)
-Skill.create(title: 'DiffMerge', information_type: :software)
-Skill.create(title: 'Visual Studio', information_type: :software)
-Skill.create(title: 'Eclipse', information_type: :software)
-Skill.create(title: 'Sublime Text', information_type: :software)
-Skill.create(title: 'Atom', information_type: :software)
-Skill.create(title: 'PyCharm', information_type: :software)
-Skill.create(title: 'Visual Studio Code', information_type: :software)
-Skill.create(title: 'Jira', information_type: :software, top: true)
-Skill.create(title: 'Basecamp', information_type: :software)
-Skill.create(title: 'Redmine', information_type: :software)
-Skill.create(title: 'Trello', information_type: :software)
-Skill.create(title: 'RabbitMQ', information_type: :software)
-Skill.create(title: 'Travis CI', information_type: :software)
-Skill.create(title: 'Jenkins', information_type: :software)
-Skill.create(title: 'Airbrake', information_type: :software)
-Skill.create(title: 'Errbit', information_type: :software)
-Skill.create(title: 'Heroku', information_type: :software)
-Skill.create(title: 'Camtasia Studio', information_type: :software)
-Skill.create(title: 'GIMP', information_type: :software, top: true)
-Skill.create(title: 'Office', information_type: :software)
-Skill.create(title: 'Google Tools', information_type: :software)
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Windows'
+I18n.locale = :en
+skill.title = 'Windows'
+skill.save
 
+skill = Skill.new()
+skill.information_type = :software
+skill.top = true
+I18n.locale = :de
+skill.title = 'Ubuntu'
+I18n.locale = :en
+skill.title = 'Ubuntu'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+skill.top = true
+I18n.locale = :de
+skill.title = 'Mac OS'
+I18n.locale = :en
+skill.title = 'Mac OS'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'SVN'
+I18n.locale = :en
+skill.title = 'SVN'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+skill.top = true
+I18n.locale = :de
+skill.title = 'git'
+I18n.locale = :en
+skill.title = 'git'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+skill.top = true
+I18n.locale = :de
+skill.title = 'GitHub'
+I18n.locale = :en
+skill.title = 'GitHub'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Bitbucket'
+I18n.locale = :en
+skill.title = 'Bitbucket'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'GitLab'
+I18n.locale = :en
+skill.title = 'GitLab'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Git Tower'
+I18n.locale = :en
+skill.title = 'Git Tower'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'SourceTree'
+I18n.locale = :en
+skill.title = 'SourceTree'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'GitKraken'
+I18n.locale = :en
+skill.title = 'GitKraken'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'DiffMerge'
+I18n.locale = :en
+skill.title = 'DiffMerge'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Visual Studio'
+I18n.locale = :en
+skill.title = 'Visual Studio'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Eclipse'
+I18n.locale = :en
+skill.title = 'Eclipse'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Sublime Text'
+I18n.locale = :en
+skill.title = 'Sublime Text'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Atom'
+I18n.locale = :en
+skill.title = 'Atom'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'PyCharm'
+I18n.locale = :en
+skill.title = 'PyCharm'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Visual Studio Code'
+I18n.locale = :en
+skill.title = 'Visual Studio Code'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+skill.top = true
+I18n.locale = :de
+skill.title = 'Jira'
+I18n.locale = :en
+skill.title = 'Jira'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Basecamp'
+I18n.locale = :en
+skill.title = 'Basecamp'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Redmine'
+I18n.locale = :en
+skill.title = 'Redmine'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Trello'
+I18n.locale = :en
+skill.title = 'Trello'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'RabbitMQ'
+I18n.locale = :en
+skill.title = 'RabbitMQ'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Travis CI'
+I18n.locale = :en
+skill.title = 'Travis CI'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Jenkins'
+I18n.locale = :en
+skill.title = 'Jenkins'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Airbrake'
+I18n.locale = :en
+skill.title = 'Airbrake'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Errbit'
+I18n.locale = :en
+skill.title = 'Errbit'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Heroku'
+I18n.locale = :en
+skill.title = 'Heroku'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Camtasia Studio'
+I18n.locale = :en
+skill.title = 'Camtasia Studio'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+skill.top = true
+I18n.locale = :de
+skill.title = 'GIMP'
+I18n.locale = :en
+skill.title = 'GIMP'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Office'
+I18n.locale = :en
+skill.title = 'Office'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Google Tools'
+I18n.locale = :en
+skill.title = 'Google Tools'
+skill.save
+I18n.locale = :de
 
 
 ######################################################################################################
