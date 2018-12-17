@@ -10,6 +10,7 @@ gem 'jquery-ui-rails'
 gem 'haml-rails'
 gem 'high_voltage'
 gem 'rails-i18n'
+gem 'globalize'
 gem 'font-awesome-sass'
 
 group :development do
