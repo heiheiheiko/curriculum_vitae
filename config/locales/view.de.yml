@@ -5,8 +5,6 @@ de:
     chronicle:
       header: Meine Chronik
       filter: Filter
-      tooltip_disable: '%{model} ausblenden'
-      tooltip_enable: '%{model} einblenden'
       top: Top Einträge
     skills:
       header: Skills
