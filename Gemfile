@@ -9,7 +9,6 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-ui-rails'
 gem 'haml-rails'
 gem 'high_voltage'
-gem 'simple_form'
 gem 'rails-i18n'
 gem 'font-awesome-sass'
 
