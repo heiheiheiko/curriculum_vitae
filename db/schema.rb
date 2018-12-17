@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_17_211441) do
+ActiveRecord::Schema.define(version: 2018_12_17_214610) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "name"
@@ -97,6 +97,17 @@ ActiveRecord::Schema.define(version: 2018_12_17_211441) do
     t.string "url"
     t.boolean "top", default: false
     t.index ["informable_type", "informable_id"], name: "index_information_on_informable_type_and_informable_id"
+  end
+
+  create_table "information_translations", force: :cascade do |t|
+    t.integer "information_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "description"
+    t.index ["information_id"], name: "index_information_translations_on_information_id"
+    t.index ["locale"], name: "index_information_translations_on_locale"
   end
 
 end
