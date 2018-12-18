@@ -20,8 +20,7 @@
           %span
             = icon 'far', 'calendar-alt'
             = chronicle_item.time_range.period_as_dates
-          %span
-            = icon 'far', 'clock-o'
+          %span.text-8.badge.badge-secondary
             = chronicle_item.time_range.period_in_words
         - if chronicle_item.address
           - address = chronicle_item.address
