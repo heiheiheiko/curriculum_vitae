@@ -982,7 +982,7 @@ ci.save
 ######################################################################################################
 
 
-Highlight.new(
+ci = Highlight.new(
   started_at: '01-10-2006',
   ended_at: nil,
   badge: 'car',
@@ -1875,9 +1875,9 @@ interest = Interest.new(
   informable_type: applicant.model_name
 )
 I18n.locale = :de
-interest.title = 'Web-Technologien'
+interest.title = 'Frontend Technologien'
 I18n.locale = :en
-interest.title = 'Web technologies'
+interest.title = 'Frontend technologies'
 interest.save
 
 interest = Interest.new(
