@@ -1781,90 +1781,169 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 # interests
 ######################################################################################################
 
-Interest.create(
-  title: 'Spiele',
-  description: '',
+interest = Interest.new(
   information_type: :personal,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
-Interest.create(
-  title: 'Andere Welten',
-  description: '',
-  information_type: :personal,
-  informable_id: applicant.id,
-  informable_type: applicant.model_name
-)
-Interest.create(
-  title: 'Outdoor',
-  description: '',
-  information_type: :personal,
-  informable_id: applicant.id,
-  informable_type: applicant.model_name
-)
-Interest.create(
-  title: 'Aquascaping',
-  description: '',
-  information_type: :personal,
-  informable_id: applicant.id,
-  informable_type: applicant.model_name
-)
-Interest.create(
-  title: 'Reisen',
-  description: '',
-  information_type: :personal,
-  informable_id: applicant.id,
-  informable_type: applicant.model_name
-)
-Interest.create(
-  title: 'Sport',
-  description: '',
-  information_type: :personal,
-  informable_id: applicant.id,
-  informable_type: applicant.model_name
-)
+I18n.locale = :de
+interest.title = 'Brettspiele'
+I18n.locale = :en
+interest.title = 'Board games'
+interest.save
 
-Interest.create(
-  title: 'Web-Technologien',
-  description: '',
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Computerspieler'
+I18n.locale = :en
+interest.title = 'Computer games'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Outdoor Aktivitäten'
+I18n.locale = :en
+interest.title = 'Outdoor activities'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Reisen'
+I18n.locale = :en
+interest.title = 'Traveling'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Fitness'
+I18n.locale = :en
+interest.title = 'Fitness'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Popkultur'
+I18n.locale = :en
+interest.title = 'Pop culture'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Aquascaping'
+I18n.locale = :en
+interest.title = 'Aquascaping'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Welt verbessern'
+I18n.locale = :en
+interest.title = 'Improve the world'
+interest.save
+
+interest = Interest.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
-Interest.create(
-  title: 'Open Source',
-  description: '',
+I18n.locale = :de
+interest.title = 'Web-Technologien'
+I18n.locale = :en
+interest.title = 'Web technologies'
+interest.save
+
+interest = Interest.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
-Interest.create(
-  title: 'Usability',
-  description: '',
+I18n.locale = :de
+interest.title = 'Usability'
+I18n.locale = :en
+interest.title = 'Usability'
+interest.save
+
+interest = Interest.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
-Interest.create(
-  title: 'Gamification',
-  description: '',
+I18n.locale = :de
+interest.title = 'Gamification'
+I18n.locale = :en
+interest.title = 'Gamification'
+interest.save
+
+interest = Interest.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
-Interest.create(
-  title: 'Softwarequalität',
-  description: '',
+I18n.locale = :de
+interest.title = 'Softwarequalität'
+I18n.locale = :en
+interest.title = 'Software quality'
+interest.save
+
+interest = Interest.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
-Interest.create(
-  title: 'Digitale Prozesse',
-  description: '',
+I18n.locale = :de
+interest.title = 'Digitale Prozesse'
+I18n.locale = :en
+interest.title = 'Digital processes'
+interest.save
+
+interest = Interest.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
+I18n.locale = :de
+interest.title = 'Neue Dinge lernen'
+I18n.locale = :en
+interest.title = 'Learning new things'
+interest.save
+
+interest = Interest.new(
+  information_type: :professional,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Welt verbessern'
+I18n.locale = :en
+interest.title = 'Improve the world'
+interest.save
 
 p 'end'
