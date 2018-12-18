@@ -15,6 +15,9 @@ en:
     filter:
       disable: '%{obj} hide'
       enable: '%{obj} show'
+  languages:
+    de: Deutsch
+    en: English
   time_range:
     year: year
     month: month

@@ -7,7 +7,7 @@
       %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
-        %ul.navbar-nav.ml-auto{ role: 'tablist'}
+        %ul.navbar-nav.ml-auto.f-row.f-ccenter{ role: 'tablist'}
           %li.nav-item
             = link_to t(:header, scope: 'applicant.introduction'), '#goto-introduction', class: 'nav-link anchor'
           %li.nav-item
@@ -16,4 +16,12 @@
             = link_to t(:header, scope: 'applicant.skills'), '#goto-skills', class: 'nav-link anchor'
           %li.nav-item
             = link_to t(:header, scope: 'applicant.interests'), '#goto-interests', class: 'nav-link anchor'
+          %li.nav-item
+            - i18n_scope = "languages"
+            .dropdown
+              %button#dropdownMenuButton.btn.btn-outline-light.dropdown-toggle.border-0{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+                = t(I18n.locale, scope: i18n_scope)
+              .dropdown-menu{"aria-labelledby" => "dropdownMenuButton"}
+                = link_to t(:de, scope: i18n_scope), '/', class: 'dropdown-item small'
+                = link_to t(:en, scope: i18n_scope), '/en', class: 'dropdown-item small'
             

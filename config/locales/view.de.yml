@@ -15,6 +15,9 @@ de:
     filter:
       disable: '%{obj} ausblenden'
       enable: '%{obj} einblenden'
+  languages:
+    de: Deutsch
+    en: English
   time_range:
     year: Jahr
     month: Monat
