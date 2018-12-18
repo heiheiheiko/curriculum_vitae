@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_17_214610) do
+ActiveRecord::Schema.define(version: 2018_12_17_234058) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "name"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 2018_12_17_214610) do
     t.integer "experience"
     t.index ["chronicle_item_id"], name: "index_chronicle_item_skills_on_chronicle_item_id"
     t.index ["skill_id"], name: "index_chronicle_item_skills_on_skill_id"
+  end
+
+  create_table "chronicle_item_translations", force: :cascade do |t|
+    t.integer "chronicle_item_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "description"
+    t.string "graduation"
+    t.index ["chronicle_item_id"], name: "index_chronicle_item_translations_on_chronicle_item_id"
+    t.index ["locale"], name: "index_chronicle_item_translations_on_locale"
   end
 
   create_table "chronicle_items", force: :cascade do |t|

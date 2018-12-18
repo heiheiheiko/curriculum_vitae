@@ -5,6 +5,8 @@ class ChronicleItem < ApplicationRecord
   has_many :chronicle_item_skills
   has_many :skills, through: :chronicle_item_skills
 
+  translates :title, :description, :graduation
+
   def self.address_icon_font
     'fas'
   end

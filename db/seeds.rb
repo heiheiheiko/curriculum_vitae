@@ -891,15 +891,18 @@ address = Address.create(
   zip: '48653',
   city: 'Coesfeld'
 )
-Highlight.create(
+ci = Highlight.new(
   started_at: '18-07-1986',
   ended_at: nil,
-  title: 'Meine Geburt',
-  description: nil,
   badge: 'birthday-cake',
   applicant: applicant,
   address: address
 )
+I18n.locale = :de
+ci.title = 'Geburtstag'
+I18n.locale = :en
+ci.title = 'Birthday'
+ci.save
 
 
 ######################################################################################################
@@ -911,15 +914,21 @@ school = Address.create(
   zip: '48356',
   city: 'Nordwalde'
 )
-ci = Education.create(
+ci = Education.new(
   started_at: '01-08-1997',
   ended_at: '01-07-2003',
-  title: 'Realschule',
   badge: 'book',
-  graduation: 'Fachoberschulreife',
   applicant: applicant,
   address: school
 )
+I18n.locale = :de
+ci.title = 'Realschule'
+ci.graduation = 'Fachoberschulreife'
+I18n.locale = :en
+ci.title = 'Secondary school'
+ci.graduation = 'Vocational extension certificate'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Windows').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Office').id, experience: :regular)
 
@@ -933,15 +942,21 @@ school = Address.create(
   zip: '48565',
   city: 'Steinfurt'
 )
-ci = Education.create(
+ci = Education.new(
   started_at: '01-08-2003',
   ended_at: '01-06-2005',
-  title: 'Höhere Handelsschule',
   badge: 'book',
-  graduation: 'Fachhochschulreife (Wirtschaft)',
   applicant: applicant,
   address: school,
 )
+I18n.locale = :de
+ci.title = 'Höhere Handelsschule'
+ci.graduation = 'Fachhochschulreife (Wirtschaft)'
+I18n.locale = :en
+ci.title = 'Commercial college'
+ci.graduation = 'Advanced college certificate (Commercial)'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Windows').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Office').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Visual Basic').id, experience: :rare)
@@ -950,27 +965,34 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ######################################################################################################
 
 
-Highlight.create(
+ci = Highlight.new(
   started_at: '22-02-2004',
   ended_at: nil,
   title: 'Meine heutige Frau kennengelernt',
-  description: nil,
   badge: 'heart',
   applicant: applicant
 )
+I18n.locale = :de
+ci.title = 'Meine heutige Frau kennengelernt'
+I18n.locale = :en
+ci.title = "My today's wife met"
+ci.save
 
 
 ######################################################################################################
 
 
-Highlight.create(
+Highlight.new(
   started_at: '01-10-2006',
   ended_at: nil,
-  title: 'Führerschein Klasse B',
-  description: nil,
   badge: 'car',
   applicant: applicant
 )
+I18n.locale = :de
+ci.title = 'Führerschein Klasse B'
+I18n.locale = :en
+ci.title = "Driving licence"
+ci.save
 
 
 ######################################################################################################
@@ -982,16 +1004,23 @@ school = Address.create(
   zip: '48565',
   city: 'Steinfurt'
 )
-ci = Education.create(
+ci = Education.new(
   started_at: '01-08-2005',
   ended_at: '01-07-2008',
-  title: 'Informationstechnischer Assistent',
-  description: 'Abschluss als Jahrgangsbester',
   badge: 'book',
-  graduation: 'Fachhochschulreife (Informatik)',
   applicant: applicant,
   address: school
 )
+I18n.locale = :de
+ci.title = 'Informationstechnischer Assistent'
+ci.description = 'Abschluss als Jahrgangsbester'
+ci.graduation = 'Fachhochschulreife (Informatik)'
+I18n.locale = :en
+ci.title = 'IT assistant'
+ci.description = 'Graduation as best of year'
+ci.graduation = 'Advanced college certificate (IT)'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Windows').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Ubuntu').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Office').id, experience: :frequent)
@@ -1013,14 +1042,19 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ######################################################################################################
 
 
-Highlight.create(
+ci = Highlight.new(
   started_at: '01-03-2002',
   ended_at: '01-09-2009',
-  title: 'Verschiedene Aushilfsjobs',
-  description: 'Martin Oelrich GmbH & Co. KG (Wagenwäscher);Emsdettener Fahrradkurier (Briefzusteller);Movie and More - Videothek (Verkäufer);Biobauernhof (Mädchen für alles) ;Hermes Logistik Gruppe Deutschland (Paketzusteller);crashtest-service.com GmbH (Datenaufbereitung)',
   badge: 'money-bill-alt',
   applicant: applicant
 )
+I18n.locale = :de
+ci.title = 'Verschiedene Aushilfsjobs'
+ci.description = 'Martin Oelrich GmbH & Co. KG (Wagenwäscher);Emsdettener Fahrradkurier (Briefzusteller);Movie and More - Videothek (Verkäufer);Biobauernhof (Mädchen für alles);Hermes Logistik Gruppe Deutschland (Paketzusteller);crashtest-service.com GmbH (Datenaufbereitung)'
+I18n.locale = :en
+ci.title = "Various backup jobs"
+ci.description = 'Martin Oelrich GmbH & Co. KG (Car washer);Emsdettener Fahrradkurier (Mail carrier);Movie and More - Video library (Seller);Organic farm (Utility man);Hermes Logistik Gruppe Deutschland (Parcel delivery);crashtest-service.com GmbH (Data preparation)'
+ci.save
 
 
 ######################################################################################################
@@ -1034,7 +1068,7 @@ school = Address.create(
   website: Website.create(url: 'https://www.fh-muenster.de/fb2/index.php' )
 )
 
-ci = Education.create(
+ci = Education.new(
   started_at: '01-10-2008',
   ended_at: '01-07-2010',
   title: 'Angewandte Informatik',
@@ -1043,6 +1077,12 @@ ci = Education.create(
   applicant: applicant,
   address: school
 )
+I18n.locale = :de
+ci.title = 'Angewandte Informatik'
+I18n.locale = :en
+ci.title = 'Applied computer science'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Projektmanagement').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Backend Development').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Windows').id, experience: :frequent)
@@ -1066,17 +1106,23 @@ company = Address.create(
   city: 'Münster',
   website: Website.create(url: 'https://www.fh-muenster.de/fb9/index.php' )
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-12-2010',
   ended_at: '01-02-2011',
-  title: 'Web Developer',
-  description: 'Pflege und Weiterentwicklung der Website',
   employment: :student_assistant,
   position: :web_developer,
   badge: 'code',
   applicant: applicant,
   address: company,
 )
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Wartung und Weiterentwicklung der Website'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Maintenance and further development of the website'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'PHP').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'HTML5').id, experience: :frequent)
@@ -1099,11 +1145,9 @@ company = Address.create(
   city: 'Münster',
   website: Website.create(url: 'http://www.zeb.de/' )
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-04-2009',
   ended_at: '01-07-2011',
-  title: 'Web Developer',
-  description: 'Pflege und Weiterentwicklung eines Prototypen im Team',
   employment: :student_assistant,
   position: :web_developer,
   badge: 'code',
@@ -1111,6 +1155,14 @@ ci = Job.create(
   applicant: applicant,
   address: company,
 )
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Wartung und Weiterentwicklung eines Prototypen'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Maintenance and further development of a prototype'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'HTML5').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'JavaScript').id, experience: :frequent)
@@ -1131,14 +1183,19 @@ address = Address.create(
   zip: '48341',
   city: 'Altenberge'
 )
-Highlight.create(
+
+ci = Highlight.new(
   started_at: '22-04-2011',
   ended_at: '22-09-2014',
-  title: 'Erste gemeinsame Wohnung',
   badge: 'home',
   applicant: applicant,
   address: address
 )
+I18n.locale = :de
+ci.title = 'Erste gemeinsame Wohnung'
+I18n.locale = :en
+ci.title = 'First shared apartment'
+ci.save
 
 
 ######################################################################################################
@@ -1151,17 +1208,23 @@ company = Address.create(
   city: 'Münster',
   website: Website.create(url: 'http://gloud.de/')
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-01-2012',
   ended_at: '01-07-2012',
-  title: 'Web Developer',
-  description: 'Pflege und Weiterentwicklung eines Prototypen im Team',
   employment: :student_assistant,
   position: :web_developer,
   badge: 'code',
   applicant: applicant,
   address: company
 )
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Wartung und Weiterentwicklung eines Prototypen'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Maintenance and further development of a prototype'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'PHP').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Zend Framework').id, experience: :rare)
@@ -1185,11 +1248,9 @@ company = Address.create(
   city: 'Münster',
   website: Website.create(url: 'https://www.fh-muenster.de/wirtschaftsinformatik/index.php')
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-07-2012',
   ended_at: '01-09-2012',
-  title: 'Web Developer',
-  description: 'Entwurf und Umsetzung einer Anwendung für die Hochschulverwaltung im Team',
   employment: :intern,
   position: :web_developer,
   badge: 'code',
@@ -1197,6 +1258,14 @@ ci = Job.create(
   applicant: applicant,
   address: company
 )
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Entwurf und Umsetzung einer Anwendung für die Hochschulverwaltung'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Design and implementation of an application for the university administration'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Projektmanagement').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Prozessoptimierung').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Softwarequalität').id, experience: :regular)
@@ -1235,14 +1304,17 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ######################################################################################################
 
 
-Highlight.create(
+ci = Highlight.new(
   started_at: '22-02-2013',
   ended_at: nil,
-  title: 'Meine heutige Frau geheiratet',
-  description: nil,
   badge: 'heart',
   applicant: applicant
 )
+I18n.locale = :de
+ci.title = 'Meine heutige Frau geheiratet'
+I18n.locale = :en
+ci.title = "My today's wife married"
+ci.save
 
 
 ######################################################################################################
@@ -1255,11 +1327,9 @@ company = Address.create(
   city: 'Emsdetten',
   website: Website.create(url: 'https://www.compeon.de')
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-03-2013',
   ended_at: '01-09-2013',
-  title: 'Web Developer',
-  description: 'Pflege und Weiterentwicklung des Online-Finanzportals COMPEON im Team;Bachelorarbeit: Konzeption, Implementierung und Evaluation einer webbasierten Anwendung zur Erfassung der Kundenzufriedenheit und zur Publikation von Kundenempfehlungen im Rahmen des Online-Finanzportals COMPEON ',
   employment: :bachelor,
   position: :web_developer,
   badge: 'code',
@@ -1267,6 +1337,14 @@ ci = Job.create(
   applicant: applicant,
   address: company,
 )
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Wartung und Weiterentwicklung des Online-Finanzportals COMPEON;Bachelorarbeit: Konzeption, Implementierung und Evaluation einer webbasierten Anwendung zur Erfassung der Kundenzufriedenheit und zur Publikation von Kundenempfehlungen im Rahmen des Online-Finanzportals COMPEON'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Maintenance and further development of the online financial portal COMPEON;Bachelor Thesis: Conception, implementation and evaluation of a web-based application for recording customer satisfaction and for publishing customer recommendations in the context of the online financial portal COMPEON'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Softwarequalität').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Code Reviews').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :frequent)
@@ -1319,16 +1397,22 @@ school = Address.create(
   city: 'Münster',
   website: Website.create(url: 'https://www.fh-muenster.de/wirtschaftsinformatik/index.php')
 )
-ci = Education.create(
+ci = Education.new(
   started_at: '01-10-2010',
   ended_at: '01-09-2013',
-  title: 'Wirtschaftsinformatik',
   badge: 'graduation-cap',
-  graduation: 'Bachelor of Science',
   top: true,
   applicant: applicant,
   address: school,
 )
+I18n.locale = :de
+ci.title = 'Wirtschaftsinformatik'
+ci.graduation = 'Bachelor of science'
+I18n.locale = :en
+ci.title = 'Business computer science'
+ci.graduation = 'Bachelor of science'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Projektmanagement').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Prozessoptimierung').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Softwarequalität').id, experience: :rare)
@@ -1380,11 +1464,9 @@ company = Address.create(
   city: 'Dissen a.T.W.',
   website: Website.create(url: 'http://www.fuchs.de/')
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-12-2013',
   ended_at: '01-06-2014',
-  title: 'Junior Software Developer',
-  description: 'Entwurf und Umsetzung individueller ERP-Anwendungen im Team; Entwicklung von API-Schnittstellen zur Integration verteilter Systeme;Pflege und Weiterentwicklung bestehender ERP-Anwendungen;',
   employment: :employee,
   position: :junior_software_developer,
   badge: 'code',
@@ -1392,6 +1474,14 @@ ci = Job.create(
   applicant: applicant,
   address: company
 )
+I18n.locale = :de
+ci.title = 'Junior Software Developer'
+ci.description = 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von API-Schnittstellen zur Integration verteilter Systeme'
+I18n.locale = :en
+ci.title = 'Junior Software Developer'
+ci.description = 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of API interfaces for the integration of distributed systems'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Projektmanagement').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Prozessoptimierung').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Softwarequalität').id, experience: :regular)
@@ -1452,17 +1542,23 @@ company = Address.create(
   city: 'Emsdetten',
   website: Website.create(url: 'http://www.deltacity.net/')
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-6-2014',
   ended_at: '01-09-2014',
-  title: 'Web Developer',
-  description: 'Entwurf und Umsetzung einer individuellen CMS-Lösung',
   employment: :employee,
   position: :web_developer,
   badge: 'code',
   applicant: applicant,
   address: company
 )
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Entwurf und Umsetzung einer individuellen CMS-Lösung'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Design and implementation of an individual CMS solution'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Projektmanagement').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Backend Development').id, experience: :frequent)
@@ -1492,14 +1588,18 @@ address = Address.create(
   zip: '48565',
   city: 'Steinfurt'
 )
-Highlight.create(
+ci = Highlight.new(
   started_at: '22-10-2014',
   ended_at: nil,
-  title: 'Umzug in eine größere Wohnung',
   badge: 'home',
   applicant: applicant,
   address: address
 )
+I18n.locale = :de
+ci.title = 'Umzug in eine größere Wohnung'
+I18n.locale = :en
+ci.title = 'Moving to a larger apartment'
+ci.save
 
 
 ######################################################################################################
@@ -1512,15 +1612,18 @@ address = Address.create(
   city: 'Steinfurt',
   website: Website.create(url: 'http://www.tv-borghorst.de/')
 )
-Highlight.create(
+ci = Highlight.new(
   started_at: '22-04-2010',
   ended_at: '22-07-2015',
-  title: 'Kung Fu Training',
-  description: nil,
   badge: 'hand-rock',
   applicant: applicant,
   address: address
 )
+I18n.locale = :de
+ci.title = 'Kung Fu Training'
+I18n.locale = :en
+ci.title = 'Kung Fu training'
+ci.save
 
 
 ######################################################################################################
@@ -1536,8 +1639,6 @@ company = Address.create(
 ci = Job.create(
   started_at: '01-10-2014',
   ended_at: nil,
-  title: 'Software Developer',
-  description: 'Entwurf und Umsetzung individueller ERP-Anwendungen im Team; Entwicklung von API-Schnittstellen zur Integration verteilter Systeme;Pflege und Weiterentwicklung bestehender ERP-Anwendungen;',
   employment: :employee,
   position: :software_developer,
   badge: 'code',
@@ -1545,6 +1646,14 @@ ci = Job.create(
   applicant: applicant,
   address: company
 )
+I18n.locale = :de
+ci.title = 'Software Developer'
+ci.description = 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von API-Schnittstellen zur Integration verteilter Systeme'
+I18n.locale = :en
+ci.title = 'Software Developer'
+ci.description = 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of API interfaces for the integration of distributed systems'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Projektmanagement').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Prozessoptimierung').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Softwarequalität').id, experience: :regular)
@@ -1605,7 +1714,7 @@ company = Address.create(
   city: 'Köln',
   website: Website.create(url: 'https://influencerdb.com/')
 )
-ci = Job.create(
+ci = Job.new(
   started_at: '01-11-2016',
   ended_at: nil,
   title: 'Software Developer',
@@ -1617,6 +1726,14 @@ ci = Job.create(
   applicant: applicant,
   address: company
 )
+I18n.locale = :de
+ci.title = 'Software Developer'
+ci.description = 'Wartung und Weiterentwicklung der Influencer Marketing Platform;Hauptverantwortlicher für das Frontend;Einführung von Vue'
+I18n.locale = :en
+ci.title = 'Software Developer'
+ci.description = 'Maintenance and further development of the Influencer Marketing Platform;Main responsible for the frontend;Introduction of Vue'
+ci.save
+I18n.locale = :de
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Software Engineering').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Backend Development').id, experience: :frequent)
