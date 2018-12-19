@@ -190,9 +190,9 @@ skill.title = 'Mobile Optimization'
 skill.save
 
 
-# conditions
+# keyword
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Testing'
@@ -201,7 +201,7 @@ skill.title = 'Testing'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Error Tracking'
 I18n.locale = :en
@@ -209,7 +209,7 @@ skill.title = 'Error Tracking'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Test Driven'
 I18n.locale = :en
@@ -217,7 +217,7 @@ skill.title = 'Test Driven'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Code Reviews'
@@ -226,7 +226,7 @@ skill.title = 'Code Reviews'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'MVC'
 I18n.locale = :en
@@ -234,7 +234,7 @@ skill.title = 'MVC'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'REST'
 I18n.locale = :en
@@ -242,7 +242,7 @@ skill.title = 'REST'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Webservices'
 I18n.locale = :en
@@ -250,7 +250,7 @@ skill.title = 'Webservices'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Microservices'
@@ -259,7 +259,7 @@ skill.title = 'Microservices'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'KVP'
 I18n.locale = :en
@@ -267,7 +267,7 @@ skill.title = 'CIP'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Agil'
@@ -276,7 +276,7 @@ skill.title = 'Agile'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Kanban'
 I18n.locale = :en
@@ -284,7 +284,7 @@ skill.title = 'Kanban'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Scrum'
@@ -293,7 +293,7 @@ skill.title = 'Scrum'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :conditions
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Lean Startup'
