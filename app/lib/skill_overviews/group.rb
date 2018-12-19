@@ -8,7 +8,7 @@ module SkillOverviews
     end
 
     def time_range
-      items.map{ |item| item.chronicle_item.time_range }.sum
+      items.map{ |item| item.time_range }.sum
     end
   end
 end
