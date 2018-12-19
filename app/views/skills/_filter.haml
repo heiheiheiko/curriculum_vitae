@@ -24,12 +24,12 @@
         = icon 'fas', 'circle', class: "fa-stack-2x text-technology"
         = icon 'fas', 'microchip', class: 'fa-stack-1x fa-inverse'
 
-    %li{"data-target-class" => ".js-area"}
-      - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.area'))
-      - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.area'))
+    %li{"data-target-class" => ".js-keyword"}
+      - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.keyword'))
+      - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.keyword'))
       = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
-        = icon 'fas', 'circle', class: "fa-stack-2x text-area"
-        = icon 'fas', 'brain', class: 'fa-stack-1x fa-inverse'
+        = icon 'fas', 'circle', class: "fa-stack-2x text-keyword"
+        = icon 'fas', 'key', class: 'fa-stack-1x fa-inverse'
 
     %li{"data-target-class" => ".js-conditions"}
       - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.conditions'))

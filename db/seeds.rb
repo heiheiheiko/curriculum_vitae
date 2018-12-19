@@ -112,9 +112,9 @@ Website.create(
 # skills
 ######################################################################################################
 
-# area
+# keyword
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Projektmanagement'
 I18n.locale = :en
@@ -122,7 +122,7 @@ skill.title = 'Project Management'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Prozessoptimierung'
 I18n.locale = :en
@@ -130,7 +130,7 @@ skill.title = 'Process Optimization'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Softwarequalität'
@@ -139,7 +139,7 @@ skill.title = 'Software Quality'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Software Engineering'
 I18n.locale = :en
@@ -147,7 +147,7 @@ skill.title = 'Software Engineering'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Web Engineering'
 I18n.locale = :en
@@ -155,7 +155,7 @@ skill.title = 'Web Engineering'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Frontend Development'
@@ -164,7 +164,7 @@ skill.title = 'Frontend Development'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Backend Development'
@@ -173,7 +173,7 @@ skill.title = 'Backend Development'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 skill.top = true
 I18n.locale = :de
 skill.title = 'Usability'
@@ -182,7 +182,7 @@ skill.title = 'Usability'
 skill.save
 
 skill = Skill.new()
-skill.information_type = :area
+skill.information_type = :keyword
 I18n.locale = :de
 skill.title = 'Mobile Optimierung'
 I18n.locale = :en

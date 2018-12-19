@@ -2,7 +2,7 @@ class Skill < Information
   has_many :chronicle_item_skills
   has_many :chronicle_items, through: :chronicle_item_skills
 
-  enum information_type: [ :area, :conditions, :technology, :software ]
+  enum information_type: [ :keyword, :conditions, :technology, :software ]
 
   # decorator
   def color_class
@@ -15,8 +15,8 @@ class Skill < Information
       'bg-software js-software'
     when :technology
       'bg-technology js-technology'
-    when :area
-      'bg-area js-area'
+    when :keyword
+      'bg-keyword js-keyword'
     when :conditions
       'bg-conditions js-conditions'
     end
@@ -28,8 +28,8 @@ class Skill < Information
       'bg-software-shade-1'
     when :technology
       'bg-technology-shade-1'
-    when :area
-      'bg-area-shade-1'
+    when :keyword
+      'bg-keyword-shade-1'
     when :conditions
       'bg-conditions-shade-1'
     end
