@@ -301,6 +301,34 @@ I18n.locale = :en
 skill.title = 'Lean Startup'
 skill.save
 
+skill = Skill.new()
+skill.information_type = :keyword
+skill.top = true
+I18n.locale = :de
+skill.title = 'Homeoffice'
+I18n.locale = :en
+skill.title = 'Homeoffice'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :keyword
+skill.top = true
+I18n.locale = :de
+skill.title = 'Deutsch (Muttersprache)'
+I18n.locale = :en
+skill.title = 'German (Native language)'
+skill.save
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :keyword
+skill.top = true
+I18n.locale = :de
+skill.title = 'Englisch (B2)'
+I18n.locale = :en
+skill.title = 'English (B2)'
+skill.save
+applicant.skills << skill
 
 # technology
 skill = Skill.new()
@@ -1825,6 +1853,7 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Kanban').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Scrum').id, started_at: '01-09-2018', ended_at: "30-11-2018", experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Lean Startup').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Homeoffice').id, started_at: '01-05-2017', ended_at: "30-11-2018", experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Python').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Django').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'HTML5').id, experience: :regular)
@@ -1838,7 +1867,7 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Storybook').id, started_at: '01-09-2018', ended_at: "30-11-2018", experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Ajax').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'JSON').id, experience: :frequent)
-ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'webpack').id, started_at: '01-09-2018', ended_at: "30-11-2018", experience: :rare)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'webpack').id, started_at: '01-09-2018', ended_at: "30-11-2018", experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Ubuntu').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'git').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Bitbucket').id, experience: :frequent)
