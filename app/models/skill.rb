@@ -12,6 +12,10 @@ class Skill < Information
     self.class.color_class_for(information_type)
   end
 
+  def accent_color_class
+    self.class.accent_color_class_for(information_type)
+  end
+
   def self.color_class_for(information_type)
     case information_type.to_sym
     when :software

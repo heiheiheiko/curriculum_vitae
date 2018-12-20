@@ -11,4 +11,4 @@
 
     - if skill_group.present?
       .f-row.f-ccenter.text-5.ml-7
-        .badge{class: "#{skill.color_class}", "data-toggle" => "tooltip", "data-html" =>"true", "data-container"=>"body", title: skill_group.experience_groups_in_words}= skill_group.time_range.reduced_period_in_words
+        .badge{class: "#{skill.accent_color_class}", "data-toggle" => "tooltip", "data-html" =>"true", "data-container"=>"body", title: skill_group.experience_groups_in_words}= skill_group.time_range.reduced_period_in_words
