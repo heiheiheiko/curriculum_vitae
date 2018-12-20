@@ -4,7 +4,7 @@ module SkillOverviews
 
     def initialize(type, items)
       @type = type
-      @items = items
+      @items = items.sort_by(&:id)
     end
 
     def time_range
