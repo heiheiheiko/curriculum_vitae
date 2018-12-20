@@ -758,6 +758,7 @@ skill.title = 'PyCharm'
 I18n.locale = :en
 skill.title = 'PyCharm'
 skill.save
+applicant.save
 
 skill = Skill.new()
 skill.information_type = :software
@@ -881,6 +882,78 @@ I18n.locale = :en
 skill.title = 'Google Tools'
 skill.save
 I18n.locale = :de
+
+
+# soft
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Problemlösungsorientiert'
+I18n.locale = :en
+skill.title = 'Solution-oriented'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Lernfreudig'
+I18n.locale = :en
+skill.title = 'Willingness to learn'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Selbständiges Arbeiten'
+I18n.locale = :en
+skill.title = 'Independent working'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Teamgeist'
+I18n.locale = :en
+skill.title = 'Team spirit'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Qualitätsbewusst'
+I18n.locale = :en
+skill.title = 'Quality-conscious'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Begeisterungsfähig'
+I18n.locale = :en
+skill.title = 'Enthusiastic'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
+
+skill = Skill.new()
+skill.information_type = :soft
+I18n.locale = :de
+skill.title = 'Bodenständig'
+I18n.locale = :en
+skill.title = 'Grounded'
+skill.save
+I18n.locale = :de
+applicant.skills << skill
 
 
 ######################################################################################################

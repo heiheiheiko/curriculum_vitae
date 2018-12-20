@@ -31,9 +31,9 @@
         = icon 'fas', 'circle', class: "fa-stack-2x text-keyword"
         = icon 'fas', 'key', class: 'fa-stack-1x fa-inverse'
 
-    %li{"data-target-class" => ".js-conditions"}
-      - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.conditions'))
-      - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.conditions'))
+    %li{"data-target-class" => ".js-soft"}
+      - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.soft'))
+      - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.soft'))
       = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
-        = icon 'fas', 'circle', class: "fa-stack-2x text-conditions"
-        = icon 'fas', 'book', class: 'fa-stack-1x fa-inverse'
+        = icon 'fas', 'circle', class: "fa-stack-2x text-soft"
+        = icon 'fas', 'feather', class: 'fa-stack-1x fa-inverse'

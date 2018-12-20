@@ -1,0 +1,3 @@
+- applicant.skill_type_groups.each do |skill_type_group|
+  - skill_type_group.skill_groups.each do |skill_group|
+    = render "skills/skill", skill: skill_group.skill, skill_group: skill_group

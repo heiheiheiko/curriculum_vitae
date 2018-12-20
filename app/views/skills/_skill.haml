@@ -1,0 +1,14 @@
+- card_class ||= ""
+- skill_group ||= ""
+
+.card.card-body.border-0.py-7.px-6.mx-7.mb-6{class: "js-skill #{skill.color_class} #{card_class} #{skill.top ? "is-top" : ""}"}
+  .f-row.f-ccenter
+    - if skill.top
+      %h4.m-0
+        %u= skill.title
+    - else
+      %h4.m-0= skill.title
+
+    - if skill_group.present?
+      .f-row.f-ccenter.text-5.ml-7
+        .badge{class: "#{skill.color_class}", "data-toggle" => "tooltip", "data-html" =>"true", "data-container"=>"body", title: skill_group.experience_groups_in_words}= skill_group.time_range.reduced_period_in_words

@@ -1,0 +1,12 @@
+- i18n_scope = 'applicant.skills'
+%span.goto#goto-skills
+%section.section-skills{style:"min-height: 500px"}
+  = render "skills/filter"
+
+  .container
+    %h1.text-center.p-3.m-0= t(:header, scope: i18n_scope)
+    
+    .f-row.f-wrap.mx--6
+      = render "skills/skill_groups", applicant: @applicant
+      - applicant.skills.each do |skill|
+        = render "skills/skill", skill: skill

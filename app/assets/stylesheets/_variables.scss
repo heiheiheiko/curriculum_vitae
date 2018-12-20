@@ -51,7 +51,7 @@ $color-professional:    $material-red;
 $color-software:        $material-teal;
 $color-technology:      $material-indigo;
 $color-keyword:            $material-deep-orange;
-$color-conditions:      $material-purple;
+$color-soft:      $material-purple;
 
 $color-introduction:    $material-red;
 $color-chronicle:       $material-blue;
@@ -65,7 +65,7 @@ $colors: (
     software: $color-software,
     technology: $color-technology,
     keyword: $color-keyword,
-    conditions: $color-conditions,
+    soft: $color-soft,
     top: $material-amber,
     disabled: $material-grey
 );

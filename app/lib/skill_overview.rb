@@ -11,8 +11,7 @@ class SkillOverview
     @skill_type_groups ||= [
       skill_type_groups.find { |stg| stg.type == 'software' },
       skill_type_groups.find { |stg| stg.type == 'technology' },
-      skill_type_groups.find { |stg| stg.type == 'keyword' },
-      skill_type_groups.find { |stg| stg.type == 'conditions' }
+      skill_type_groups.find { |stg| stg.type == 'keyword' }
     ].compact
   end
 end
