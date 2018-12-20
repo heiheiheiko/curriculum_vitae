@@ -887,6 +887,7 @@ I18n.locale = :de
 # soft
 skill = Skill.new()
 skill.information_type = :soft
+skill.top = true
 I18n.locale = :de
 skill.title = 'Problemlösungsorientiert'
 I18n.locale = :en
@@ -897,6 +898,7 @@ applicant.skills << skill
 
 skill = Skill.new()
 skill.information_type = :soft
+skill.top = true
 I18n.locale = :de
 skill.title = 'Lernfreudig'
 I18n.locale = :en
@@ -917,16 +919,18 @@ applicant.skills << skill
 
 skill = Skill.new()
 skill.information_type = :soft
+skill.top = true
 I18n.locale = :de
-skill.title = 'Teamgeist'
+skill.title = 'Teamplayer'
 I18n.locale = :en
-skill.title = 'Team spirit'
+skill.title = 'Teamplayer'
 skill.save
 I18n.locale = :de
 applicant.skills << skill
 
 skill = Skill.new()
 skill.information_type = :soft
+skill.top = true
 I18n.locale = :de
 skill.title = 'Qualitätsbewusst'
 I18n.locale = :en
