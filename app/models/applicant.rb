@@ -5,6 +5,8 @@ class Applicant < ApplicationRecord
   has_many :faqs, as: :informable, dependent: :destroy
   has_many :interests, as: :informable, dependent: :destroy
   has_many :chronicle_items, dependent: :destroy
+  has_many :applicant_skills
+  has_many :skills, through: :applicant_skills
   
   translates :slogan, :family_status
 
