@@ -203,14 +203,6 @@ skill.save
 skill = Skill.new()
 skill.information_type = :keyword
 I18n.locale = :de
-skill.title = 'Error Tracking'
-I18n.locale = :en
-skill.title = 'Error Tracking'
-skill.save
-
-skill = Skill.new()
-skill.information_type = :keyword
-I18n.locale = :de
 skill.title = 'Test Driven'
 I18n.locale = :en
 skill.title = 'Test Driven'
@@ -1076,15 +1068,14 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ci = Highlight.new(
   started_at: '22-02-2004',
   ended_at: nil,
-  title: 'Meine heutige Frau kennengelernt',
   badge: 'heart',
   applicant: applicant,
   order: 4
 )
 I18n.locale = :de
-ci.title = 'Meine heutige Frau kennengelernt'
+ci.title = 'Traf die Liebe meines Lebens'
 I18n.locale = :en
-ci.title = "My today's wife met"
+ci.title = "Met the love of my life"
 ci.save
 
 
@@ -1430,9 +1421,9 @@ ci = Highlight.new(
   order: 14
 )
 I18n.locale = :de
-ci.title = 'Meine heutige Frau geheiratet'
+ci.title = 'Heiratete die Liebe meines Lebens'
 I18n.locale = :en
-ci.title = "My today's wife married"
+ci.title = "Married the love of my life"
 ci.save
 
 
@@ -1497,7 +1488,6 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Testing').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Kanban').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Travis CI').id, experience: :frequent)
-ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Error Tracking').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Google Tools').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Airbrake').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Basecamp').id, experience: :regular)
@@ -1640,7 +1630,6 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Testing').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Kanban').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Google Tools').id, experience: :regular)
-ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Error Tracking').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'AMQP').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'RabbitMQ').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'XML').id, experience: :regular)
@@ -1762,7 +1751,7 @@ company = Address.create(
 )
 ci = Job.create(
   started_at: '01-10-2014',
-  ended_at: nil,
+  ended_at: '31-10-2016',
   employment: :employee,
   position: :software_developer,
   badge: 'code',
@@ -1815,7 +1804,6 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Testing').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Kanban').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Google Tools').id, experience: :regular)
-ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Error Tracking').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'AMQP').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'RabbitMQ').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'XML').id, experience: :regular)
@@ -1826,6 +1814,24 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'KVP').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Microservices').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Webservices').id, experience: :frequent)
+
+
+######################################################################################################
+
+
+ci = Highlight.new(
+  started_at: '16-10-2004',
+  ended_at: '18-09-2018',
+  badge: 'dog',
+  applicant: applicant,
+  address: address,
+  order: 22
+)
+I18n.locale = :de
+ci.title = 'Stolzes Herr­chen von Geoffrey'
+I18n.locale = :en
+ci.title = 'Proud dog daddy of Geoffrey'
+ci.save
 
 
 ######################################################################################################
@@ -1849,7 +1855,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 22
+  order: 23
 )
 I18n.locale = :de
 ci.title = 'Software Developer'
@@ -1866,7 +1872,6 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Usability').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Mobile Optimierung').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Testing').id, experience: :frequent)
-ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Error Tracking').id, experience: :frequent)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Test Driven').id, experience: :rare)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Code Reviews').id, started_at: '01-09-2018', ended_at: "30-11-2018", experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'MVC').id, experience: :regular)
