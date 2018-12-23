@@ -3,37 +3,37 @@
     %li{"data-target-class" => ".js-skill"}
       - disable_tooltip_message = t('general.filter.disable', obj: t("applicant.skills.top"))
       - enable_tooltip_message = t('general.filter.enable', obj: t("applicant.skills.top"))
-      = content_tag(:span, class: 'filter-item js-filter-item-top fa-stack fa-lg is-disabled', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: enable_tooltip_message) do
+      = content_tag(:span, class: 'filter-item js-filter-item-top fa-stack rounded-circle shadow-2 is-disabled', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: enable_tooltip_message) do
         = icon 'fas', 'circle', class: "fa-stack-2x text-top text-disabled"
         %u= icon 'fas', 'star', class: 'fa-stack-1x fa-inverse'
-    
+  
     %li.mb-7
       %hr.border-light.m-0
 
     %li{"data-target-class" => ".js-software"}
       - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.software'))
       - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.software'))
-      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
-        = icon 'fas', 'circle', class: "fa-stack-2x text-software"
+      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack rounded-circle shadow-2', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
+        = icon 'fas', 'circle', class: "fa-stack-2x text-software tet"
         = icon 'fas', 'compact-disc', class: 'fa-stack-1x fa-inverse'
 
     %li{"data-target-class" => ".js-technology"}
       - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.technology'))
       - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.technology'))
-      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
+      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack rounded-circle shadow-2', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
         = icon 'fas', 'circle', class: "fa-stack-2x text-technology"
         = icon 'fas', 'microchip', class: 'fa-stack-1x fa-inverse'
 
     %li{"data-target-class" => ".js-keyword"}
       - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.keyword'))
       - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.keyword'))
-      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
+      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack rounded-circle shadow-2', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
         = icon 'fas', 'circle', class: "fa-stack-2x text-keyword"
         = icon 'fas', 'key', class: 'fa-stack-1x fa-inverse'
 
     %li{"data-target-class" => ".js-soft"}
       - disable_tooltip_message = t('general.filter.disable', obj: t('enums.skill.type.soft'))
       - enable_tooltip_message = t('general.filter.enable', obj: t('enums.skill.type.soft'))
-      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack fa-lg', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
+      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack rounded-circle shadow-2', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
         = icon 'fas', 'circle', class: "fa-stack-2x text-soft"
         = icon 'fas', 'feather', class: 'fa-stack-1x fa-inverse'
