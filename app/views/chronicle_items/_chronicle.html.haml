@@ -25,6 +25,6 @@
   .container
     %h1.text-center.p-3.m-0= t(:header, scope: 'applicant.chronicle')
     %ul.timeline
-      - applicant.chronicle_items.sort_by(&:id).each do |ci|
+      - applicant.chronicle_items.sort_by(&:order).reverse.each do |ci|
         - alignment = ci.id.even? ? :right : nil
         = render 'chronicle_items/chronicle_item', chronicle_item: ci, alignment: alignment

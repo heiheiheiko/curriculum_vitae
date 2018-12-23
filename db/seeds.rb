@@ -1001,7 +1001,8 @@ ci = Highlight.new(
   ended_at: nil,
   badge: 'birthday-cake',
   applicant: applicant,
-  address: address
+  address: address,
+  order: 1
 )
 I18n.locale = :de
 ci.title = 'Geburtstag'
@@ -1024,7 +1025,8 @@ ci = Education.new(
   ended_at: '01-07-2003',
   badge: 'book',
   applicant: applicant,
-  address: school
+  address: school,
+  order: 2
 )
 I18n.locale = :de
 ci.title = 'Realschule'
@@ -1053,6 +1055,7 @@ ci = Education.new(
   badge: 'book',
   applicant: applicant,
   address: school,
+  order: 3
 )
 I18n.locale = :de
 ci.title = 'Höhere Handelsschule'
@@ -1075,7 +1078,8 @@ ci = Highlight.new(
   ended_at: nil,
   title: 'Meine heutige Frau kennengelernt',
   badge: 'heart',
-  applicant: applicant
+  applicant: applicant,
+  order: 4
 )
 I18n.locale = :de
 ci.title = 'Meine heutige Frau kennengelernt'
@@ -1091,7 +1095,8 @@ ci = Highlight.new(
   started_at: '01-10-2006',
   ended_at: nil,
   badge: 'car',
-  applicant: applicant
+  applicant: applicant,
+  order: 5
 )
 I18n.locale = :de
 ci.title = 'Führerschein Klasse B'
@@ -1114,7 +1119,8 @@ ci = Education.new(
   ended_at: '01-07-2008',
   badge: 'book',
   applicant: applicant,
-  address: school
+  address: school,
+  order: 6
 )
 I18n.locale = :de
 ci.title = 'Informationstechnischer Assistent'
@@ -1151,7 +1157,8 @@ ci = Highlight.new(
   started_at: '01-03-2002',
   ended_at: '01-09-2009',
   badge: 'money-bill-alt',
-  applicant: applicant
+  applicant: applicant,
+  order: 7
 )
 I18n.locale = :de
 ci.title = 'Verschiedene Aushilfsjobs'
@@ -1180,7 +1187,8 @@ ci = Education.new(
   badge: 'graduation-cap',
   graduation: nil,
   applicant: applicant,
-  address: school
+  address: school,
+  order: 8
 )
 I18n.locale = :de
 ci.title = 'Angewandte Informatik'
@@ -1219,6 +1227,7 @@ ci = Job.new(
   badge: 'code',
   applicant: applicant,
   address: company,
+  order: 9
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1259,6 +1268,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
+  order: 10
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1294,7 +1304,8 @@ ci = Highlight.new(
   ended_at: '22-09-2014',
   badge: 'home',
   applicant: applicant,
-  address: address
+  address: address,
+  order: 11
 )
 I18n.locale = :de
 ci.title = 'Erste gemeinsame Wohnung'
@@ -1320,7 +1331,8 @@ ci = Job.new(
   position: :web_developer,
   badge: 'code',
   applicant: applicant,
-  address: company
+  address: company,
+  order: 12
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1361,7 +1373,8 @@ ci = Job.new(
   badge: 'code',
   top: true,
   applicant: applicant,
-  address: company
+  address: company,
+  order: 13
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1413,7 +1426,8 @@ ci = Highlight.new(
   started_at: '22-02-2013',
   ended_at: nil,
   badge: 'heart',
-  applicant: applicant
+  applicant: applicant,
+  order: 14
 )
 I18n.locale = :de
 ci.title = 'Meine heutige Frau geheiratet'
@@ -1441,6 +1455,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
+  order: 15
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1509,6 +1524,7 @@ ci = Education.new(
   top: true,
   applicant: applicant,
   address: school,
+  order: 16
 )
 I18n.locale = :de
 ci.title = 'Wirtschaftsinformatik'
@@ -1577,7 +1593,8 @@ ci = Job.new(
   badge: 'code',
   top: true,
   applicant: applicant,
-  address: company
+  address: company,
+  order: 17
 )
 I18n.locale = :de
 ci.title = 'Junior Software Developer'
@@ -1653,7 +1670,8 @@ ci = Job.new(
   position: :web_developer,
   badge: 'code',
   applicant: applicant,
-  address: company
+  address: company,
+  order: 18
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1697,7 +1715,8 @@ ci = Highlight.new(
   ended_at: nil,
   badge: 'home',
   applicant: applicant,
-  address: address
+  address: address,
+  order: 19
 )
 I18n.locale = :de
 ci.title = 'Umzug in eine größere Wohnung'
@@ -1721,7 +1740,8 @@ ci = Highlight.new(
   ended_at: '22-07-2015',
   badge: 'hand-rock',
   applicant: applicant,
-  address: address
+  address: address,
+  order: 20
 )
 I18n.locale = :de
 ci.title = 'Kung Fu Training'
@@ -1748,7 +1768,8 @@ ci = Job.create(
   badge: 'code',
   top: true,
   applicant: applicant,
-  address: company
+  address: company,
+  order: 21
 )
 I18n.locale = :de
 ci.title = 'Software Developer'
@@ -1827,7 +1848,8 @@ ci = Job.new(
   badge: 'code',
   top: true,
   applicant: applicant,
-  address: company
+  address: company,
+  order: 22
 )
 I18n.locale = :de
 ci.title = 'Software Developer'
