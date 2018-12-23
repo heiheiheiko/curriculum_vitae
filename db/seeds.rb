@@ -1,3 +1,5 @@
+include ActionView::Helpers::AssetUrlHelper
+
 p 'start'
 
 ######################################################################################################
@@ -34,7 +36,7 @@ applicant.family_status = 'married'
 applicant.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/od38D9f-2xAOqJLRioBJrJanGF1Gc2QdJk6tQdHfcF9-X33fRIFYvMdWOq9DPpVgxr17_sEgg2biFuydIjYVCjDx9qvZd7X3lkIDxgntDiIUbnwjdit0GXYq4wIk3R4pO7snWlej2eFbmElx7A7t7GjNIO4ku1fu_t6myeRfoDN1xRgQHqf6uWi3_V7vMU6kcGBNxXqH1SpujCWlpcip3k6MPlggsGHL4sO8StggUbJvIcJ-lkACkUa-bVFYcU7OzdWGYUpu12FsqXLbiFqRBnYQ5qkoers97ybnbpsKhATH1aTY60P_hlu8I5bbRjeZ_RkWHQGdTTDqQC5R5KbSyF8vbQ6uw1-t0e2LIS8BBtlB2Q7rQA1ROiznQsvut4X6_5ppRAU1SkHFrE6B_-fMOvbr5tkuPxkwX_QBt3uL7CvmiAmd_xrYVRDl2IMyP_f9JmfwWMv0A9VmH6JGmW39t-THr0dKcRRcFkXWYGL1i8mn2WMMzabt0YTXdCozRWHdQWATg5wMFo_5otz6AVyYYW1occwmbPSe-hXAL4V0Q9OfU3tQUaGEkv20oGKXTkK6NZkcukX2qcFVCnXrxSGY7eSFA7v40kLNWzNcs4AWd_3C5TwFPzW7=w430-h700-no',
+  url: asset_path("assets/gamer_430x700"),
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
@@ -47,7 +49,7 @@ img.description = 'Your focus determines your reality. - Qui-Gon Jinn'
 img.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/OXCfHXC1jCIKW3cYB1-6yOT18gdj1MgMszN5-HMEeim-4t9ONm8kjmOAvEgJTbYQ5OoJe-PN-BObdI-2pGPiycKSaKZBs2SmUgdM6dDysXWr0Zw4iZgHyUyGM0G0N0GVRdRYUpnzoRQS1zBaMq9EzDgy5hLJwnCajLdDYkFXuZlk_iCIc_R5oAE1Uny1C5-YZ4P_8YPfHX_DtNdxZqPR8KlqcuP9WYzY3bxdoXJVWnNmxO9YSJMD6SXJtiTfPSc4TZzaKL9858ZtVzSNvP8439xsWjB4EXs2I5CRHzxCBhiVWX0-04rt0CpvvRNNlnz1iDgBR0T4_1kca-ltrt_grkXfYq4gIeeesuGafIK7a0K27bDoBUO5Rnq5RD6-M9JYA9ka3VRYj3QdJLBApamHfl7Ol_T0ISCZ88lsBNC_Fg3bon9qnjpjScZw4j7j4LifZstMOolVqKSzsx3yyjfllQtYCEo_gEEq7GI-AB_T635R_4vN043CYZuNmUIkN01dy9_JyJ2d61FNzuSE_CrGhf3AiV9huLBH8BDRUwEQOhJczXesdIWdWigOiFTozBqVrhLT9Wlzfp0VuOo__YW36OqHKWM6Ym2cLLobLzcmOUEfw18rFBB4=w430-h700-no',
+  url: asset_path("assets/explorer_430x700"),
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
@@ -60,7 +62,7 @@ img.description = 'I have no special talent. I am only passionately curious. - A
 img.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/QJWnWquJx91n3EFGs24RuWw-ZvpOalqMLeS2j4AbNk5MwANXCVvjhk78UyjhXMtog9ILSDJSvgqbU3bnRnlVStVhs_bmv_tpozVOvgiTDuxuMZKoFlL6sRdK6Fjwo7tX7_IxlZJ2FppB4CYDlDceGcDxt7OIqfuD-R0qVjU73EhIaZLk3Vgn6Sh-fYI3oQEaSKfcfPyV3zNn15d-ZcfdY00vz6pAD48QTJTlM_RuftOuKnKVIDXHjurM-ovvVY_sRZUDLdxaCVBhBJQPGvWZefYTHkbwwXhT9J7vb12tyrC6N6H8VrX6Dn_P5IgRaQEhfdnUUZy6coMl0FdPDDrA7_l2awHsDe68g1CHBoTwIpd12lN-OE-a6-K8RfnKGb_ZxIDANvdFJmGF73BOmawspsaU44lh7dp-nsl-h7m_KmhUTut4123slakzK9kb1EBvTLWrmWl8ZUPLe_V-qpjnbneCOhr18umkxtHqH0j-sIFDcs9xsKcBBnNvkSzVzeE9iVtCr0aw8kO5tDm5rirLxxQQBlJ8E_-jURMad8rJCe9gPoG_FTvNl-C12gEreg3hmyTS=w430-h700-no',
+  url: asset_path("assets/accomplisher_430x700"),
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
