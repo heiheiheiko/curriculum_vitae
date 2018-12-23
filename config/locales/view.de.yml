@@ -11,6 +11,8 @@ de:
       top: Top Skills
     interests:
       header: Interessen
+    faqs:
+      header: FAQ
   general:
     filter:
       disable: '%{obj} ausblenden'

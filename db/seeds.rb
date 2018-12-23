@@ -2078,4 +2078,36 @@ I18n.locale = :en
 interest.title = 'Improve the world'
 interest.save
 
-p 'end'
+
+
+######################################################################################################
+# faqs
+######################################################################################################
+
+faq = Faq.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Was ist dein größter persönliche Wunsch?'
+faq.description = 'Einen neuen Hund.'
+I18n.locale = :en
+faq.title = "What's your biggest personal wish?"
+faq.description = 'A new dog.'
+faq.save
+
+faq = Faq.new(
+  information_type: :professional,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Was ist dein größter berufliche Wunsch?'
+faq.description = 'Für eine Firma zu arbeiten auf die ich stolz bin.'
+I18n.locale = :en
+faq.title = "What's your biggest professional wish?"
+faq.description = "To work for a company that I'm proud of."
+faq.save
+
+p "end"

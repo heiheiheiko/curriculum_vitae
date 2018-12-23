@@ -14,6 +14,7 @@ function initApplicantHeaderColorSwitch(){
     var chronicle_break_point = $('#goto-chronicle').position().top - correction
     var skills_break_point = $('#goto-skills').position().top - correction
     var interests_break_point = $('#goto-interests').position().top - correction
+    var faqs_break_point = $('#goto-faqs').position().top - correction
 
     var x = $(this).scrollTop();
     if (x > lastScrollTop){
@@ -27,12 +28,18 @@ function initApplicantHeaderColorSwitch(){
         case (skills_break_point <= x && x < interests_break_point):
             selector.switchClass('applicant-header-chronicle', 'applicant-header-skills', 150);
             break;
-        case (x > interests_break_point):
+        case (x > interests_break_point <= x && x < faqs_break_point):
             selector.switchClass('applicant-header-skills', 'applicant-header-interests', 150);
             break;
+        case (x > faqs_break_point):
+          selector.switchClass('applicant-header-interests', 'applicant-header-faqs', 150);
+          break;
       }
     } else {
       switch (true) {
+        case (faqs_break_point >= x && x > interests_break_point ):
+            selector.switchClass('applicant-header-faqs', 'applicant-header-interests', 150);
+            break;
         case (interests_break_point >= x && x > skills_break_point ):
             selector.switchClass('applicant-header-interests', 'applicant-header-skills', 150);
             break;

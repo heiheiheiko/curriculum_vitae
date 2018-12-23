@@ -1,0 +1,19 @@
+- i18n_scope = 'applicant.faqs'
+%span.goto#goto-faqs
+%section.section-faqs.mb-1
+  .container
+    %h1.text-center.p-3.m-0= t(:header, scope: i18n_scope)
+    .f-column.mx--6
+      - applicant.faqs.sort_by{ |f| f.id }.each do |f|
+        .faq.f-column
+          .w-100
+            = content_tag(:span, class: 'icon-40 js-filter-item-type fa-stack rounded-circle shadow-2 mr-8') do
+              = icon 'fas', 'circle', class: "fa-stack-2x text-#{f.color_key}"
+              = icon 'fas', 'robot', class: 'fa-stack-1x fa-inverse'
+            .card.card-body.d-inline-block.border-0.shadow-2.py-7.px-6.mx-7.mb-6.mw-75.bg-question
+              .m-0= f.title
+          .w-100
+            = image_tag("explorer_40x40", class:"rounded-circle float-right shadow-2 ml-8")
+            .card.card-body.d-inline-block.border-0.shadow-2.py-7.px-6.mx-7.mb-6.mw-75.float-right.bg-answer
+              .m-0= f.description
+            

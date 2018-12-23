@@ -37,6 +37,8 @@ $material-deep-orange:  rgb(255,87,34);
 
 $material-brown:        rgb(121,85,72);
 $material-grey:         rgb(158,158,158);
+$material-grey-4:      rgba($material-grey, $intensity-4);
+$material-grey-1:      rgba($material-grey, $intensity-1);
 $material-blue-grey:    rgb(96,125,139);
 
 $color-white:           rgb(255,255,255);
@@ -57,6 +59,7 @@ $color-introduction:    $material-blue;
 $color-chronicle:       $material-red;
 $color-skills:          $material-green;
 $color-interests:       $material-deep-purple;
+$color-faqs:            $material-amber;
 
 $colors: (
     personal: $color-personal,
@@ -67,7 +70,9 @@ $colors: (
     keyword: $color-keyword,
     soft: $color-soft,
     top: $material-amber,
-    disabled: $material-grey
+    disabled: $material-grey,
+    question: $material-grey-4,
+    answer: $material-grey-1
 );
 
 

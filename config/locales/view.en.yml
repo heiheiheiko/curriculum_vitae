@@ -11,6 +11,8 @@ en:
       top: Top skills
     interests:
       header: Interests
+    faqs: 
+      header: FAQ
   general:
     filter:
       disable: '%{obj} hide'
