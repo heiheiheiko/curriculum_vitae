@@ -1,7 +1,7 @@
 - content_for :header do
   = render 'header', applicant: @applicant
 
-= render 'introduction', applicant: @applicant
-= render 'chronicle_items/chronicle', applicant: @applicant
-= render 'skills/skills', applicant: @applicant
-= render 'interests/interests', applicant: @applicant
+= render 'introduction_section', applicant: @applicant
+= render 'chronicle_items/chronicle_items_section', applicant: @applicant
+= render 'skills/skills_section', applicant: @applicant
+= render 'interests/interests_section', applicant: @applicant
