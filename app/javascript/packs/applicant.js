@@ -3,11 +3,7 @@ export class Applicant {
     this.lastScrollTop = 0;
   }
 
-  initApplicant() {
-    this.initApplicantHeaderColorSwitch();
-  }
-
-  initApplicantHeaderColorSwitch() {
+  static initApplicantHeaderColorSwitch() {
     $(document).scroll(function () {
       const selector = $('.js-applicant-header');
       const gotoElmHeight = 70;
@@ -56,5 +52,9 @@ export class Applicant {
       }
       this.lastScrollTop = x;
     });
+  }
+
+  initApplicant() {
+    this.constructor.initApplicantHeaderColorSwitch();
   }
 }
