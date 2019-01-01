@@ -1,10 +1,10 @@
 import { Filter } from './components/filter';
 import { Applicant } from './applicant';
 
-$(function () {
+$(() => {
   $('[data-toggle="tooltip"]').tooltip();
 
-  $('.toggle_collapse_icon').click(function() {
+  $('.toggle_collapse_icon').click(function () {
     $(this).toggleClass('fa-chevron-circle-up fa-chevron-circle-down');
   });
 
