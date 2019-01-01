@@ -9,7 +9,10 @@
     "dev": "./bin/webpack-dev-server"
   },
   "dependencies": {
-    "@rails/webpacker": "3.5"
+    "@rails/webpacker": "3.5",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
