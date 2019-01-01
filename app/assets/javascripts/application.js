@@ -16,14 +16,3 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-
-  $('.toggle_collapse_icon').click(function() {
-    $(this).toggleClass('fa-chevron-circle-up fa-chevron-circle-down');
-  });
-
-  initFilter();
-  initApplicant();
-});
