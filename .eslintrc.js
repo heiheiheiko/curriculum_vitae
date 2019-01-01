@@ -27,6 +27,7 @@ const config = {
     }],
     'quotes': ['error', 'single'],
     'import/prefer-default-export': 'off',
+    'func-names': ["error", "never"],
   }
 };
 
