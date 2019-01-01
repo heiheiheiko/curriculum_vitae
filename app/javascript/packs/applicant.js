@@ -1,6 +1,6 @@
 export class Applicant {
   constructor() {
-    self.lastScrollTop = 0;
+    this.lastScrollTop = 0;
   }
 
   initApplicant() {
@@ -54,7 +54,7 @@ export class Applicant {
           break;
         }
       }
-      lastScrollTop = x;
+      this.lastScrollTop = x;
     });
   }
 }
