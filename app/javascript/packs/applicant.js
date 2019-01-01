@@ -33,6 +33,7 @@ export class Applicant {
         case (x > faqsBreakpoint):
           selector.switchClass('applicant-header-interests', 'applicant-header-faqs', 150);
           break;
+        default:
         }
       } else {
         switch (true) {
@@ -48,6 +49,7 @@ export class Applicant {
         case (chronicleBreakpoint > x && x >= 0):
           selector.switchClass('applicant-header-chronicle', 'applicant-header-introduction', 150);
           break;
+        default:
         }
       }
       this.lastScrollTop = x;
