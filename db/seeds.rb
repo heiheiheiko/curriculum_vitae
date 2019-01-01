@@ -1819,14 +1819,6 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ######################################################################################################
 
 
-ci = Highlight.new(
-  started_at: '16-10-2004',
-  ended_at: '18-09-2018',
-  badge: 'dog',
-  applicant: applicant,
-  address: address,
-  order: 22
-)
 I18n.locale = :de
 ci.title = 'Stolzes Herr­chen von Geoffrey'
 I18n.locale = :en
