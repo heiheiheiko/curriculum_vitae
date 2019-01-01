@@ -32,13 +32,13 @@ class Skill < Information
   def self.accent_color_class_for(information_type)
     case information_type.to_sym
     when :software
-      'bg-software-shade-1'
+      'bg-software-shade-2'
     when :technology
-      'bg-technology-shade-1'
+      'bg-technology-shade-2'
     when :keyword
-      'bg-keyword-shade-1'
+      'bg-keyword-shade-2'
     when :soft
-      'bg-soft-shade-1'
+      'bg-soft-shade-2'
     end
   end
 end

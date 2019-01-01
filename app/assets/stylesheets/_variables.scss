@@ -2,11 +2,12 @@
 // intensity
 // -----------------------------------------------------------------------------
 
-$intensity-1: 13.5%;
-$intensity-2: 20%;
-$intensity-3: 33.5%;
-$intensity-4: 46.7%;
-$intensity-5: 93.5%;
+$intensity-1: 6%;
+$intensity-2: 13.5%;
+$intensity-3: 20%;
+$intensity-4: 33.5%;
+$intensity-5: 46.7%;
+$intensity-6: 93.5%;
 
 
 
@@ -34,11 +35,10 @@ $material-yellow:       rgb(255,235,59);
 $material-amber:        rgb(255,193,7);
 $material-orange:       rgb(255,152,0);
 $material-deep-orange:  rgb(255,87,34);
-
 $material-brown:        rgb(121,85,72);
 $material-grey:         rgb(158,158,158);
-$material-grey-4:      rgba($material-grey, $intensity-4);
-$material-grey-1:      rgba($material-grey, $intensity-1);
+$material-grey-5:       rgba($material-grey, $intensity-5);
+$material-grey-2:       rgba($material-grey, $intensity-2);
 $material-blue-grey:    rgb(96,125,139);
 
 $color-white:           rgb(255,255,255);
@@ -46,6 +46,8 @@ $color-black:           rgb(0,0,0);
 
 
 // functional
+$color-disabled:        $material-grey;
+
 $color-personal:        $material-blue;
 $color-educational:     $material-green;
 $color-professional:    $material-red;
@@ -70,9 +72,9 @@ $colors: (
     keyword: $color-keyword,
     soft: $color-soft,
     top: $material-amber,
-    disabled: $material-grey,
-    question: $material-grey-4,
-    answer: $material-grey-1
+    disabled: $color-disabled,
+    question: $material-grey-5,
+    answer: $material-grey-2
 );
 
 

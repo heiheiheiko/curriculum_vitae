@@ -1,11 +1,11 @@
-// examples: .bg-software, .bg-personal-shade-1, .text-technology
+// examples: .bg-software, .bg-personal-shade-2, .text-technology
 @each $key, $color in $colors {
   .bg-#{$key} {
     background-color: $color;
   }
 
-  .bg-#{$key}-shade-1 {
-    background-color: shade($color, $intensity-1);
+  .bg-#{$key}-shade-2 {
+    background-color: shade($color, $intensity-2);
   }
 
   .text-#{$key} {
