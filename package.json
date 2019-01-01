@@ -1,0 +1,17 @@
+{
+  "name": "curriculum_vitae",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HBeineke/curriculum_vitae.git",
+  "author": "Heiko Beineke <heiko.beineke@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "./bin/webpack-dev-server"
+  },
+  "dependencies": {
+    "@rails/webpacker": "3.5"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}
