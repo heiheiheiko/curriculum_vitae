@@ -15,19 +15,10 @@ const config = {
   plugins: [],
   rules: {
     'indent': ['error', 2],
-    'no-param-reassign': ['error', {
-        ignorePropertyModificationsFor: [
-            'el',
-        ],
-    }],
-    'no-shadow': ['error', {
-        allow: [
-            'state',
-        ],
-    }],
     'quotes': ['error', 'single'],
     'import/prefer-default-export': 'off',
     'func-names': ["error", "never"],
+    'no-param-reassign': 0,
   }
 };
 

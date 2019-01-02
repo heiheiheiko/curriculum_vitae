@@ -24,7 +24,7 @@ export class Filter {
 
   static disableFilter(elm, options) {
     const defaults = { toggleTargetElms: true };
-    var options = $.extend({}, defaults, options || {});
+    options = $.extend({}, defaults, options || {});
 
     elm.addClass('is-disabled');
     elm.find('.fa-circle').addClass('text-disabled');
@@ -40,7 +40,7 @@ export class Filter {
 
   static enableFilter(elm, options) {
     const defaults = { toggleTargetElms: true };
-    var options = $.extend({}, defaults, options || {});
+    options = $.extend({}, defaults, options || {});
 
     elm.removeClass('is-disabled');
     elm.find('.fa-circle').removeClass('text-disabled');
