@@ -5,7 +5,7 @@ class TimeRange
 
   def initialize(start_date = nil, end_date = nil, range_in_months = nil)
     @start_date = start_date
-    @end_date = end_date || Date.current
+    @end_date = end_date
     @range_in_months = range_in_months || init_range_in_months
     @range_in_days = init_range_in_days
   end
@@ -62,7 +62,8 @@ class TimeRange
 
   def init_range_in_days
     return unless @start_date
-    (@end_date.to_date - @start_date.to_date).to_i
+    end_date = @end_date || Date.current
+    (end_date.to_date - @start_date.to_date).to_i
   end
 
   def translation_for(value, plural_locale)
