@@ -994,7 +994,7 @@ ci = Highlight.new(
   badge: 'birthday-cake',
   applicant: applicant,
   address: address,
-  order: 1
+  order: 10
 )
 I18n.locale = :de
 ci.title = 'Geburtstag'
@@ -1018,7 +1018,7 @@ ci = Education.new(
   badge: 'book',
   applicant: applicant,
   address: school,
-  order: 2
+  order: 20
 )
 I18n.locale = :de
 ci.title = 'Realschule'
@@ -1047,7 +1047,7 @@ ci = Education.new(
   badge: 'book',
   applicant: applicant,
   address: school,
-  order: 3
+  order: 30
 )
 I18n.locale = :de
 ci.title = 'Höhere Handelsschule'
@@ -1070,7 +1070,7 @@ ci = Highlight.new(
   ended_at: nil,
   badge: 'heart',
   applicant: applicant,
-  order: 4
+  order: 40
 )
 I18n.locale = :de
 ci.title = 'Traf die Liebe meines Lebens'
@@ -1087,7 +1087,7 @@ ci = Highlight.new(
   ended_at: nil,
   badge: 'car',
   applicant: applicant,
-  order: 5
+  order: 50
 )
 I18n.locale = :de
 ci.title = 'Führerschein Klasse B'
@@ -1111,7 +1111,7 @@ ci = Education.new(
   badge: 'book',
   applicant: applicant,
   address: school,
-  order: 6
+  order: 60
 )
 I18n.locale = :de
 ci.title = 'Informationstechnischer Assistent'
@@ -1149,7 +1149,7 @@ ci = Highlight.new(
   ended_at: '01-09-2009',
   badge: 'money-bill-alt',
   applicant: applicant,
-  order: 7
+  order: 70
 )
 I18n.locale = :de
 ci.title = 'Verschiedene Aushilfsjobs'
@@ -1179,7 +1179,7 @@ ci = Education.new(
   graduation: nil,
   applicant: applicant,
   address: school,
-  order: 8
+  order: 80
 )
 I18n.locale = :de
 ci.title = 'Angewandte Informatik'
@@ -1218,7 +1218,7 @@ ci = Job.new(
   badge: 'code',
   applicant: applicant,
   address: company,
-  order: 9
+  order: 90
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1259,7 +1259,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 10
+  order: 100
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1296,7 +1296,7 @@ ci = Highlight.new(
   badge: 'home',
   applicant: applicant,
   address: address,
-  order: 11
+  order: 110
 )
 I18n.locale = :de
 ci.title = 'Erste gemeinsame Wohnung'
@@ -1323,7 +1323,7 @@ ci = Job.new(
   badge: 'code',
   applicant: applicant,
   address: company,
-  order: 12
+  order: 120
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1365,7 +1365,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 13
+  order: 130
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1418,7 +1418,7 @@ ci = Highlight.new(
   ended_at: nil,
   badge: 'heart',
   applicant: applicant,
-  order: 14
+  order: 140
 )
 I18n.locale = :de
 ci.title = 'Heiratete die Liebe meines Lebens'
@@ -1446,7 +1446,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 15
+  order: 150
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1514,7 +1514,7 @@ ci = Education.new(
   top: true,
   applicant: applicant,
   address: school,
-  order: 16
+  order: 160
 )
 I18n.locale = :de
 ci.title = 'Wirtschaftsinformatik'
@@ -1584,7 +1584,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 17
+  order: 170
 )
 I18n.locale = :de
 ci.title = 'Junior Software Developer'
@@ -1645,6 +1645,23 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ######################################################################################################
 
 
+ci = Highlight.new(
+  started_at: '22-02-2007',
+  ended_at: '01-08-2014',
+  badge: 'crow',
+  applicant: applicant,
+  order: 171
+)
+I18n.locale = :de
+ci.title = 'Halter mehrerer Wellensittiche'
+I18n.locale = :en
+ci.title = "Holder of several budgies"
+ci.save
+
+
+######################################################################################################
+
+
 company = Address.create(
   name: 'deltacity.NET GmbH & Co. KG',
   street: 'Spatzenweg 2',
@@ -1660,7 +1677,7 @@ ci = Job.new(
   badge: 'code',
   applicant: applicant,
   address: company,
-  order: 18
+  order: 180
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
@@ -1705,12 +1722,29 @@ ci = Highlight.new(
   badge: 'home',
   applicant: applicant,
   address: address,
-  order: 19
+  order: 190
 )
 I18n.locale = :de
 ci.title = 'Umzug in eine größere Wohnung'
 I18n.locale = :en
 ci.title = 'Moving to a larger apartment'
+ci.save
+
+
+######################################################################################################
+
+
+ci = Highlight.new(
+  started_at: '01-04-2014',
+  ended_at: nil,
+  badge: 'dragon',
+  applicant: applicant,
+  order: 191
+)
+I18n.locale = :de
+ci.title = 'Halter von 2 Kornnattern'
+I18n.locale = :en
+ci.title = "Holder of 2 corn snakes"
 ci.save
 
 
@@ -1730,12 +1764,31 @@ ci = Highlight.new(
   badge: 'hand-rock',
   applicant: applicant,
   address: address,
-  order: 20
+  order: 200
 )
 I18n.locale = :de
 ci.title = 'Kung Fu Training'
 I18n.locale = :en
 ci.title = 'Kung Fu training'
+ci.save
+
+
+######################################################################################################
+
+
+ci = Highlight.new(
+  started_at: '30-07-2016',
+  ended_at: '07-08-2016',
+  badge: 'hiking',
+  applicant: applicant,
+  order: 201
+)
+I18n.locale = :de
+ci.title = 'Hermannsweg erwandert'
+ci.description = '8 Tage, 150 km, 2 Bundeländer, 5 Kreise, 1 kaputtes Knie, 1 kaputten Knöchel, 2 kleine Aufschürfungen, 1 riesige Blase und einen Haufen Glücksmomente'
+I18n.locale = :en
+ci.title = "Hermannsweg hiked - long-distance trail"
+ci.description = '8 days, 150 km, 2 federal states, 1 broken knee, 1 broken ankle, 2 small abrasions, 1 huge bladder and a bunch of happy moments'
 ci.save
 
 
@@ -1758,7 +1811,7 @@ ci = Job.create(
   top: true,
   applicant: applicant,
   address: company,
-  order: 21
+  order: 210
 )
 I18n.locale = :de
 ci.title = 'Software Developer'
@@ -1824,12 +1877,50 @@ ci = Highlight.new(
   ended_at: '18-09-2018',
   badge: 'dog',
   applicant: applicant,
-  order: 22
+  order: 220
 )
 I18n.locale = :de
 ci.title = 'Stolzes Herr­chen von Geoffrey'
 I18n.locale = :en
 ci.title = 'Proud dog daddy of Geoffrey'
+ci.save
+
+
+######################################################################################################
+
+
+ci = Highlight.new(
+  started_at: '29-07-2018',
+  ended_at: '02-08-2018',
+  badge: 'hiking',
+  applicant: applicant,
+  order: 221
+)
+I18n.locale = :de
+ci.title = 'Eggeweg erwandert'
+ci.description = '5 Tage, 100 km, keine Blessuren und einige unerwartete Bekanntschaften'
+I18n.locale = :en
+ci.title = "Eggeweg hiked - long-distance trail"
+ci.description = '5 days, 100 km, no injuries and some unexpected acquaintances'
+ci.save
+
+
+######################################################################################################
+
+
+ci = Highlight.new(
+  started_at: '29-07-2018',
+  ended_at: '02-08-2018',
+  badge: 'hiking',
+  applicant: applicant,
+  order: 221
+)
+I18n.locale = :de
+ci.title = 'Betreibe ein Nano Cube'
+ci.description = '5 Tage, 100 km, keine Blessuren und einige unerwartete Bekanntschaften'
+I18n.locale = :en
+ci.title = "Eggeweg hiked - long-distance trail"
+ci.description = '5 days, 100 km, no injuries and some unexpected acquaintances'
 ci.save
 
 
@@ -1854,7 +1945,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 23
+  order: 230
 )
 I18n.locale = :de
 ci.title = 'Software Developer'
