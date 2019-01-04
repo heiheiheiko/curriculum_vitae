@@ -1909,18 +1909,16 @@ ci.save
 
 
 ci = Highlight.new(
-  started_at: '29-07-2018',
-  ended_at: '02-08-2018',
-  badge: 'hiking',
+  started_at: '01-09-2018',
+  ended_at: nil,
+  badge: 'fish',
   applicant: applicant,
   order: 221
 )
 I18n.locale = :de
-ci.title = 'Betreibe ein Nano Cube'
-ci.description = '5 Tage, 100 km, keine Blessuren und einige unerwartete Bekanntschaften'
+ci.title = 'Nano Cube mit Garnelen aufgestellt'
 I18n.locale = :en
-ci.title = "Eggeweg hiked - long-distance trail"
-ci.description = '5 days, 100 km, no injuries and some unexpected acquaintances'
+ci.title = "Set up a nano cube with shrimps"
 ci.save
 
 
