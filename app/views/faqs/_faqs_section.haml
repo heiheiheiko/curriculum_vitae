@@ -13,7 +13,9 @@
             .card.card-body.d-inline-block.border-0.shadow-2.py-7.px-6.mx-7.mb-6.mw-75.bg-question
               .m-0= f.title
           .w-100
-            - image_file = f.information_type == "personal" ? "explorer_40x40" : "accomplisher_40x40"
-            = image_tag(image_file, class:"rounded-circle float-right shadow-2 ml-8")
+            - personal_image_url = "https://lh3.googleusercontent.com/onpwi_sw7SKZvq29loRoO69dYgT_AbtbRxS_B5TQ3Lsb8udGV4NEmKvloZYRntzWRBOWyDn9DrgGL3vPGZWwoD4ot4SU2V7NcjZCMZX0-tOLNSlJtIMJHRN_7rzsn3JgzXWlmmitcZNs3bf-zWsRaXCcRlpSmX7nZb0gDp-g_Eot5B3EsP-k7QunUUCEtIRzoAx1Ym5bQuoId8DFngHqTu_sE2HJ8NMlc08eqBOfML6SUuk6QSpi40kp6pwHI0-jNFJwJSnTZu9_InvuOTLVm_wTVM8eWBq1CyqC6hZtskFmlnAMxjDAqJ7LtzU0uvzRDFNkwASQnFO0ITpZI400axeYOvbKUqcbu88-wx3jWJoXqQuLxVh9ukHOpO-V4c14NdyLf7kX486DSp4naubvjI5dTI3aGzPJP222QoahxnJZQyutP8aZEvGlngQ39DzFOTUdp1GbJpAdDdEGL58Oq13JaydDZ3ufls4mxBraanVUxWAzeYTLk2kFJ01DDdXXdOQ6sVWJ5fNiQfUyUKqcUTp_WJfGwgx30Kuajrhq2tjxgjCGmcmsm5AB2TB3Yq1qj27kW1TSu-UrBWsr2szHo5g0w6Jw6tNspW6u3e4UbUQris_tBYeg7lQjw2JDfVyz1nmq_yi5M7Pl-5AB-vWowcjJ=s40-no"
+            - professional_image_url = "https://lh3.googleusercontent.com/uf3DX1B2z90U_-r4prM_-RhtFdT9HgnepBaAcZk5z99EBFdXjG8BibTFW_x7egGo8thEza_0JpAbl2JXNYkb-GY4knks5oz-F1qO0iziFdmnoIkRo3q5SRWE08lfrB9hc5AOhij3cc2wua1zn1fKo5PpoiUeZrrCP1_tdG66IW4B7WFS3Xh4gCviWS1P1AihbqPnJBv90X13C4-axaFtpOMo_QgIxT5NAqnX36kcDh_BH3IZ9usjan58box-Iw7M_jaOFWkCVDD6SVvudRL4PrYL5IH9pUEbDQdJTLtovGRKuEAU4P0YziuPjQPNjxi7RLRcQTxCbAJ1toZmoQxOE40ASPccL9xLaZkIh1BuWwEMlcGFeBpx3Ryyy66VEjwYAkMDYRlL4LaTgNwHLeagQdN93Y0G9Gi3DOnLcR74lRb42wmlz7OWrY8Djoky7jZ_dxu3_sJpiVYFYjZDTsMKrq1iBgzcMgE5IQFuSHweJcNEUIiCqbMDMam2o6_wtsLT3dg2xQPKPriq5GdKPTntRpjtkmT7ULoem1vIZJVrJ3S_lPewVQoJ9cirg-7UOH4dp7I46FM4KsXyOiJ6G_GS85ItsOSkwfvGOQ9PFS3HAVWoE_jjDi3xtYBxmr6Wqs7RWOnul9N003wWcMU3QrXeLjRC=s40-no"
+            - image_url = f.information_type == "personal" ? personal_image_url : professional_image_url
+            = image_tag(image_url, class:"rounded-circle float-right shadow-2 ml-8")
             .card.card-body.d-inline-block.border-0.shadow-2.py-7.px-6.mx-7.mb-6.mw-75.float-right.bg-answer
               .m-0= f.description
