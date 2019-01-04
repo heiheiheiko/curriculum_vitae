@@ -1785,10 +1785,10 @@ ci = Highlight.new(
 )
 I18n.locale = :de
 ci.title = 'Hermannsweg erwandert'
-ci.description = '8 Tage, 150 km, 2 Bundeländer, 5 Kreise, 1 kaputtes Knie, 1 kaputten Knöchel, 2 kleine Aufschürfungen, 1 riesige Blase und einen Haufen Glücksmomente'
+ci.description = '8 Tage, 150 km, 2 Bundesländer, 5 Kreise, 1 kaputtes Knie, 1 kaputten Knöchel, 2 kleine Abschürfungen, 1 riesige Blase und einen Haufen Glücksmomente'
 I18n.locale = :en
-ci.title = "Hermannsweg hiked - long-distance trail"
-ci.description = '8 days, 150 km, 2 federal states, 1 broken knee, 1 broken ankle, 2 small abrasions, 1 huge bladder and a bunch of happy moments'
+ci.title = "Hermannsweg hiked"
+ci.description = '8 days, 150 km, 2 federal states, 1 damaged knee, 1 damaged ankle, 2 small abrasions, 1 huge bladder and a bunch of happy moments'
 ci.save
 
 
@@ -1900,7 +1900,7 @@ I18n.locale = :de
 ci.title = 'Eggeweg erwandert'
 ci.description = '5 Tage, 100 km, keine Blessuren und einige unerwartete Bekanntschaften'
 I18n.locale = :en
-ci.title = "Eggeweg hiked - long-distance trail"
+ci.title = "Eggeweg hiked"
 ci.description = '5 days, 100 km, no injuries and some unexpected acquaintances'
 ci.save
 
