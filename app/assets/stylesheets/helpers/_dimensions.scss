@@ -1,0 +1,6 @@
+// examples: .mw-75
+@each $key, $dimension in $dimensions {
+  .mw-#{$key} {
+    max-width: $dimension;
+  }
+}
