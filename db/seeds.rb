@@ -26,7 +26,7 @@ applicant = Applicant.new(
   mobile_phone: '0151 555 45 345',
 )
 I18n.locale = :de
-applicant.slogan = 'Spielkind, Entdecker, Verwirklicher'
+applicant.slogan = 'Gamer, Entdecker, Verwirklicher'
 applicant.family_status = 'verheiratet'
 I18n.locale = :en
 applicant.slogan = "Gamer, Explorer, Accomplisher"
@@ -34,12 +34,12 @@ applicant.family_status = 'married'
 applicant.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/od38D9f-2xAOqJLRioBJrJanGF1Gc2QdJk6tQdHfcF9-X33fRIFYvMdWOq9DPpVgxr17_sEgg2biFuydIjYVCjDx9qvZd7X3lkIDxgntDiIUbnwjdit0GXYq4wIk3R4pO7snWlej2eFbmElx7A7t7GjNIO4ku1fu_t6myeRfoDN1xRgQHqf6uWi3_V7vMU6kcGBNxXqH1SpujCWlpcip3k6MPlggsGHL4sO8StggUbJvIcJ-lkACkUa-bVFYcU7OzdWGYUpu12FsqXLbiFqRBnYQ5qkoers97ybnbpsKhATH1aTY60P_hlu8I5bbRjeZ_RkWHQGdTTDqQC5R5KbSyF8vbQ6uw1-t0e2LIS8BBtlB2Q7rQA1ROiznQsvut4X6_5ppRAU1SkHFrE6B_-fMOvbr5tkuPxkwX_QBt3uL7CvmiAmd_xrYVRDl2IMyP_f9JmfwWMv0A9VmH6JGmW39t-THr0dKcRRcFkXWYGL1i8mn2WMMzabt0YTXdCozRWHdQWATg5wMFo_5otz6AVyYYW1occwmbPSe-hXAL4V0Q9OfU3tQUaGEkv20oGKXTkK6NZkcukX2qcFVCnXrxSGY7eSFA7v40kLNWzNcs4AWd_3C5TwFPzW7=w430-h700-no',
+  url: 'https://lh3.googleusercontent.com/jWnnl2BcJCQ9gZxNCASNqS5FBFfIUEPGMF85HmJYz8ru5juOhwQ_9DueOy1I3UHAAst5Z_ou70BGFlyEck_Xf8J0n2n58kGIe90o_sXPUUvlwsWb2P3Jxl3t06-fHftliMrCxt5Ky5xLu-KfVPKroGRejdW52SO4R8AQ_JL1c4MmvjvBrAcifzY_SfNkhVsO5_Y0wTqd2eE7FU3QcuJaw_MPPBKU3NvjOQKdeD5t7KvqjdzsCbsXDkpPbLLY-ioBVTxceYlpQGiSgfwPRBHDOBWHUmqR2DOBeNvN6cczbPpuGc0jbUegi52xyOIoKcnQsMM93XqRMtJKGc5MOuHfaUX1_2n9FEFQYAIX5SbppkgV9Ep1glJkJqupuWJiZ-US_fqiYvMzHsG36DFCw5xzgmMgK5IzAb0DCese_Z4cepHsDHUqnmPsVmAKz03hxQkLApIIRVfznZtejv8SnK5HclZf8ctLr8VjweX0dUoK9KYKhTyukdRknMDltZ0GNbqcnckARZjzQ-Xr4yqCAVEMnpg8nSNhs39vvZ7JVddq7vmM444F5fQ0rftiKbxsTihOMIOsWWX3iwFdiZ-XlJqQSFrC_JuLtQOyyx5EejtGppVpaRzHTQ2L-QPcUFvbW5MV4FJAuSXovkZOagPiFObj5jlU=w430-h700-no',
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
 I18n.locale = :de
-img.title = 'Spielkind'
+img.title = 'Gamer'
 img.description = 'Deine Wahrnehmung bestimmt deine Realität. - Qui-Gon Jinn'
 I18n.locale = :en
 img.title = 'Gamer'
@@ -1929,7 +1929,7 @@ interest = Interest.new(
   informable_type: applicant.model_name
 )
 I18n.locale = :de
-interest.title = 'Computerspieler'
+interest.title = 'Computerspiele'
 I18n.locale = :en
 interest.title = 'Computer games'
 interest.save
