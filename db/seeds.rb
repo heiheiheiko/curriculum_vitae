@@ -1891,7 +1891,7 @@ ci.save
 
 ci = Highlight.new(
   started_at: '29-07-2018',
-  ended_at: '02-08-2018',
+  ended_at: '03-08-2018',
   badge: 'hiking',
   applicant: applicant,
   order: 221
@@ -1913,7 +1913,7 @@ ci = Highlight.new(
   ended_at: nil,
   badge: 'fish',
   applicant: applicant,
-  order: 221
+  order: 222
 )
 I18n.locale = :de
 ci.title = 'Nano Cube mit Garnelen aufgestellt'
