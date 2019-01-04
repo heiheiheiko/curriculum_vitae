@@ -2179,11 +2179,54 @@ faq = Faq.new(
 )
 I18n.locale = :de
 faq.title = 'Was ist dein größter persönliche Wunsch?'
-faq.description = 'Einen neuen Hund.'
+faq.description = 'Ein neuer Hund'
 I18n.locale = :en
-faq.title = "What's your biggest personal wish?"
-faq.description = 'A new dog.'
+faq.title = "What is your biggest personal wish?"
+faq.description = 'A new dog'
 faq.save
+
+
+faq = Faq.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Was sind deine lieblings Brettspiele?'
+faq.description = 'Twilight Imperium, Eclipse, Battlestar Galactica, Rising Sun, 1830, Food Chain Magnate, Codenames'
+I18n.locale = :en
+faq.title = "What are your favorite board games?"
+faq.description = 'Twilight Imperium, Eclipse, Battlestar Galactica, Rising Sun, 1830, Food Chain Magnate, Codenames'
+faq.save
+
+
+faq = Faq.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Wie verbesserst du privat die Welt?'
+faq.description = 'Ich habe kürzlich angefangen auf Fleischprodukte zu verzichten und versuche beim Einkauf Plastik zu vermeiden'
+I18n.locale = :en
+faq.title = "How do you improve the world?"
+faq.description = 'I recently stopped buying meat products and try to avoid plastic when I go shopping'
+faq.save
+
+
+faq = Faq.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'In welchen Ländern würdest du gerne mal wandern?'
+faq.description = 'Island, Norwegen, Schweden, Finnland, Irland, Kanada, Österreich, Deutschland'
+I18n.locale = :en
+faq.title = "In which countries would you like to go hiking?"
+faq.description = 'Iceland, Norway, Sweden, Finland, Ireland, Canada, Austria, Germany'
+faq.save
+
 
 faq = Faq.new(
   information_type: :professional,
@@ -2192,10 +2235,52 @@ faq = Faq.new(
 )
 I18n.locale = :de
 faq.title = 'Was ist dein größter berufliche Wunsch?'
-faq.description = 'Für eine Firma zu arbeiten auf die ich stolz bin.'
+faq.description = 'Für ein Unternehmen zu arbeiten auf das ich stolz sein kann'
 I18n.locale = :en
-faq.title = "What's your biggest professional wish?"
-faq.description = "To work for a company that I'm proud of."
+faq.title = "What is your biggest professional wish?"
+faq.description = "To work for a company I can proud of"
+faq.save
+
+
+faq = Faq.new(
+  information_type: :professional,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Mit welchen Technologien arbeitest du derzeit am liebsten?'
+faq.description = 'Ruby on Rails und Vue'
+I18n.locale = :en
+faq.title = "Which technologies do you currently enjoy working with most?"
+faq.description = "Ruby on Rails and Vue"
+faq.save
+
+
+faq = Faq.new(
+  information_type: :professional,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Wie möchtest du beruflich die Welt verbessern?'
+faq.description = 'Am liebsten möchte ich an einem Produkt arbeiten, welches neben ausreichend Profit auch noch einen gemeinen Nutzen bringt'
+I18n.locale = :en
+faq.title = "How do you want to improve the world at work?"
+faq.description = "I would like to work on a product, which brings not only sufficient profit but also a common benefit"
+faq.save
+
+
+faq = Faq.new(
+  information_type: :professional,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Welche Technologien möchtest du mal ausprobieren?'
+faq.description = 'Angular, React, NodeJS, Meteor'
+I18n.locale = :en
+faq.title = "Which technologies would you like to try?"
+faq.description = "Angular, React, NodeJS, Meteor"
 faq.save
 
 p "end"
