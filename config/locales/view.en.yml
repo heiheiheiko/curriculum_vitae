@@ -23,7 +23,9 @@ en:
   time_range:
     year: year
     month: month
+    day: day
     years: years
     months: months
+    days: days
     and: ' and '
     today: today

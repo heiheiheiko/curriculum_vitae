@@ -5,11 +5,16 @@ class TimeRange
 
   def initialize(start_date = nil, end_date = nil, range_in_months = nil)
     @start_date = start_date
-    @end_date = end_date
+    @end_date = end_date || Date.current
     @range_in_months = range_in_months || init_range_in_months
+    @range_in_days = init_range_in_days
   end
 
   def period_in_words
+    if @range_in_days and @range_in_days < 30
+      return translation_for(@range_in_days, 'days')
+    end
+
     years_in_words = translation_for(years, 'years')
     months_in_words = translation_for(months, 'months')
     [years_in_words, months_in_words].compact.join("#{I18n.t(:and, scope: I18N_SCOPE)}")
@@ -53,6 +58,11 @@ class TimeRange
   def init_range_in_months
     end_date = (@end_date || Date.current) + 1.month
     (end_date.year * 12 + end_date.month) - (@start_date.year * 12 + @start_date.month)
+  end
+
+  def init_range_in_days
+    return unless @start_date
+    (@end_date.to_date - @start_date.to_date).to_i
   end
 
   def translation_for(value, plural_locale)

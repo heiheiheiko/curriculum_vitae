@@ -23,7 +23,9 @@ de:
   time_range:
     year: Jahr
     month: Monat
+    day: Tag
     years: Jahre
     months: Monate
+    days: Tage
     and: ' und '
     today: heute
