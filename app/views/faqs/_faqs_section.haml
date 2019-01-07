@@ -13,10 +13,7 @@
             .card.card-body.d-inline-block.border-0.shadow-2.py-7.px-6.mx-7.mb-6.mw-75.bg-question
               .m-0= f.title
           .w-100
-            - personal_image = "explorer_40x40.jpg"
-            - professional_image = "accomplisher_40x40.jpg"
-            - image = f.information_type == "personal" ? personal_image : professional_image
-            - image_url = image_path(image)
+            - image_url = image_path(f.avatar_asset)
             = image_tag(image_url, class:"rounded-circle float-right shadow-2 ml-8")
             .card.card-body.d-inline-block.border-0.shadow-2.py-7.px-6.mx-7.mb-6.mw-75.float-right.bg-answer
               .m-0= f.description
