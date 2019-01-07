@@ -34,7 +34,7 @@ applicant.family_status = 'married'
 applicant.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/s1R8hHh2LeH27UA7ij6x0F77U0fEcg1yw9ysN4HVzgCs0spgxnp5EB1-BFxOS-G2KvSq99mwQCT0ROm91Sv7tYmCqjCDC75KitE20DIswy-3LHGgvw8NotU-8j1hSTUeutJV0FDcAVi6wHLpKYFKFcjTWKlPbVCbVdcyObNd1ROac3sEPtENmKc-i1GbLms99Zzdst7qu3B-eeXCx9ho_5i5-tyEuKaop5kyL4kXuoFlhF9C8NEwr0lC8d2lj89UTt9IEfG6QJoz3426wyc9jcdwjhn5pOC2w4K_gY7rwY5KMUf2jooQFTx5tUbgvyc0nxefaunNwqygtT9MxG4CDVrcyoUo57eM_sSjsuuKF7MBeiNBj747_nkvpcc8YZ3vgqMEkWL3Hy9R_LfczZGekXxyR6eL7Ji1rU36fhZZ984yHAIwStcSm4Nt9ql0o5hgbraa5Qb1JKGXXGJBtE2jDWDKrnh3rog7vmKpoq1jULNT0wv8QbG4QIV2MVpXE3rJD1Sfd0TodXtpckLxwaZM2C4To6kJxYa3AoH0jGAPztcxQgrfJ74-9M_uw7ynL5orFZQ1B9VIiAfz2YLrfnO3ubwDk93Mtxnb92v3r35aGj5udsnRMDVtOReG5Yo8yJTd-b_ica7BOP4Q3OHqs5YELbrf=w430-h700-no',
+  url: 'gamer_430x700.jpg',
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
@@ -47,7 +47,7 @@ img.description = 'Your focus determines your reality. - Qui-Gon Jinn'
 img.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/jWnnl2BcJCQ9gZxNCASNqS5FBFfIUEPGMF85HmJYz8ru5juOhwQ_9DueOy1I3UHAAst5Z_ou70BGFlyEck_Xf8J0n2n58kGIe90o_sXPUUvlwsWb2P3Jxl3t06-fHftliMrCxt5Ky5xLu-KfVPKroGRejdW52SO4R8AQ_JL1c4MmvjvBrAcifzY_SfNkhVsO5_Y0wTqd2eE7FU3QcuJaw_MPPBKU3NvjOQKdeD5t7KvqjdzsCbsXDkpPbLLY-ioBVTxceYlpQGiSgfwPRBHDOBWHUmqR2DOBeNvN6cczbPpuGc0jbUegi52xyOIoKcnQsMM93XqRMtJKGc5MOuHfaUX1_2n9FEFQYAIX5SbppkgV9Ep1glJkJqupuWJiZ-US_fqiYvMzHsG36DFCw5xzgmMgK5IzAb0DCese_Z4cepHsDHUqnmPsVmAKz03hxQkLApIIRVfznZtejv8SnK5HclZf8ctLr8VjweX0dUoK9KYKhTyukdRknMDltZ0GNbqcnckARZjzQ-Xr4yqCAVEMnpg8nSNhs39vvZ7JVddq7vmM444F5fQ0rftiKbxsTihOMIOsWWX3iwFdiZ-XlJqQSFrC_JuLtQOyyx5EejtGppVpaRzHTQ2L-QPcUFvbW5MV4FJAuSXovkZOagPiFObj5jlU=w430-h700-no',
+  url: 'explorer_430x700.jpg',
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )
@@ -60,7 +60,7 @@ img.description = 'I have no special talent. I am only passionately curious. - A
 img.save
 
 img = Image.new(
-  url: 'https://lh3.googleusercontent.com/QJWnWquJx91n3EFGs24RuWw-ZvpOalqMLeS2j4AbNk5MwANXCVvjhk78UyjhXMtog9ILSDJSvgqbU3bnRnlVStVhs_bmv_tpozVOvgiTDuxuMZKoFlL6sRdK6Fjwo7tX7_IxlZJ2FppB4CYDlDceGcDxt7OIqfuD-R0qVjU73EhIaZLk3Vgn6Sh-fYI3oQEaSKfcfPyV3zNn15d-ZcfdY00vz6pAD48QTJTlM_RuftOuKnKVIDXHjurM-ovvVY_sRZUDLdxaCVBhBJQPGvWZefYTHkbwwXhT9J7vb12tyrC6N6H8VrX6Dn_P5IgRaQEhfdnUUZy6coMl0FdPDDrA7_l2awHsDe68g1CHBoTwIpd12lN-OE-a6-K8RfnKGb_ZxIDANvdFJmGF73BOmawspsaU44lh7dp-nsl-h7m_KmhUTut4123slakzK9kb1EBvTLWrmWl8ZUPLe_V-qpjnbneCOhr18umkxtHqH0j-sIFDcs9xsKcBBnNvkSzVzeE9iVtCr0aw8kO5tDm5rirLxxQQBlJ8E_-jURMad8rJCe9gPoG_FTvNl-C12gEreg3hmyTS=w430-h700-no',
+  url: 'accomplisher_430x700.jpg',
   informable_id: applicant.id,
   informable_type: applicant.model_name
 )

@@ -12,7 +12,7 @@
           .carousel-item{class: "#{'active' if index == 0 }"}
             .table-wrapper
               .image
-                = image_tag i.url, alt: i.title, class: 'img-fluid'
+                = image_tag image_path(i.url), alt: i.title, class: 'img-fluid'
               .quote.d-none.d-md-block
                 = icon 'fas', 'quote-left'
                 = i.description
