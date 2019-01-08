@@ -2244,7 +2244,7 @@ faq = Faq.new(
 )
 I18n.locale = :de
 faq.title = 'Woran programmierst du privat?'
-faq.description = 'Mit selbstgeschriebenen Web App versuche ich private Probleme zu lösen'
+faq.description = 'Mit selbstgeschriebenen Web Apps versuche ich private Probleme zu lösen'
 I18n.locale = :en
 faq.title = "What are you programming privately?"
 faq.description = 'I try to solve personal problems with self-written web apps'
