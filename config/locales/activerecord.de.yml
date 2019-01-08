@@ -28,3 +28,7 @@ de:
         technology: Technologien
         keyword: Keywords
         soft: Soft Skills
+    faq:
+      type:
+        personal: Persönliche FAQ
+        professional: Berufliche FAQ

@@ -1,0 +1,15 @@
+.filter.js-faqs-filter{style: "display: none;"}
+  %ul.list-unstyled.d-none.d-lg-block
+    %li{"data-target-class" => ".js-personal-faq"}
+      - disable_tooltip_message = t('general.filter.disable', obj: t('enums.faq.type.personal'))
+      - enable_tooltip_message = t('general.filter.enable', obj: t('enums.faq.type.personal'))
+      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack rounded-circle shadow-2', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
+        = icon 'fas', 'circle', class: "fa-stack-2x text-personal"
+        = icon 'fas', 'robot', class: 'fa-stack-1x fa-inverse'
+
+    %li{"data-target-class" => ".js-professional-faq"}
+      - disable_tooltip_message = t('general.filter.disable', obj: t('enums.faq.type.professional'))
+      - enable_tooltip_message = t('general.filter.enable', obj: t('enums.faq.type.professional'))
+      = content_tag(:span, class: 'filter-item js-filter-item-type fa-stack rounded-circle shadow-2', data: { toggle: 'tooltip', placement: 'right', disable_tooltip_message: disable_tooltip_message, enable_tooltip_message: enable_tooltip_message  }, title: disable_tooltip_message) do
+        = icon 'fas', 'circle', class: "fa-stack-2x text-professional"
+        = icon 'fas', 'robot', class: 'fa-stack-1x fa-inverse'

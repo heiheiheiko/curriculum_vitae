@@ -59,6 +59,7 @@ export class Filter {
     $(document).scroll(() => {
       thisClass.constructor.toggleFilterSection('.js-chronicle-filter', '#goto-chronicle', '#goto-skills');
       thisClass.constructor.toggleFilterSection('.js-skills-filter', '#goto-skills', '#goto-interests');
+      thisClass.constructor.toggleFilterSection('.js-faqs-filter', '#goto-faqs', '#goto-end');
     });
   }
 
