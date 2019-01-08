@@ -1935,10 +1935,8 @@ company = Address.create(
 ci = Job.new(
   started_at: '01-11-2016',
   ended_at: nil,
-  title: 'Software Developer',
-  description: 'Pflege und Weiterentwicklung der Influencer Marketing Platform',
   employment: :employee,
-  position: :software_developer,
+  position: :web_developer,
   badge: 'code',
   top: true,
   applicant: applicant,
@@ -1946,10 +1944,10 @@ ci = Job.new(
   order: 230
 )
 I18n.locale = :de
-ci.title = 'Software Developer'
+ci.title = 'Web Developer'
 ci.description = 'Wartung und Weiterentwicklung der Influencer Marketing Platform;Hauptverantwortlicher für das Frontend;Einführung von Vue'
 I18n.locale = :en
-ci.title = 'Software Developer'
+ci.title = 'Web Developer'
 ci.description = 'Maintenance and further development of the Influencer Marketing Platform;Main responsible for the frontend;Introduction of Vue'
 ci.save
 I18n.locale = :de
@@ -2076,6 +2074,17 @@ I18n.locale = :de
 interest.title = 'Aquascaping'
 I18n.locale = :en
 interest.title = 'Aquascaping'
+interest.save
+
+interest = Interest.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+interest.title = 'Programmieren'
+I18n.locale = :en
+interest.title = 'Programming'
 interest.save
 
 interest = Interest.new(
@@ -2229,6 +2238,20 @@ faq.save
 
 
 faq = Faq.new(
+  information_type: :personal,
+  informable_id: applicant.id,
+  informable_type: applicant.model_name
+)
+I18n.locale = :de
+faq.title = 'Woran programmierst du privat?'
+faq.description = 'Mit selbstgeschriebenen Web App versuche ich private Probleme zu lösen'
+I18n.locale = :en
+faq.title = "What are you programming privately?"
+faq.description = 'I try to solve personal problems with self-written web apps'
+faq.save
+
+
+faq = Faq.new(
   information_type: :professional,
   informable_id: applicant.id,
   informable_type: applicant.model_name
@@ -2238,7 +2261,7 @@ faq.title = 'Was ist dein größter berufliche Wunsch?'
 faq.description = 'Für ein Unternehmen zu arbeiten auf das ich stolz sein kann'
 I18n.locale = :en
 faq.title = "What is your biggest professional wish?"
-faq.description = "To work for a company I can proud of"
+faq.description = "To work for a company I can be proud of"
 faq.save
 
 
