@@ -2054,7 +2054,7 @@ ci = Job.new(
   top: true,
   applicant: applicant,
   address: company,
-  order: 230
+  order: 231
 )
 I18n.locale = :de
 ci.title = 'Web Developer'
