@@ -366,6 +366,14 @@ skill.save
 skill = Skill.new()
 skill.information_type = :technology
 I18n.locale = :de
+skill.title = 'Spring Boot'
+I18n.locale = :en
+skill.title = 'Spring Boot'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
 skill.title = 'PHP'
 I18n.locale = :en
 skill.title = 'PHP'
@@ -636,6 +644,23 @@ skill.title = 'webpack'
 I18n.locale = :en
 skill.title = 'webpack'
 skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'Vuetify'
+I18n.locale = :en
+skill.title = 'Vuetify'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :technology
+I18n.locale = :de
+skill.title = 'JAMstack'
+I18n.locale = :en
+skill.title = 'JAMstack'
+skill.save
+
 
 
 # software
@@ -902,6 +927,22 @@ I18n.locale = :en
 skill.title = 'Google Tools'
 skill.save
 I18n.locale = :de
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'IntelliJ'
+I18n.locale = :en
+skill.title = 'IntelliJ'
+skill.save
+
+skill = Skill.new()
+skill.information_type = :software
+I18n.locale = :de
+skill.title = 'Confluence'
+I18n.locale = :en
+skill.title = 'Confluence'
+skill.save
 
 
 # soft
@@ -1934,7 +1975,7 @@ company = Address.create(
 )
 ci = Job.new(
   started_at: '01-11-2016',
-  ended_at: nil,
+  ended_at: '01-01-2019',
   employment: :employee,
   position: :web_developer,
   badge: 'code',
@@ -1992,6 +2033,71 @@ ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(titl
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Trello').id, experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Jira').id, started_at: '01-10-2018', ended_at: "30-11-2018", experience: :regular)
 ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'GIMP').id, experience: :rare)
+
+
+######################################################################################################
+
+
+company = Address.create(
+  name: 'CROWDCODE GmbH & Co. KG',
+  street: 'Am Mittelhafen 16',
+  zip: '48155',
+  city: 'Münster',
+  website: Website.create(url: 'https://www.crowdcode.io/')
+)
+ci = Job.new(
+  started_at: '01-06-2019',
+  ended_at: nil,
+  employment: :employee,
+  position: :web_developer,
+  badge: 'code',
+  top: true,
+  applicant: applicant,
+  address: company,
+  order: 230
+)
+I18n.locale = :de
+ci.title = 'Web Developer'
+ci.description = 'Entwurf und Umsetzung einer PWA zur Planung eines Studiums;Hauptverantwortlicher für das Frontend;Einführung von Vue'
+I18n.locale = :en
+ci.title = 'Web Developer'
+ci.description = 'Maintenance and further development of a PWA for study planning;Main responsible for the frontend;Introduction of Vue'
+ci.save
+I18n.locale = :de
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Web Engineering').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Frontend Development').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Backend Development').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Softwarequalität').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Usability').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Mobile Optimierung').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Testing').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Test Driven').id, experience: :rare)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Code Reviews').id, experience: :rare)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'MVC').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Agil').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Scrum').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Homeoffice').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Java').id, experience: :rare)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Spring Boot').id, experience: :rare)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'HTML5').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'CSS3').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Sass').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Vuetify').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'JAMstack').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Tailwind CSS').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'JavaScript').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Vue').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Ajax').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'JSON').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'webpack').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Mac OS').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'git').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Bitbucket').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'GitKraken').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'IntelliJ').id, experience: :frequent)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Visual Studio Code').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Confluence').id, experience: :regular)
+ChronicleItemSkill.create(chronicle_item_id: ci.id, skill_id: Skill.find_by(title: 'Jira').id, experience: :regular)
 
 
 
