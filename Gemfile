@@ -40,7 +40,7 @@ end
 group :production do
   gem 'pg', '>= 0.18', '< 2.0'
   gem 'rails_12factor'
-  gem 'puma', '~> 3.11'
+  gem 'puma', '~> 3.12'
   gem 'google-analytics-rails'
 end
 
